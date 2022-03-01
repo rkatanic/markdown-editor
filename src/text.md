@@ -96,6 +96,15 @@ Image source: [https://images.pexels.com/photos/2983303/pexels-photo-2983303.jpe
 - [ ] to do two
 - [x] done
 
+## Table
+
+---
+
+| heading a | heading b |            heading c |    heading d    |
+| --------- | :-------- | -------------------: | :-------------: |
+| cell 1    | cell 2    | cell 3 right aligned | cell 4 centered |
+| cell 5    | cell 6    | cell 7 right aligned | cell 8 centered |
+
 ## Footnote
 
 ---

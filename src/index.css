@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
 
 :root {
   --color-hue: 200;
@@ -6,7 +6,10 @@
   --color-dark-two: hsl(var(--color-hue), 15%, 23%);
   --color-light: hsl(var(--color-hue), 3%, 97%);
   --color-primary: hsl(var(--color-hue), 98%, 60%);
-  --font: "Nunito", sans-serif;
+  --color-gray: hsl(0, 0%, 80%);
+  --color-gray-two: hsl(0, 0%, 94%);
+  --color-gray-three: hsl(0, 0%, 90%);
+  --font: "Open Sans", sans-serif;
 }
 
 * {

@@ -1,13 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
 :root {
-  --color-bg: hsl(0, 0%, 8%);
-  --color-txt: hsl(0, 0%, 90%);
-  --color-primary: hsl(30, 50%, 50%);
+  --color-hue: 200;
+  --color-dark: hsl(var(--color-hue), 6%, 12%);
+  --color-dark-two: hsl(var(--color-hue), 15%, 23%);
+  --color-light: hsl(var(--color-hue), 3%, 97%);
+  --color-primary: hsl(var(--color-hue), 98%, 60%);
+  --font: "Nunito", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
-  color: var(--color-txt);
+  font-family: var(--font);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-two);
 }

@@ -1,20 +1,39 @@
 .markdown-editor {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .markdown-output,
 .markdown-input {
-  background-color: transparent;
-  white-space: nowrap;
+  overflow-y: auto;
   flex: 1;
   width: 50vw;
-  height: 100%;
-  padding: 1rem;
+  padding: 2rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.15);
+}
+
+.markdown-output {
+  padding: 0.5rem 2rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+a {
+  color: var(--color-primary);
 }
 
 textarea {
-  color: var(--color-txt);
+  font-size: 1rem;
+  font-family: var(--font);
+  color: var(--color-light);
+  background-color: var(--color-dark);
   resize: none;
   border: none;
   outline: none;

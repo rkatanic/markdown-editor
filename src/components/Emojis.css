@@ -1,0 +1,25 @@
+.emojis {
+  position: relative;
+}
+
+.emoji-list {
+  padding: 0.25rem;
+  background-color: var(--color-dark);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  top: 3rem;
+  left: -8rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0 2px 7px var(--color-dark);
+}
+
+.emoji {
+  padding: 0.25rem;
+}
+
+.emoji:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-two);
+}

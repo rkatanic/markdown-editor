@@ -1,4 +1,5 @@
 import IconButton from "./components/IconButton";
+import Emojis from "./components/Emojis";
 import { ReactComponent as BoldIcon } from "./assets/icons/bold.svg";
 import { ReactComponent as ItalicIcon } from "./assets/icons/italic.svg";
 import { ReactComponent as StrikeThroughIcon } from "./assets/icons/strikeThrough.svg";
@@ -18,6 +19,7 @@ import "./EditControls.css";
 
 const EditControls = ({
   insertMarkdownPrefix,
+  insertMarkdownSuffix,
   insertMarkdown,
   uploadMarkdown,
   downloadMarkdown,
@@ -97,6 +99,7 @@ const EditControls = ({
             )
           }
         />
+        <Emojis insertEmoji={insertMarkdownSuffix} />
       </div>
 
       <div>

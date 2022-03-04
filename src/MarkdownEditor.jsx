@@ -31,6 +31,15 @@ const MarkdownEditor = () => {
     setMarkdown(front + text + back);
   };
 
+  const handleMarkdownSuffixInsert = (text) => {
+    var selectEnd = textareaRef.current.selectionEnd;
+
+    var front = markdown.substring(0, selectEnd);
+    var back = markdown.substring(selectEnd, markdown.length);
+
+    setMarkdown(front + text + back);
+  };
+
   const handleMarkdownInsert = (
     fullMarkdown,
     markdownPrefix,
@@ -75,6 +84,7 @@ const MarkdownEditor = () => {
       <EditControls
         insertMarkdown={handleMarkdownInsert}
         insertMarkdownPrefix={handleMarkdownPrefixInsert}
+        insertMarkdownSuffix={handleMarkdownSuffixInsert}
         uploadMarkdown={handleMarkdownUpload}
         downloadMarkdown={handleMarkdownDownload}
         clearMarkdown={() => setMarkdown("")}

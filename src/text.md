@@ -1,7 +1,3 @@
-# Simple markdown editor
-
-See markdown examples below.
-
 ## Headings
 
 ---

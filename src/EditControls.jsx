@@ -13,46 +13,68 @@ import { ReactComponent as TableIcon } from "./assets/icons/table.svg";
 
 import "./EditControls.css";
 
-const EditControls = ({
-  editText,
-  insertString,
-  insertLink,
-  insertCode,
-  insertImage,
-  insertTask,
-}) => {
+const EditControls = ({ insertMarkdownPrefix, insertMarkdown }) => {
   return (
     <div className="edit-controls">
-      <IconButton icon={<>H1</>} onClick={() => insertString("# ")} />
-      <IconButton icon={<>H2</>} onClick={() => insertString("## ")} />
-      <IconButton icon={<>H3</>} onClick={() => insertString("### ")} />
-      <IconButton icon={<>H4</>} onClick={() => insertString("#### ")} />
-      <IconButton icon={<>H5</>} onClick={() => insertString("##### ")} />
-      <IconButton icon={<>H6</>} onClick={() => insertString("###### ")} />
-      <IconButton icon={<BoldIcon />} onClick={() => editText("**")} />
-      <IconButton icon={<ItalicIcon />} onClick={() => editText("_")} />
-      <IconButton icon={<StrikeThroughIcon />} onClick={() => editText("~~")} />
+      <IconButton icon={<>H1</>} onClick={() => insertMarkdownPrefix("# ")} />
+      <IconButton icon={<>H2</>} onClick={() => insertMarkdownPrefix("## ")} />
+      <IconButton icon={<>H3</>} onClick={() => insertMarkdownPrefix("### ")} />
+      <IconButton
+        icon={<>H4</>}
+        onClick={() => insertMarkdownPrefix("#### ")}
+      />
+      <IconButton
+        icon={<>H5</>}
+        onClick={() => insertMarkdownPrefix("##### ")}
+      />
+      <IconButton
+        icon={<>H6</>}
+        onClick={() => insertMarkdownPrefix("###### ")}
+      />
+      <IconButton
+        icon={<BoldIcon />}
+        onClick={() => insertMarkdown("****", "**", "**")}
+      />
+      <IconButton
+        icon={<ItalicIcon />}
+        onClick={() => insertMarkdown("__", "_", "_")}
+      />
+      <IconButton
+        icon={<StrikeThroughIcon />}
+        onClick={() => insertMarkdown("~~~~", "~~", "~~")}
+      />
       <IconButton
         icon={<HorizontalLine />}
-        onClick={() => insertString("---")}
+        onClick={() => insertMarkdownPrefix("---")}
       />
       <IconButton
         icon={<BlockquoteIcon />}
-        onClick={() => insertString("> ")}
+        onClick={() => insertMarkdownPrefix("> ")}
       />
-      <IconButton icon={<CodeIcon />} onClick={insertCode} />
-      <IconButton icon={<LinkIcon />} onClick={insertLink} />
-      <IconButton icon={<ImageIcon />} onClick={insertImage} />
-      <IconButton icon={<TaskIcon />} onClick={insertTask} />
+      <IconButton
+        icon={<CodeIcon />}
+        onClick={() => insertMarkdown("```js\n code\n```", "```js\n", "\n```")}
+      />
+      <IconButton
+        icon={<LinkIcon />}
+        onClick={() => insertMarkdown("[link](url)", "[", "](url)")}
+      />
+      <IconButton
+        icon={<ImageIcon />}
+        onClick={() => insertMarkdown("![imageText](url)", "![", "](url)")}
+      />
+      <IconButton
+        icon={<TaskIcon />}
+        onClick={() => insertMarkdown("- [ ] text", "- [ ] ", "")}
+      />
       <IconButton
         icon={<UnorderedListIcon />}
-        onClick={() => insertString("- ")}
+        onClick={() => insertMarkdownPrefix("- ")}
       />
-
       <IconButton
         icon={<TableIcon />}
         onClick={() =>
-          insertString(
+          insertMarkdownPrefix(
             `| heading a | heading b |\n| --------- | :-------- |\n| cell 1    | cell 2    |\n| cell 3    | cell 4    | `
           )
         }

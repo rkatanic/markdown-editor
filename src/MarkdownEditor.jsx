@@ -12,9 +12,6 @@ const MarkdownEditor = () => {
   const textareaRef = useRef();
 
   useEffect(() => {
-    textareaRef.current.selectStart = 0;
-    textareaRef.current.selectEnd = 0;
-
     import(`./text.md`)
       .then((res) => {
         fetch(res.default)
@@ -25,18 +22,7 @@ const MarkdownEditor = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const handleTextEdit = (text) => {
-    var selectStart = textareaRef.current.selectionStart;
-    var selectEnd = textareaRef.current.selectionEnd;
-
-    var front = markdown.substring(0, selectStart);
-    var back = markdown.substring(selectEnd, markdown.length);
-    var middle = markdown.substring(selectStart, selectEnd);
-
-    setMarkdown(front + text + middle + text + back);
-  };
-
-  const handleStringInsert = (text) => {
+  const handleMarkdownPrefixInsert = (text) => {
     var selectStart = textareaRef.current.selectionStart;
 
     var front = markdown.substring(0, selectStart);
@@ -45,7 +31,11 @@ const MarkdownEditor = () => {
     setMarkdown(front + text + back);
   };
 
-  const insertLink = () => {
+  const handleMarkdownInsert = (
+    fullMarkdown,
+    markdownPrefix,
+    markdownSuffix
+  ) => {
     var selectStart = textareaRef.current.selectionStart;
     var selectEnd = textareaRef.current.selectionEnd;
     var front = markdown.substring(0, selectStart);
@@ -54,66 +44,17 @@ const MarkdownEditor = () => {
     if (selectStart !== selectEnd) {
       const middle = markdown.slice(selectStart, selectEnd);
       back = back.substring(middle.length, markdown.length);
-      setMarkdown(front + "[" + middle + "](url)" + back);
+      setMarkdown(front + markdownPrefix + middle + markdownSuffix + back);
     } else {
-      setMarkdown(front + "[link](url)" + back);
-    }
-  };
-
-  const insertCode = () => {
-    var selectStart = textareaRef.current.selectionStart;
-    var selectEnd = textareaRef.current.selectionEnd;
-    var front = markdown.substring(0, selectStart);
-    var back = markdown.substring(selectStart, markdown.length);
-
-    if (selectStart !== selectEnd) {
-      const middle = markdown.slice(selectStart, selectEnd);
-      back = back.substring(middle.length, markdown.length);
-      setMarkdown(front + "```js\n" + middle + "\n```" + back);
-    } else {
-      setMarkdown(front + "```js\n code\n```" + back);
-    }
-  };
-
-  const insertImage = () => {
-    var selectStart = textareaRef.current.selectionStart;
-    var selectEnd = textareaRef.current.selectionEnd;
-    var front = markdown.substring(0, selectStart);
-    var back = markdown.substring(selectStart, markdown.length);
-
-    if (selectStart !== selectEnd) {
-      const middle = markdown.slice(selectStart, selectEnd);
-      back = back.substring(middle.length, markdown.length);
-      setMarkdown(front + "![" + middle + "](url)" + back);
-    } else {
-      setMarkdown(front + "![imageText](url)" + back);
-    }
-  };
-
-  const insertTask = () => {
-    var selectStart = textareaRef.current.selectionStart;
-    var selectEnd = textareaRef.current.selectionEnd;
-    var front = markdown.substring(0, selectStart);
-    var back = markdown.substring(selectStart, markdown.length);
-
-    if (selectStart !== selectEnd) {
-      const middle = markdown.slice(selectStart, selectEnd);
-      back = back.substring(middle.length, markdown.length);
-      setMarkdown(front + "- [ ] " + middle + back);
-    } else {
-      setMarkdown(front + "- [ ] task" + back);
+      setMarkdown(front + fullMarkdown + back);
     }
   };
 
   return (
     <div className="markdown-editor">
       <EditControls
-        insertTask={insertTask}
-        insertImage={insertImage}
-        insertCode={insertCode}
-        insertLink={insertLink}
-        insertString={handleStringInsert}
-        editText={handleTextEdit}
+        insertMarkdown={handleMarkdownInsert}
+        insertMarkdownPrefix={handleMarkdownPrefixInsert}
       />
 
       <div className="markdown-editor-content">

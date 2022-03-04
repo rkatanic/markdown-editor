@@ -18,11 +18,3 @@
   cursor: pointer;
   background-color: var(--color-dark-two);
 }
-
-.icon-button svg > path {
-  fill: var(--color-gray-three);
-}
-
-.icon {
-  height: 1.25rem;
-}

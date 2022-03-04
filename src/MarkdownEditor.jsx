@@ -50,6 +50,15 @@ const MarkdownEditor = () => {
     }
   };
 
+  const handleMarkdownUpload = (e) => {
+    const fileReader = new FileReader();
+    fileReader.readAsText(e.target.files[0], "UTF-8");
+    fileReader.onload = (e) => {
+      console.log("e.target.result", e.target.result);
+      setMarkdown(e.target.result);
+    };
+  };
+
   const handleMarkdownDownload = () => {
     const element = document.createElement("a");
     const file = new Blob([markdown], {
@@ -66,6 +75,7 @@ const MarkdownEditor = () => {
       <EditControls
         insertMarkdown={handleMarkdownInsert}
         insertMarkdownPrefix={handleMarkdownPrefixInsert}
+        uploadMarkdown={handleMarkdownUpload}
         downloadMarkdown={handleMarkdownDownload}
         clearMarkdown={() => setMarkdown("")}
       />

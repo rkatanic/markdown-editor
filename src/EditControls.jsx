@@ -12,12 +12,14 @@ import { ReactComponent as UnorderedListIcon } from "./assets/icons/unorderedLis
 import { ReactComponent as TableIcon } from "./assets/icons/table.svg";
 import { ReactComponent as DownloadIcon } from "./assets/icons/download.svg";
 import { ReactComponent as DeleteIcon } from "./assets/icons/delete.svg";
+import { ReactComponent as UploadIcon } from "./assets/icons/upload.svg";
 
 import "./EditControls.css";
 
 const EditControls = ({
   insertMarkdownPrefix,
   insertMarkdown,
+  uploadMarkdown,
   downloadMarkdown,
   clearMarkdown,
 }) => {
@@ -99,6 +101,10 @@ const EditControls = ({
 
       <div>
         <IconButton icon={<DeleteIcon />} onClick={clearMarkdown} />
+        <button className="markdown-file-upload">
+          <UploadIcon />
+          <input type="file" title="" onChange={uploadMarkdown} />
+        </button>
         <IconButton icon={<DownloadIcon />} onClick={downloadMarkdown} />
       </div>
     </div>

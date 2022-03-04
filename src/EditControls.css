@@ -10,3 +10,27 @@
 .edit-controls > div {
   display: flex;
 }
+
+.markdown-file-upload {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: var(--header-height);
+}
+
+.markdown-file-upload:hover {
+  background-color: var(--color-dark-two);
+}
+
+.markdown-file-upload input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: var(--header-height);
+  height: var(--header-height);
+}

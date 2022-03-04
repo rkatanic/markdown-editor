@@ -1,0 +1,7 @@
+.edit-controls {
+  display: flex;
+  background-color: var(--color-dark);
+  height: var(--header-height);
+  box-shadow: 0 0 7px black;
+  z-index: 1;
+}

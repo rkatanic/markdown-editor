@@ -27,9 +27,9 @@ Unordered list
 - Create a list by starting a line with `+`, `-`, or `*`
 - Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
+    - text one
+    * text two
+    - text three
 - Very easy!
 
 Ordered list
@@ -76,7 +76,7 @@ console.log(foo(25));
 
 [link text](https://www.google.com/)
 
-[link with title](https://www.google.com/ "title text!")
+[link with title](https://www.google.com/ "title text!") (hover link to see title)
 
 ## Images
 

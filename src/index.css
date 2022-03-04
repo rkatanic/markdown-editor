@@ -2,14 +2,21 @@
 
 :root {
   --color-hue: 200;
+
   --color-dark: hsl(var(--color-hue), 6%, 12%);
-  --color-dark-two: hsl(var(--color-hue), 15%, 23%);
-  --color-light: hsl(var(--color-hue), 3%, 97%);
+  --color-dark-two: hsl(var(--color-hue), 3%, 16%);
+  --color-light: hsl(var(--color-hue), 3%, 97.5%);
+
   --color-primary: hsl(var(--color-hue), 98%, 60%);
+  --color-primary-two: hsl(var(--color-hue), 98%, 94%);
+  --color-primary-three: hsl(var(--color-hue), 98%, 88%);
+
   --color-gray: hsl(0, 0%, 80%);
   --color-gray-two: hsl(0, 0%, 94%);
   --color-gray-three: hsl(0, 0%, 90%);
   --font: "Open Sans", sans-serif;
+
+  --header-height: 3.25rem;
 }
 
 * {

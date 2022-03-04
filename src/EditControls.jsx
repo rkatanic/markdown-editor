@@ -11,6 +11,7 @@ import { ReactComponent as TaskIcon } from "./assets/icons/task.svg";
 import { ReactComponent as UnorderedListIcon } from "./assets/icons/unorderedList.svg";
 import { ReactComponent as TableIcon } from "./assets/icons/table.svg";
 import { ReactComponent as DownloadIcon } from "./assets/icons/download.svg";
+import { ReactComponent as DeleteIcon } from "./assets/icons/delete.svg";
 
 import "./EditControls.css";
 
@@ -18,10 +19,11 @@ const EditControls = ({
   insertMarkdownPrefix,
   insertMarkdown,
   downloadMarkdown,
+  clearMarkdown,
 }) => {
   return (
     <div className="edit-controls">
-      <div className="edit-controls-left">
+      <div>
         <IconButton icon={<>H1</>} onClick={() => insertMarkdownPrefix("# ")} />
         <IconButton
           icon={<>H2</>}
@@ -96,6 +98,7 @@ const EditControls = ({
       </div>
 
       <div>
+        <IconButton icon={<DeleteIcon />} onClick={clearMarkdown} />
         <IconButton icon={<DownloadIcon />} onClick={downloadMarkdown} />
       </div>
     </div>

@@ -7,6 +7,6 @@
   z-index: 1;
 }
 
-.edit-controls-left {
+.edit-controls > div {
   display: flex;
 }

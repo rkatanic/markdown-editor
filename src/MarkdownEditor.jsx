@@ -64,9 +64,10 @@ const MarkdownEditor = () => {
   return (
     <div className="markdown-editor">
       <EditControls
-        downloadMarkdown={handleMarkdownDownload}
         insertMarkdown={handleMarkdownInsert}
         insertMarkdownPrefix={handleMarkdownPrefixInsert}
+        downloadMarkdown={handleMarkdownDownload}
+        clearMarkdown={() => setMarkdown("")}
       />
 
       <div className="markdown-editor-content">

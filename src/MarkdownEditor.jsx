@@ -50,9 +50,21 @@ const MarkdownEditor = () => {
     }
   };
 
+  const handleMarkdownDownload = () => {
+    const element = document.createElement("a");
+    const file = new Blob([markdown], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "markdown.md";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  };
+
   return (
     <div className="markdown-editor">
       <EditControls
+        downloadMarkdown={handleMarkdownDownload}
         insertMarkdown={handleMarkdownInsert}
         insertMarkdownPrefix={handleMarkdownPrefixInsert}
       />

@@ -1,7 +1,12 @@
 .edit-controls {
   display: flex;
+  justify-content: space-between;
   background-color: var(--color-dark);
   height: var(--header-height);
   box-shadow: 0 0 7px black;
   z-index: 1;
+}
+
+.edit-controls-left {
+  display: flex;
 }

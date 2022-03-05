@@ -10,11 +10,15 @@
   height: var(--header-height);
   font-weight: 500;
   font-family: "Courier New", Courier, monospace;
-  font-size: 1.25rem;
+  font-size: 1.175rem;
   color: var(--color-gray-three);
 }
 
 .icon-button:hover {
   cursor: pointer;
   background-color: var(--color-dark-two);
+}
+
+.icon-button:disabled {
+  cursor: not-allowed;
 }

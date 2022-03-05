@@ -24,6 +24,7 @@ const EditControls = ({
   uploadMarkdown,
   downloadMarkdown,
   clearMarkdown,
+  isMarkdownEmpty,
 }) => {
   return (
     <div className="edit-controls">
@@ -108,7 +109,11 @@ const EditControls = ({
           <UploadIcon />
           <input type="file" title="" onChange={uploadMarkdown} />
         </button>
-        <IconButton icon={<DownloadIcon />} onClick={downloadMarkdown} />
+        <IconButton
+          {...{ disabled: isMarkdownEmpty }}
+          icon={<DownloadIcon />}
+          onClick={downloadMarkdown}
+        />
       </div>
     </div>
   );

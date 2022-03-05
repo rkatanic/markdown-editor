@@ -5,7 +5,9 @@
 
   --color-dark: hsl(var(--color-hue), 6%, 12%);
   --color-dark-two: hsl(var(--color-hue), 3%, 16%);
-  --color-light: hsl(var(--color-hue), 3%, 97.5%);
+  --color-dark-three: hsl(var(--color-hue), 3%, 32%);
+
+  --color-light: hsl(var(--color-hue), 3%, 98%);
 
   --color-primary: hsl(var(--color-hue), 98%, 60%);
   --color-primary-two: hsl(var(--color-hue), 98%, 94%);
@@ -14,6 +16,7 @@
   --color-gray: hsl(0, 0%, 80%);
   --color-gray-two: hsl(0, 0%, 94%);
   --color-gray-three: hsl(0, 0%, 90%);
+  --color-gray-four: hsl(0, 0%, 60%);
   --font: "Open Sans", sans-serif;
 
   --header-height: 3.25rem;
@@ -35,5 +38,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-dark-two);
+  background: var(--color-dark-three);
 }

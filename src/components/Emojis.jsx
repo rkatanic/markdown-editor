@@ -18,8 +18,8 @@ const Emojis = ({ insertEmoji }) => {
 
       {showList && (
         <div className="emoji-list">
-          {EMOJIS.map((emoji) => (
-            <span className="emoji" onClick={() => insertEmoji(emoji)}>
+          {EMOJIS.map((emoji, i) => (
+            <span key={i} className="emoji" onClick={() => insertEmoji(emoji)}>
               {emoji}
             </span>
           ))}

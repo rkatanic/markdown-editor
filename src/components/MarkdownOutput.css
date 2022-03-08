@@ -1,0 +1,98 @@
+.markdown-output {
+  border: 2px solid var(--color-gray-02);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.markdown-output-header {
+  height: var(--header-height);
+  background-color: var(--color-gray-01);
+  border-bottom: 2px solid var(--color-gray-02);
+  position: relative;
+}
+
+.markdown-output-header-txt {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: var(--color-gray-04);
+  font-size: 0.925rem;
+  bottom: -2px;
+  border: 2px solid var(--color-gray-02);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: var(--color-background);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.15);
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.2px 1rem;
+  background-color: var(--color-primary-03);
+  border-left: 5px solid var(--color-primary);
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-primary-02);
+}
+
+hr {
+  opacity: 0.15;
+  border-color: var(--color-gray-04);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 2px solid var(--color-gray-02);
+  padding: 6px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-gray-02);
+}
+
+tr {
+  background-color: var(--color-gray-01);
+}
+
+th {
+  padding: 8px;
+  text-align: left;
+  background-color: var(--color-background);
+  color: var(--color-white);
+  border: 2px solid var(--color-gray-01);
+}
+
+.markdown-editor-description {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.markdown-editor-description h3 {
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .markdown-output {
+    display: none;
+  }
+}

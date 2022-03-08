@@ -14,7 +14,9 @@ const Emojis = ({ insertEmoji }) => {
       onMouseEnter={() => setShowList(true)}
       onMouseLeave={() => setShowList(false)}
     >
-      <IconButton icon={<EmojiIcon />} />
+      <div className="emoji-button">
+        <IconButton icon={<EmojiIcon />} />
+      </div>
 
       {showList && (
         <div className="emoji-list">

@@ -1,0 +1,12 @@
+.markdown-editor {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--color-background);
+  height: 100vh;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.markdown-editor > div {
+  flex: 1;
+}

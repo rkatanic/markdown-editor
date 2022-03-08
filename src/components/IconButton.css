@@ -1,22 +1,23 @@
 .icon-button {
   display: flex;
-  padding-top: calc(var(--header-height) / 2 - 0.625rem);
   align-items: baseline;
   justify-content: center;
   outline: none;
   border: none;
   background-color: transparent;
-  width: var(--header-height);
-  height: var(--header-height);
   font-weight: 500;
   font-family: "Courier New", Courier, monospace;
-  font-size: 1.175rem;
-  color: var(--color-gray-three);
+  font-size: 1rem;
+  color: var(--color-text);
+  cursor: pointer;
 }
 
 .icon-button:hover {
-  cursor: pointer;
-  background-color: var(--color-dark-two);
+  color: var(--color-primary);
+}
+
+.icon-button:hover svg > path {
+  fill: var(--color-primary);
 }
 
 .icon-button:disabled {

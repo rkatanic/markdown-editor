@@ -1,0 +1,39 @@
+.markdown-output-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-gray-02);
+  background-color: var(--color-gray-01);
+  margin: 1rem;
+  height: calc(100% - 5.25rem);
+  border-radius: 8px;
+}
+
+.markdown-output-result {
+  padding: 0 1rem;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.markdown-output-desc {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.markdown-output-desc h3,
+.markdown-output-desc p {
+  margin: 0;
+}
+
+.markdown-output-desc p {
+  color: var(--color-gray-04);
+}
+
+.icon-markdown {
+  fill: var(--color-white);
+  width: 3rem !important;
+  height: 3rem !important;
+}

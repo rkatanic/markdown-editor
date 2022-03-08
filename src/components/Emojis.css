@@ -3,23 +3,30 @@
 }
 
 .emoji-list {
-  padding: 0.25rem;
-  background-color: var(--color-dark);
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  top: 3rem;
-  left: -8rem;
-  width: 20rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-gray-02);
+  background-color: var(--color-gray-01);
+  padding: 0.25rem;
   position: absolute;
-  border-radius: 4px;
-  box-shadow: 0 2px 7px var(--color-dark);
+  top: 3rem;
+  right: 0;
+  width: 20rem;
+  box-shadow: 0 2px 7px var(--color-background);
 }
 
 .emoji {
   padding: 0.25rem;
 }
 
+.emoji-button {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+}
+
 .emoji:hover {
   cursor: pointer;
-  background-color: var(--color-dark-two);
+  background-color: var(--color-gray-02);
 }

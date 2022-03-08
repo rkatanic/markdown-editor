@@ -1,23 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap");
 
 :root {
-  --color-hue: 200;
+  --hue: 160;
+  --color-background: hsl(0, 0%, 8%);
+  --color-gray-01: hsl(0, 0%, 9%);
+  --color-gray-02: hsl(0, 0%, 13%);
+  --color-gray-03: hsl(0, 0%, 22%);
+  --color-gray-04: hsl(0, 0%, 60%);
 
-  --color-dark: hsl(var(--color-hue), 6%, 12%);
-  --color-dark-two: hsl(var(--color-hue), 3%, 16%);
-  --color-dark-three: hsl(var(--color-hue), 3%, 32%);
+  --color-white: hsl(0, 0%, 90%);
+  --color-text: hsl(0, 0%, 82%);
+  --color-primary: hsl(var(--hue), 70%, 57%);
+  --color-primary-02: hsl(var(--hue), 60%, 70%);
+  --color-primary-03: hsla(var(--hue), 60%, 75%, 0.175);
 
-  --color-light: hsl(var(--color-hue), 3%, 98%);
-
-  --color-primary: hsl(var(--color-hue), 98%, 60%);
-  --color-primary-two: hsl(var(--color-hue), 98%, 94%);
-  --color-primary-three: hsl(var(--color-hue), 98%, 88%);
-
-  --color-gray: hsl(0, 0%, 80%);
-  --color-gray-two: hsl(0, 0%, 94%);
-  --color-gray-three: hsl(0, 0%, 90%);
-  --color-gray-four: hsl(0, 0%, 60%);
-  --font: "Open Sans", sans-serif;
+  --font: "Exo", sans-serif;
 
   --header-height: 3.25rem;
 }
@@ -31,12 +28,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font);
+  color: var(--color-white);
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-dark-three);
+  border-radius: 8px;
+  background: var(--color-gray-03);
 }

@@ -3,8 +3,10 @@ import { Controlled as CodeMirror2 } from "react-codemirror2";
 import CodeMirror from "codemirror";
 import MarkdownOutput from "./MarkdownOutput";
 import IconButton from "../components/IconButton";
+import Files from "./Files";
 import { ReactComponent as TrashIcon } from "../assets/icons/trash.svg";
 import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg";
+import { ReactComponent as FolderIcon } from "../assets/icons/folder.svg";
 
 import "codemirror/addon/mode/overlay";
 import "codemirror/mode/markdown/markdown";
@@ -42,7 +44,7 @@ CodeMirror.defineMode("customHighlights", (config) => {
 const MarkdownEditor = () => {
   const [markdown, setMarkdown] = useState("");
   const [activeTab, setActiveTab] = useState("editor");
-
+  const [showFiles, setShowFiles] = useState(false);
   useEffect(() => {
     import(`../text.md`)
       .then((res) => {
@@ -71,6 +73,7 @@ const MarkdownEditor = () => {
 
   return (
     <div className="markdown-editor">
+      <Files isOpen={showFiles} closeFiles={() => setShowFiles(false)} />
       <div className="header">
         <div className="tabs">
           <h5
@@ -91,6 +94,10 @@ const MarkdownEditor = () => {
           <IconButton
             icon={<DownloadIcon />}
             onClick={handleMarkdownDownload}
+          />
+          <IconButton
+            icon={<FolderIcon />}
+            onClick={() => setShowFiles((prevState) => !prevState)}
           />
         </div>
       </div>

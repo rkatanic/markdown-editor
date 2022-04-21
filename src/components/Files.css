@@ -1,0 +1,25 @@
+.files {
+    padding: 2rem;
+    width: 16rem;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    position: fixed;
+    background-color: var(--color-gray-800);
+    border-right: 1px solid var(--color-gray-600);
+    transition: left 0.5s;
+    z-index: 2;
+}
+
+.files-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.files-open {
+    left: 0;
+}
+
+.file-text {
+    color: var(--color-gray-100);
+}

@@ -1,12 +1,121 @@
 .markdown-editor {
-  display: flex;
-  gap: 1rem;
-  background-color: var(--color-background);
-  height: 100vh;
-  padding: 1rem;
-  overflow: hidden;
+  height: calc(100vh - 6rem);
+  max-width: 50rem;
+  margin: auto;
 }
 
-.markdown-editor > div {
-  flex: 1;
+.header {
+  padding: 2rem 0 1rem;
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.75rem;
+  background-color: var(--color-gray-900);
+  border-bottom: 2px solid var(--color-gray-500);
+}
+
+.tabs {
+  gap: 1rem;
+  display: flex;
+}
+
+.tab {
+  margin: 0;
+}
+
+.tab-active {
+  position: relative;
+}
+
+.tab-active::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: -1.125rem;
+  background-color: var(--color-primary-500);
+}
+
+.actions {
+  gap: 0.25rem;
+  display: flex;
+}
+
+.code-mirror {
+  margin-top: 6rem;
+}
+
+.code-mirror>div {
+  height: 100%;
+  background-color: transparent !important;
+  font-family: var(--font);
+  color: var(--color-white-two) !important;
+}
+
+.CodeMirror-selected {
+  background-color: var(--color-primary-500) !important;
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid var(--color-primary-500) !important;
+}
+
+.cm-hr {
+  color: var(--color-primary-500);
+}
+
+.cm-md-strong {
+  color: var(--color-gray-200) !important;
+}
+
+.cm-url {
+  color: var(--color-primary-500) !important;
+}
+
+.cm-header {
+  color: var(--color-white) !important;
+}
+
+.cm-header-1,
+h1 {
+  font-size: 4rem;
+}
+
+.cm-header-2,
+h2 {
+  font-size: 3rem;
+}
+
+.cm-header-3,
+h3 {
+  font-size: 2rem;
+}
+
+.cm-header-4,
+h4 {
+  font-size: 1.75rem;
+}
+
+.cm-header-5,
+h5 {
+  font-size: 1.5rem;
+}
+
+.cm-heading-6,
+h6 {
+  font-size: 1.25rem;
+}
+
+.cm-strong,
+.cm-em {
+  color: var(--color-white);
+}
+
+.cm-md-heading-prefix {
+  color: var(--color-gray-300) !important;
 }

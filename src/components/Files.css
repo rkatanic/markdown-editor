@@ -1,0 +1,73 @@
+.files {
+    width: 16rem;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    position: fixed;
+    background-color: var(--color-gray-800);
+    border-right: 1px solid var(--color-gray-500);
+    transition: left 0.5s;
+    z-index: 2;
+    overflow-y: auto;
+    box-shadow: 0px 0 24px hsl(0, 0%, 6%);
+}
+
+.files-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-gray-500);
+}
+
+.files-open {
+    left: 0;
+}
+
+.files-list {
+    padding: 1rem;
+}
+
+.files-button {
+    position: relative;
+}
+
+.files-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -0.5rem;
+    right: -0.25rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-primary-500);
+    color: var(--color-black);
+    font-size: 0.625rem;
+    font-weight: 600;
+    position: absolute;
+}
+
+.file {
+    color: var(--color-gray-100);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.file:not(:last-child) {
+    border-bottom: 1px solid var(--color-gray-500);
+}
+
+.file span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 9rem;
+    cursor: pointer;
+}
+
+.file-text {
+    color: var(--color-gray-100);
+}

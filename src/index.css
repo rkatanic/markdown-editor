@@ -1,22 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --hue: 160;
-  --color-background: hsl(0, 0%, 8%);
-  --color-gray-01: hsl(0, 0%, 9%);
-  --color-gray-02: hsl(0, 0%, 13%);
-  --color-gray-03: hsl(0, 0%, 22%);
-  --color-gray-04: hsl(0, 0%, 60%);
+  --color-hue: 42;
 
-  --color-white: hsl(0, 0%, 90%);
-  --color-text: hsl(0, 0%, 82%);
-  --color-primary: hsl(var(--hue), 70%, 57%);
-  --color-primary-02: hsl(var(--hue), 60%, 70%);
-  --color-primary-03: hsla(var(--hue), 60%, 75%, 0.175);
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 99%);
+  --color-white-two: hsl(0, 0%, 85%);
 
-  --font: "Exo", sans-serif;
+  --color-gray-900: hsl(0, 0%, 8%);
+  --color-gray-800: hsl(0, 0%, 9.5%);
+  --color-gray-700: hsl(0, 0%, 10%);
+  --color-gray-600: hsl(0, 0%, 12%);
+  --color-gray-500: hsl(0, 0%, 15%);
+  --color-gray-400: hsl(0, 0%, 17%);
+  --color-gray-300: hsl(0, 0%, 20%);
+  --color-gray-200: hsl(0, 0%, 30%);
+  --color-gray-100: hsl(0, 0%, 50%);
 
-  --header-height: 3.25rem;
+  --color-primary-500: hsl(var(--color-hue), 72%, 62%);
+  --color-primary-400: hsl(var(--color-hue), 72%, 72%);
+  --color-primary-300: hsl(var(--color-hue), 72%, 78%);
+
+  --font: "Urbanist", sans-serif;
 }
 
 * {
@@ -29,13 +34,50 @@ body {
   padding: 0;
   font-family: var(--font);
   color: var(--color-white);
+  background-color: var(--color-gray-900);
+  /*  background:
+    radial-gradient(var(--color-gray-700) 20%, transparent 10%);
+  background-color: var(--color-gray-900);
+  background-size: 10px 10px; */
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 10px;
+  background-color: var(--color-gray-700);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background: var(--color-gray-03);
+  background: var(--color-gray-500);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+p {
+  color: var(--color-white-two);
+}
+
+hr {
+  border-color: var(--color-gray-500);
+  border-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+strong,
+em {
+  color: var(--color-white);
 }

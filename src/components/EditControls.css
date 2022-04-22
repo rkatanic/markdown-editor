@@ -33,7 +33,6 @@
 .heading-options {
   padding: 0.5rem 0;
   display: none;
-  font-weight: 500;
   border-radius: 8px;
   border: 2px solid var(--color-gray-02);
   top: 3rem;

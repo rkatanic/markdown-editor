@@ -131,7 +131,7 @@ const Editor = ({ markdown, setMarkdown }) => {
               <IconButton
                 {...{ disabled: markdown.length <= 0 }}
                 icon={<DownloadIcon />}
-                downloadMarkdown={handleMarkdownDownload}
+                onClick={handleMarkdownDownload}
               />
               <button className="markdown-file-upload">
                 <UploadIcon />

@@ -1,12 +1,135 @@
 .markdown-editor {
-  display: flex;
-  gap: 1rem;
-  background-color: var(--color-background);
-  height: 100vh;
-  padding: 1rem;
-  overflow: hidden;
+  height: calc(100vh - 10rem);
+  max-width: 50rem;
+  margin: auto;
 }
 
-.markdown-editor > div {
-  flex: 1;
+.header {
+  box-shadow: 0 4px 8px hsl(0, 0%, 7%);
+  border-radius: 8px;
+  margin: 4rem 0 0;
+  padding: 1rem 2rem;
+  max-width: 50rem;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-500);
+}
+
+.header .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.tabs {
+  gap: 1rem;
+  display: flex;
+}
+
+.tab {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  color: var(--color-gray-200);
+}
+
+.tab-active {
+  color: var(--color-white);
+}
+
+.tab-active::before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  bottom: -1.125rem;
+  background-color: var(--color-primary-500);
+}
+
+.actions {
+  gap: 0.5rem;
+  display: flex;
+}
+
+.code-mirror {
+  margin-top: 10rem;
+}
+
+.code-mirror>div {
+  height: 100%;
+  background-color: transparent !important;
+  font-family: var(--font);
+  color: var(--color-white-two) !important;
+}
+
+.CodeMirror-selected {
+  background-color: var(--color-gray-400) !important;
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid var(--color-primary-500) !important;
+}
+
+.cm-hr {
+  color: var(--color-primary-500);
+}
+
+.cm-md-strong {
+  color: var(--color-gray-200) !important;
+}
+
+.cm-url {
+  color: var(--color-primary-500) !important;
+}
+
+.cm-header {
+  color: var(--color-white) !important;
+}
+
+.cm-header-1,
+h1 {
+  font-size: 4rem;
+}
+
+.cm-header-2,
+h2 {
+  font-size: 3rem;
+}
+
+.cm-header-3,
+h3 {
+  font-size: 2rem;
+}
+
+.cm-header-4,
+h4 {
+  font-size: 1.75rem;
+}
+
+.cm-header-5,
+h5 {
+  font-size: 1.5rem;
+}
+
+.cm-heading-6,
+h6 {
+  font-size: 1.25rem;
+}
+
+.cm-strong,
+.cm-em {
+  color: var(--color-white);
+}
+
+.cm-md-heading-prefix {
+  color: var(--color-gray-300) !important;
 }

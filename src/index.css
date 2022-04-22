@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color-hue: 0;
+  --color-hue: 42;
 
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(0, 0%, 99%);
@@ -10,18 +10,18 @@
   --color-gray-900: hsl(0, 0%, 8%);
   --color-gray-800: hsl(0, 0%, 9.5%);
   --color-gray-700: hsl(0, 0%, 10%);
-  --color-gray-600: hsl(0, 0%, 15%);
-  --color-gray-500: hsl(0, 0%, 17%);
-  --color-gray-400: hsl(0, 0%, 20%);
-  --color-gray-300: hsl(0, 0%, 25%);
+  --color-gray-600: hsl(0, 0%, 12%);
+  --color-gray-500: hsl(0, 0%, 15%);
+  --color-gray-400: hsl(0, 0%, 17%);
+  --color-gray-300: hsl(0, 0%, 20%);
   --color-gray-200: hsl(0, 0%, 30%);
   --color-gray-100: hsl(0, 0%, 50%);
 
   --color-primary-500: hsl(var(--color-hue), 72%, 62%);
   --color-primary-400: hsl(var(--color-hue), 72%, 72%);
-  --color-primary-300: hsl(var(--color-hue), 72%, 82%);
+  --color-primary-300: hsl(var(--color-hue), 72%, 78%);
 
-  --font: "Space Grotesk", sans-serif;
+  --font: "Urbanist", sans-serif;
 }
 
 * {
@@ -35,10 +35,10 @@ body {
   font-family: var(--font);
   color: var(--color-white);
   background-color: var(--color-gray-900);
-  background:
+  /*  background:
     radial-gradient(var(--color-gray-700) 20%, transparent 10%);
   background-color: var(--color-gray-900);
-  background-size: 10px 10px;
+  background-size: 10px 10px; */
 }
 
 ::-webkit-scrollbar {

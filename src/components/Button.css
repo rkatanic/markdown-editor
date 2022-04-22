@@ -1,0 +1,32 @@
+.button {
+    font-family: var(--font);
+    font-size: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button-primary {
+    background-color: var(--color-primary-500);
+    border: 1px solid var(--color-primary-400);
+    box-shadow: 0 2px 4px hsl(0, 0%, 0%);
+}
+
+.button-outline {
+    color: var(--color-white);
+    background-color: transparent;
+    border: 1px solid var(--color-white);
+}
+
+.button-ghost {
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: transparent;
+}

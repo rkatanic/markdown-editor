@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
 :root {
   --color-hue: 42;
 
   --color-black: hsl(0, 0%, 0%);
+  --color-black-two: hsl(0, 0%, 5%);
+  --color-black-three: hsl(0, 0%, 7%);
   --color-white: hsl(0, 0%, 99%);
   --color-white-two: hsl(0, 0%, 85%);
 
-  --color-gray-900: hsl(0, 0%, 8%);
-  --color-gray-800: hsl(0, 0%, 9.5%);
+  --color-gray-900: hsl(0, 0%, 8.25%);
+  --color-gray-800: hsl(0, 0%, 9%);
   --color-gray-700: hsl(0, 0%, 10%);
   --color-gray-600: hsl(0, 0%, 12%);
   --color-gray-500: hsl(0, 0%, 15%);
@@ -21,7 +23,7 @@
   --color-primary-400: hsl(var(--color-hue), 72%, 72%);
   --color-primary-300: hsl(var(--color-hue), 72%, 78%);
 
-  --font: "Urbanist", sans-serif;
+  --font: "Nunito", sans-serif;
 }
 
 * {
@@ -34,16 +36,15 @@ body {
   padding: 0;
   font-family: var(--font);
   color: var(--color-white);
-  background-color: var(--color-gray-900);
-  /*  background:
-    radial-gradient(var(--color-gray-700) 20%, transparent 10%);
-  background-color: var(--color-gray-900);
-  background-size: 10px 10px; */
+  background:
+    radial-gradient(var(--color-gray-800) 20%, transparent 10%);
+  background-color: var(--color-black-three);
+  background-size: 10px 10px;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--color-gray-700);
+  background-color: var(--color-gray-800);
 }
 
 ::-webkit-scrollbar-track {
@@ -51,12 +52,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gray-500);
+  background: var(--color-gray-600);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gray-400);
+  background: var(--color-gray-500);
 }
 
 p {
@@ -64,8 +65,9 @@ p {
 }
 
 hr {
+  width: 100%;
   border-color: var(--color-gray-500);
-  border-top: 0;
+  border-top: 1px solid var(--color-black-two);
 }
 
 h1,

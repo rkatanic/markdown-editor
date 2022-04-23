@@ -3,10 +3,14 @@ import { Controlled as CodeMirror2 } from "react-codemirror2";
 
 import MarkdownOutput from "./MarkdownOutput";
 import IconButton from "../components/IconButton";
-import Files from "./Files";
+import FileSave from "./FileSave";
 import { ReactComponent as TrashIcon } from "../assets/icons/trash.svg";
 import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg";
-import FileSave from "./FileSave";
+import { ReactComponent as CloseIcon } from "../assets/icons/x.svg";
+import { ReactComponent as DeleteIcon } from "../assets/icons/x-circle.svg";
+import { ReactComponent as PencilIcon } from "../assets/icons/pencil.svg";
+import { ReactComponent as EyeIcon } from "../assets/icons/eye.svg";
+import { ReactComponent as FolderIcon } from "../assets/icons/folder.svg";
 
 import "../util/CodeMirrorOvelay";
 import "codemirror/addon/mode/overlay";
@@ -19,6 +23,7 @@ import "codemirror/theme/material.css";
 import "codemirror/lib/codemirror.css";
 
 import "./MarkdownEditor.css";
+import "./Files.css";
 
 const MarkdownEditor = () => {
   const [files, setFiles] = useState([]);
@@ -27,6 +32,7 @@ const MarkdownEditor = () => {
     markdown: "",
   });
   const [activeTab, setActiveTab] = useState("editor");
+  const [showFiles, setShowFiles] = useState(true);
 
   useEffect(() => {
     const savedFiles = handleReadSavedFilesFromLocalStorage();
@@ -118,21 +124,34 @@ const MarkdownEditor = () => {
   return (
     <div className="markdown-editor">
       <div className="header">
+        <span className="logo">rk</span>
+        <hr />
         <div className="tabs">
           <h5
             className={`tab ${activeTab === "editor" ? "tab-active" : ""}`}
             onClick={() => setActiveTab("editor")}
           >
-            Editor
+            <IconButton icon={<PencilIcon />} tooltip="Editor" />
           </h5>
           <h5
             className={`tab ${activeTab === "preview" ? "tab-active" : ""}`}
             onClick={() => setActiveTab("preview")}
           >
-            Preview
+            <IconButton icon={<EyeIcon />} tooltip="Preview" />
           </h5>
         </div>
+        <hr />
         <div className="actions">
+          <div className="files-button">
+            {files.length > 0 && (
+              <div className="files-amount">{files.length}</div>
+            )}
+            <IconButton
+              icon={<FolderIcon />}
+              onClick={() => setShowFiles((prevState) => !prevState)}
+              tooltip={`${showFiles ? "Hide" : "Show"} files`}
+            />
+          </div>
           <FileSave
             changeFileName={handleFileNameChange}
             saveFile={handleFileSave}
@@ -141,40 +160,83 @@ const MarkdownEditor = () => {
           <IconButton
             icon={<DownloadIcon />}
             onClick={handleMarkdownDownload}
-          />
-          <Files
-            files={files}
-            selectFile={handleFileSelect}
-            deleteFile={handleFileDelete}
+            tooltip="Download"
           />
           <IconButton
-            icon={<TrashIcon />}
+            icon={<DeleteIcon />}
             onClick={() => setCurrentFile({ ...currentFile, markdown: "" })}
+            tooltip="Clear"
           />
         </div>
       </div>
-      {activeTab === "editor" ? (
-        <CodeMirror2
-          className="code-mirror"
-          options={{
-            placeholder: "Begin typing...",
-            mode: { name: "customHighlights" },
-            highlightFormatting: true,
-            theme: "material",
-            lineWrapping: true,
-            highlightActiveLine: true,
-          }}
-          value={currentFile.markdown}
-          onChange={(editor, data, value) =>
-            setCurrentFile({ ...currentFile, markdown: value })
-          }
-          onBeforeChange={(editor, data, value) => {
-            setCurrentFile({ ...currentFile, markdown: value });
-          }}
-        />
-      ) : (
-        <MarkdownOutput markdown={currentFile.markdown} />
-      )}
+      <div className={`files ${showFiles ? "files-open" : ""}`}>
+        <h5 className="files-header">
+          Files
+          <IconButton
+            icon={<CloseIcon />}
+            onClick={() => setShowFiles(false)}
+          />
+        </h5>
+        <hr />
+        <div className="files-list">
+          {files.length ? (
+            files.map((file, i) => (
+              <div
+                className={`file ${
+                  file.name === currentFile.name ? "file-active" : ""
+                }`}
+                key={i}
+              >
+                <div className="file-header">
+                  <span
+                    className="file-name"
+                    onClick={() => handleFileSelect(file.name)}
+                  >
+                    {file.name}
+                  </span>
+                  <IconButton
+                    icon={<TrashIcon />}
+                    onClick={() => handleFileDelete(file.name)}
+                    size="small"
+                  />
+                </div>
+                <div
+                  className="file-content"
+                  onClick={() => handleFileSelect(file.name)}
+                >
+                  {file.markdown}
+                </div>
+              </div>
+            ))
+          ) : (
+            <span className="file-text">No files saved</span>
+          )}
+        </div>
+      </div>
+      <div className="output">
+        {activeTab === "editor" ? (
+          <CodeMirror2
+            className="code-mirror"
+            options={{
+              placeholder: "Start typing",
+              mode: { name: "customHighlights" },
+              highlightFormatting: true,
+              theme: "material",
+              lineWrapping: true,
+              highlightActiveLine: true,
+            }}
+            value={currentFile.markdown}
+            onChange={(editor, data, value) =>
+              setCurrentFile({ ...currentFile, markdown: value })
+            }
+            onBeforeChange={(editor, data, value) => {
+              setCurrentFile({ ...currentFile, markdown: value });
+            }}
+          />
+        ) : (
+          <MarkdownOutput markdown={currentFile.markdown} />
+        )}
+      </div>
     </div>
   );
 };

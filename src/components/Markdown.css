@@ -1,8 +1,9 @@
 .markdown-output-container {
   display: flex;
   flex-direction: column;
-  margin: 10rem 0 0;
+  margin: 4rem 0 0;
   border-radius: 8px;
+  overflow-wrap: break-word;
 }
 
 .markdown-output-result {

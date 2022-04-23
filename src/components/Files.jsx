@@ -18,31 +18,6 @@ const Files = ({ files, selectFile, deleteFile }) => {
           onClick={() => setShowFiles((prevState) => !prevState)}
         />
       </div>
-
-      <div className={`files ${showFiles ? "files-open" : ""}`}>
-        <h5 className="files-header">
-          Files
-          <IconButton
-            icon={<CloseIcon />}
-            onClick={() => setShowFiles(false)}
-          />
-        </h5>
-        <div className="files-list">
-          {files.length ? (
-            files.map((file, i) => (
-              <div className="file" key={i}>
-                <span onClick={() => selectFile(file.name)}>{file.name}</span>
-                <IconButton
-                  icon={<DeleteIcon />}
-                  onClick={() => deleteFile(file.name)}
-                />
-              </div>
-            ))
-          ) : (
-            <span className="file-text">No files</span>
-          )}
-        </div>
-      </div>
     </>
   );
 };

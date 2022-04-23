@@ -1,25 +1,75 @@
 .icon-button {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   outline: none;
   border: none;
   background-color: transparent;
   font-weight: 500;
-  font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
   color: var(--color-text);
   cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  position: relative;
 }
 
 .icon-button:hover {
-  color: var(--color-primary);
+  background-color: var(--color-gray-600);
 }
 
-.icon-button:hover svg > path {
+.icon-button:hover svg>path {
   fill: var(--color-primary);
 }
 
 .icon-button:disabled {
   cursor: not-allowed;
+}
+
+.icon-button:hover .icon-button-tooltip {
+  display: initial;
+}
+
+.icon-button-small .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-button-tooltip {
+  font-family: var(--font);
+  font-size: 0.875rem;
+  color: var(--color-white-two);
+  position: absolute;
+  content: "";
+  padding: 0.35rem 1rem;
+  left: calc(100% + 0.75rem);
+  top: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-gray-500);
+  background-color: var(--color-gray-800);
+  box-shadow: 0 4px 8px hsl(0, 0%, 6%);
+  white-space: nowrap;
+  display: none;
+}
+
+.icon-button-tooltip::before {
+  top: 7px;
+  left: -8px;
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 14px;
+  background-color: var(--color-gray-500);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
+
+.icon-button-tooltip::after {
+  top: 8px;
+  left: -6px;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 12px;
+  background-color: var(--color-gray-800);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
 }

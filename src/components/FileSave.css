@@ -3,8 +3,8 @@
 }
 
 .file-save-dialog {
-    right: -0.25rem;
-    top: 2.125rem;
+    left: 3rem;
+    top: -0.5rem;
     border-radius: 6px;
     position: absolute;
     border: 1px solid var(--color-gray-500);
@@ -13,18 +13,29 @@
 }
 
 .file-save-dialog::before {
-    top: -0.5rem;
-    right: 0.875rem;
+    top: 1rem;
+    left: -10px;
     position: absolute;
     content: "";
-    width: 0.75rem;
-    height: 0.5rem;
+    width: 10px;
+    height: 20px;
     background-color: var(--color-gray-500);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
+
+.file-save-dialog::after {
+    top: 17px;
+    left: -8px;
+    position: absolute;
+    content: "";
+    width: calc(10px - 2px);
+    height: calc(20px - 2px);
+    background-color: var(--color-gray-800);
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
 }
 
 .file-save-dialog-header {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,6 +63,7 @@
     background-color: hsl(0, 0%, 7%);
     margin: 1rem 1rem 1.25rem;
     font-family: var(--font);
+    caret-color: var(--color-primary-500);
 }
 
 .file-name-error {
@@ -65,6 +77,7 @@
 
 .file-save-dialog-buttons {
     display: flex;
+    gap: 0.25rem;
     padding: 1rem;
     border-top: 1px solid var(--color-gray-500);
 }

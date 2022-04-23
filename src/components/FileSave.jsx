@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import IconButton from "./IconButton";
 import { ReactComponent as SaveIcon } from "../assets/icons/save.svg";
@@ -7,6 +7,7 @@ import { ReactComponent as CloseIcon } from "../assets/icons/x.svg";
 import "./FileSave.css";
 
 const FileSave = ({ saveFile, fileName, changeFileName }) => {
+  const dialog = useRef();
   const [state, setState] = useState({
     showDialog: false,
     error: "",
@@ -29,13 +30,26 @@ const FileSave = ({ saveFile, fileName, changeFileName }) => {
     setState({ showDialog: false, error: "" });
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dialog.current && !dialog.current.contains(event.target)) {
+        setState({ showDialog: false, error: "" });
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="file-save">
+    <div className="file-save" ref={dialog}>
       <IconButton
         icon={<SaveIcon />}
         onClick={() =>
           setState({ ...state, showDialog: !state.showDialog, error: "" })
         }
+        tooltip="Save file"
       />
       {state.showDialog && (
         <div className="file-save-dialog">

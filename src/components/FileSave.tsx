@@ -1,4 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  ChangeEvent,
+  EffectCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Button from "./Button";
 import IconButton from "./IconButton";
 import { ReactComponent as SaveIcon } from "../assets/icons/save.svg";
@@ -6,14 +12,24 @@ import { ReactComponent as CloseIcon } from "../assets/icons/x.svg";
 
 import "./FileSave.css";
 
-const FileSave = ({ saveFile, fileName, changeFileName }) => {
-  const dialog = useRef();
-  const [state, setState] = useState({
+interface Props {
+  fileName: string;
+  saveFile: () => void;
+  changeFileName: (fileName: string) => void;
+}
+
+const FileSave = ({
+  saveFile,
+  fileName,
+  changeFileName,
+}: Props): JSX.Element => {
+  const dialog = useRef<any>();
+  const [state, setState] = useState<{ showDialog: boolean; error: string }>({
     showDialog: false,
     error: "",
   });
 
-  const handleValidation = (event) => {
+  const handleValidation = (event: ChangeEvent<HTMLInputElement>): void => {
     changeFileName(event.target.value);
     if (!event.target.value) {
       setState({
@@ -25,13 +41,13 @@ const FileSave = ({ saveFile, fileName, changeFileName }) => {
     }
   };
 
-  const handleFileSave = () => {
+  const handleFileSave = (): void => {
     saveFile();
     setState({ showDialog: false, error: "" });
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
+  useEffect((): ReturnType<EffectCallback> => {
+    const handleClickOutside = (event: Event): void => {
       if (dialog.current && !dialog.current.contains(event.target)) {
         setState({ showDialog: false, error: "" });
       }
@@ -39,7 +55,8 @@ const FileSave = ({ saveFile, fileName, changeFileName }) => {
 
     document.addEventListener("mousedown", handleClickOutside);
 
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return (): void =>
+      document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -57,9 +74,10 @@ const FileSave = ({ saveFile, fileName, changeFileName }) => {
             <div>Name your file</div>
             <IconButton
               icon={<CloseIcon />}
-              onClick={() => setState({ showDialog: false, erorr: "" })}
+              onClick={() => setState({ showDialog: false, error: "" })}
             />
           </div>
+          <hr />
           <div className="file-name-input">
             <input
               placeholder="File name"
@@ -72,16 +90,16 @@ const FileSave = ({ saveFile, fileName, changeFileName }) => {
               <span className="file-name-error">{state.error}</span>
             )}
           </div>
+          <hr />
           <div className="file-save-dialog-buttons">
             <Button
               disabled={!fileName}
               label="Save"
-              variant="primary"
               onClick={handleFileSave}
             />
             <Button
               label="Cancel"
-              variant="ghost"
+              variant="secondary"
               onClick={() => setState({ showDialog: false, error: "" })}
             />
           </div>

@@ -1,104 +1,74 @@
-.editor {
-  border: 2px solid var(--color-gray-02);
-  border-radius: 8px;
-  overflow: hidden;
+.code-mirror {
+  margin-top: 4rem;
+  position: relative;
 }
 
-.editor-input-container {
-  padding: 1rem;
+.code-mirror>div {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  background-color: transparent !important;
+  font-family: var(--font);
+  color: var(--color-white-two) !important;
 }
 
-.editor-input {
-  caret-color: var(--color-primary);
-  border-radius: 8px 8px 0 0;
-  color: var(--color-text);
-  border: 2px solid var(--color-gray-02);
-  background-color: var(--color-gray-01);
-  padding: 1rem;
-  outline: none;
-  resize: none;
-  width: 100%;
-  height: calc(100% - 5.25rem);
+.CodeMirror-selected {
+  background-color: var(--color-gray-400) !important;
 }
 
-.editor-input-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid var(--color-gray-02);
-  border-radius: 0 0 8px 8px;
-  font-size: 0.825rem;
-  padding: 0.125rem 0.5rem;
-  color: var(--color-gray-04);
-  background-color: var(--color-gray-02);
+.CodeMirror-cursor {
+  border-left: 2px solid var(--color-primary-500) !important;
 }
 
-.markdown-length {
+.cm-hr {
+  color: var(--color-primary-500);
+}
+
+.cm-md-strong {
+  color: var(--color-gray-200) !important;
+}
+
+.cm-url {
+  color: var(--color-primary-500) !important;
+}
+
+.cm-header {
+  color: var(--color-white) !important;
+}
+
+.cm-header-1,
+h1 {
+  font-size: 4rem;
+}
+
+.cm-header-2,
+h2 {
+  font-size: 3rem;
+}
+
+.cm-header-3,
+h3 {
+  font-size: 2rem;
+}
+
+.cm-header-4,
+h4 {
+  font-size: 1.75rem;
+}
+
+.cm-header-5,
+h5 {
+  font-size: 1.5rem;
+}
+
+.cm-heading-6,
+h6 {
+  font-size: 1.25rem;
+}
+
+.cm-strong,
+.cm-em {
   color: var(--color-white);
 }
 
-.markdown-options {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.markdown-file-upload {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  position: relative;
-}
-
-.markdown-file-upload:hover svg > path {
-  fill: var(--color-primary);
-}
-
-.markdown-file-upload input {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.editor-header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--color-gray-01);
-  height: var(--header-height);
-  border-bottom: 2px solid var(--color-gray-02);
-}
-
-.editor-header-pages {
-  display: flex;
-  margin-left: 1rem;
-}
-
-.editor-header-page-txt {
-  font-size: 0.925rem;
-  color: var(--color-gray-04);
-  border-radius: 8px 8px 0 0;
-  padding: 0.5rem 1rem;
-  align-self: flex-end;
-  margin-bottom: -2px;
-  border: 2px solid transparent;
-  border-bottom: 0;
-}
-
-.editor-header-page-txt-active {
-  border: 2px solid var(--color-gray-02);
-  border-bottom: 0;
-  background-color: var(--color-background);
-}
-
-@media screen and (min-width: 1201px) {
-  .editor-header-page-txt:nth-child(2) {
-    display: none;
-  }
+.cm-md-heading-prefix {
+  color: var(--color-gray-300) !important;
 }

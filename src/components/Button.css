@@ -3,9 +3,9 @@
     font-size: 1rem;
     border: 1px solid transparent;
     outline: none;
-    padding: 0.25rem 1rem;
+    padding: 0.175rem 1rem;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-black);
     cursor: pointer;
 }
@@ -15,24 +15,36 @@
 }
 
 .button-primary {
-    background-color: var(--color-primary-500);
-    border: 1px solid var(--color-primary-400);
-    box-shadow: 0 2px 4px hsl(0, 0%, 0%);
+    color: var(--color-black);
+    font-weight: 700;
+    background: linear-gradient(var(--color-primary-400), var(--color-primary-700));
+    border: 1px solid var(--color-primary-600);
+    box-shadow: 0 1px 4px var(--color-gray-900);
 }
 
-.button-outline {
+.button-primary:hover {
+    background: linear-gradient(var(--color-primary-500), var(--color-primary-800));
+}
+
+.button-secondary {
     color: var(--color-white);
-    background-color: transparent;
-    border: 1px solid var(--color-white);
+    background: linear-gradient(var(--color-gray-400), var(--color-gray-600));
+    border: 1px solid var(--color-gray-500);
+    box-shadow: 0 1px 4px var(--color-gray-900);
+}
+
+.button-secondary:hover {
+    background: linear-gradient(var(--color-gray-500), var(--color-gray-700));
 }
 
 .button-ghost {
     font-weight: 500;
     color: var(--color-white);
     background-color: transparent;
+
 }
 
 .button-ghost:hover {
-
+    border: 1px solid var(--color-gray-600);
     background-color: var(--color-gray-600);
 }

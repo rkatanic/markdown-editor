@@ -1,9 +1,15 @@
 import "./IconButton.css";
 
-const IconButton = ({ icon, onClick, tooltip, size = "medium", ...props }) => {
+interface Props {
+  icon: JSX.Element;
+  onClick?: () => void;
+  tooltip?: string;
+  size?: "small" | "medium";
+}
+
+const IconButton = ({ icon, onClick, tooltip, size = "medium" }: Props) => {
   return (
     <button
-      {...props}
       className={`icon-button icon-button-${size}`}
       type="button"
       onClick={onClick}

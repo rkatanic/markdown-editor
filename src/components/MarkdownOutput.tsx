@@ -3,11 +3,15 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import "./Markdown.css";
+import "./MarkdownOutput.css";
 
-const Markdown = ({ markdown }) => {
+interface Props {
+  markdown: string;
+}
+
+const MarkdownOutput = ({ markdown }: Props): JSX.Element => {
   return (
-    <div className="markdown-output-container">
+    <div className="markdown-output">
       <ReactMarkdown
         className="markdown-output-result"
         children={markdown}
@@ -35,4 +39,4 @@ const Markdown = ({ markdown }) => {
   );
 };
 
-export default Markdown;
+export default MarkdownOutput;

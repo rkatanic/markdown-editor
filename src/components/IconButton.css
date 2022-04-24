@@ -46,14 +46,14 @@
   top: 0.25rem;
   border-radius: 4px;
   border: 1px solid var(--color-gray-500);
-  background-color: var(--color-gray-800);
+  background-color: var(--color-gray-700);
   box-shadow: 0 4px 8px hsl(0, 0%, 6%);
   white-space: nowrap;
   display: none;
 }
 
 .icon-button-tooltip::before {
-  top: 7px;
+  top: 8px;
   left: -8px;
   position: absolute;
   content: "";
@@ -64,12 +64,12 @@
 }
 
 .icon-button-tooltip::after {
-  top: 8px;
+  top: 9px;
   left: -6px;
   position: absolute;
   content: "";
   width: 6px;
   height: 12px;
-  background-color: var(--color-gray-800);
+  background-color: var(--color-gray-700);
   clip-path: polygon(0 50%, 100% 100%, 100% 0);
 }

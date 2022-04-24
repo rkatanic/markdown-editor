@@ -1,14 +1,13 @@
 .files {
-    width: 24rem;
+    width: 20rem;
     height: 100vh;
     top: 0;
     left: -100%;
-    background-color: var(--color-gray-900);
+    background-color: var(--color-gray-800);
     border-right: 1px solid var(--color-gray-500);
     transition: left 0.5s;
     box-shadow: -1px 0 0px var(--color-black-two) inset;
-    padding: 0 1.25rem;
-    margin-left: -24rem;
+    margin-left: -20rem;
     transition: margin-left 0.35s;
     overflow-y: auto;
 }
@@ -20,18 +19,18 @@
 .files-header {
     font-size: 1.25rem;
     font-weight: 600;
-    margin: 1.5rem 0 1.45rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 0 1.25rem;
+}
+
+.files-header-content {
+    padding: 1.25rem 1.25rem 0;
 }
 
 .files-open {
     left: 0;
-}
-
-.files-list {
-    padding: 1rem 0;
 }
 
 .files-button {
@@ -57,8 +56,8 @@
 
 .file {
     color: var(--color-gray-100);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 1.25rem 1.25rem 0;
+    border-left: 2px solid transparent;
 }
 
 .file-header {
@@ -68,7 +67,8 @@
 }
 
 .file-active {
-    background-color: var(--color-gray-700);
+    background: linear-gradient(90deg, hsla(var(--color-hue), 72%, 82%, 0.05), transparent);
+    border-left: 2px solid var(--color-primary-500);
 }
 
 .file-active .file-name {
@@ -91,16 +91,17 @@
 }
 
 .file-content {
-    min-height: 2rem;
+    height: 3rem;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
+    margin: 0.5rem 0 1.25rem;
+    font-size: 0.75rem;
     cursor: pointer;
 }
 
 .file-text {
     color: var(--color-gray-100);
+    margin: 1.25rem;
 }

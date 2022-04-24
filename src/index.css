@@ -19,9 +19,12 @@
   --color-gray-200: hsl(0, 0%, 30%);
   --color-gray-100: hsl(0, 0%, 50%);
 
-  --color-primary-500: hsl(var(--color-hue), 72%, 62%);
-  --color-primary-400: hsl(var(--color-hue), 72%, 72%);
-  --color-primary-300: hsl(var(--color-hue), 72%, 78%);
+  --color-primary-800: hsl(var(--color-hue), 65%, 38%);
+  --color-primary-700: hsl(var(--color-hue), 65%, 42%);
+  --color-primary-600: hsl(var(--color-hue), 65%, 52%);
+  --color-primary-500: hsl(var(--color-hue), 65%, 62%);
+  --color-primary-400: hsl(var(--color-hue), 65%, 72%);
+  --color-primary-300: hsl(var(--color-hue), 65%, 78%);
 
   --font: "Nunito", sans-serif;
 }
@@ -68,6 +71,7 @@ hr {
   width: 100%;
   border-color: var(--color-gray-500);
   border-top: 1px solid var(--color-black-two);
+  margin: 0;
 }
 
 h1,

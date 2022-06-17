@@ -2,86 +2,60 @@
     position: relative;
 }
 
-.file-save-dialog hr {
-    border-top: 1px solid var(--color-gray-900);
-}
-
 .file-save-dialog {
-    left: 3rem;
-    top: -0.5rem;
-    border-radius: 6px;
+    border-radius: 2px;
+    left: 3.25rem;
+    top: -0.25rem;
     position: absolute;
-    border: 1px solid var(--color-gray-500);
+    gap: 0.5rem;
     background-color: var(--color-gray-700);
-    box-shadow: 0 10px 16px var(--color-black-three), 0 0 1px var(--color-black-two) inset;
-}
-
-.file-save-dialog::before {
-    z-index: 1;
-    top: 1rem;
-    left: -9px;
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 20px;
-    background-color: var(--color-gray-500);
-    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    padding: 0.25rem 1rem 1rem;
+    box-shadow: 0 4px 8px var(--color-gray-900);
 }
 
 .file-save-dialog::after {
-    z-index: 2111;
     top: 17px;
-    left: -7px;
+    left: -8px;
     position: absolute;
     content: "";
-    width: calc(10px - 2px);
-    height: calc(20px - 2px);
+    width: 8px;
+    height: 16px;
     background-color: var(--color-gray-700);
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
 }
 
 .file-save-dialog-header {
-    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.875rem;
 }
 
-.file-save-dialog-header .icon {
-    width: 1.25rem;
-    height: 1.25rem;
+.file-save-dialog-button {
+    float: right;
 }
 
-
-.file-name-input {
-    position: relative;
-    margin: 0 0 0.5rem;
+.file-save-dialog-input-wrapper {
+    margin: 0.5rem 0 1rem;
 }
 
-.file-name-input-field {
+.file-save-dialog-input-field {
     color: var(--color-white);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    padding: 0.625rem 1rem;
+    border-radius: 1px;
     outline: none;
-    border: none;
-    background-color: var(--color-black-three);
-    margin: 1rem 1rem 1.25rem;
+    border: 0;
+    background-color: var(--color-gray-800);
     font-family: var(--font);
     caret-color: var(--color-primary-500);
+    font-size: 0.875rem;
 }
 
-.file-name-error {
-    bottom: 0;
-    left: 1.25rem;
+.file-save-dialog-input-error {
+    margin-top: 0.5rem;
+    display: block;
     white-space: nowrap;
-    position: absolute;
     font-size: 0.75rem;
-    color: var(--color-primary-500);
-}
-
-.file-save-dialog-buttons {
-    display: flex;
-    gap: 0.5rem;
-    padding: 1rem;
+    color: var(--color-primary-800);
 }

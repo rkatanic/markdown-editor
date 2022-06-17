@@ -8,29 +8,26 @@ import "./Files.css";
 interface Props {
   files: MarkdownFile[];
   currentFile: MarkdownFile;
-  showFiles: boolean;
-  closeFiles: () => void;
   selectFile: (fileName: string) => void;
   deleteFile: (fileName: string) => void;
+  closeSidenav: () => void;
 }
 
 const Files = ({
   files,
   currentFile,
-  showFiles,
-  closeFiles,
   selectFile,
   deleteFile,
+  closeSidenav,
 }: Props): JSX.Element => {
   return (
-    <div className={`files ${showFiles ? "files-open" : ""}`}>
-      <div className="files-header-content">
-        <h5 className="files-header">
-          Files
-          <IconButton icon={<CloseIcon />} onClick={closeFiles} />
-        </h5>
-        <hr />
-      </div>
+    <div className="files">
+      <h5 className="files-header">
+        Files {files.length > 0 && `(${files.length})`}
+        <div className="files-close">
+          <IconButton icon={<CloseIcon />} onClick={closeSidenav} />
+        </div>
+      </h5>
       <div className="files-list">
         {files.length ? (
           files.map(({ name, markdown }) => (
@@ -53,7 +50,6 @@ const Files = ({
               <div className="file-content" onClick={() => selectFile(name)}>
                 {markdown}
               </div>
-              <hr />
             </div>
           ))
         ) : (

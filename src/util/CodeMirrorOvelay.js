@@ -3,7 +3,7 @@ import CodeMirror from "codemirror";
 CodeMirror.defineMode("customHighlights", (config) => {
   const overlay = {
     token: (stream) => {
-      if (stream.match(/\*/)) {
+      if (stream.match(/\*/) || stream.match(/\_/) || stream.match(/\-/)) {
         return "md-strong";
       }
       if (stream.match(/#/)) {

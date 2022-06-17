@@ -7,7 +7,7 @@ import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg";
 import { ReactComponent as DeleteIcon } from "../assets/icons/x-circle.svg";
 import { ReactComponent as PencilIcon } from "../assets/icons/pencil.svg";
 import { ReactComponent as EyeIcon } from "../assets/icons/eye.svg";
-import { ReactComponent as FolderIcon } from "../assets/icons/folder.svg";
+import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
 
 import "./Sidenav.css";
 
@@ -36,13 +36,24 @@ const Sidenav = ({
   saveFile,
   downloadFile,
 }: Props): JSX.Element => {
-  const [showFiles, setShowFiles] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+
+  const handleNavigationOpen = (): void => {
+    setShowNav(true);
+  };
+
+  const handleNavigationClose = (): void => {
+    setShowNav(false);
+  };
 
   return (
-    <div className="sidenav">
+    <div className={`sidenav ${showNav ? "sidenav-open" : ""}`}>
+      <div className="sidenav-toggle" onClick={handleNavigationOpen}>
+        <MenuIcon />
+      </div>
+
       <div className="header">
         <span className="logo">rk</span>
-        <hr />
         <div className="tabs">
           <h5
             className={`tab ${activeTab === "editor" ? "tab-active" : ""}`}
@@ -57,18 +68,7 @@ const Sidenav = ({
             <IconButton icon={<EyeIcon />} tooltip="Preview" />
           </h5>
         </div>
-        <hr />
         <div className="actions">
-          <div className="files-button">
-            {files.length > 0 && (
-              <div className="files-amount">{files.length}</div>
-            )}
-            <IconButton
-              icon={<FolderIcon />}
-              onClick={() => setShowFiles((prevState) => !prevState)}
-              tooltip={`${showFiles ? "Hide" : "Show"} files`}
-            />
-          </div>
           <FileSave
             changeFileName={(fileName: string) => changeFileName(fileName)}
             saveFile={saveFile}
@@ -89,10 +89,9 @@ const Sidenav = ({
       <Files
         files={files}
         currentFile={currentFile}
-        showFiles={showFiles}
         selectFile={(fileName: string) => selectFile(fileName)}
         deleteFile={(fileName: string) => deleteFile(fileName)}
-        closeFiles={() => setShowFiles(false)}
+        closeSidenav={handleNavigationClose}
       />
     </div>
   );

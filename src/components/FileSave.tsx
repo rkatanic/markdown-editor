@@ -7,8 +7,8 @@ import {
 } from "react";
 import Button from "./Button";
 import IconButton from "./IconButton";
-import { ReactComponent as SaveIcon } from "../assets/icons/save.svg";
 import { ReactComponent as CloseIcon } from "../assets/icons/x.svg";
+import { ReactComponent as PlusIcon } from "../assets/icons/save.svg";
 
 import "./FileSave.css";
 
@@ -62,7 +62,7 @@ const FileSave = ({
   return (
     <div className="file-save" ref={dialog}>
       <IconButton
-        icon={<SaveIcon />}
+        icon={<PlusIcon />}
         onClick={() =>
           setState({ ...state, showDialog: !state.showDialog, error: "" })
         }
@@ -71,36 +71,31 @@ const FileSave = ({
       {state.showDialog && (
         <div className="file-save-dialog">
           <div className="file-save-dialog-header">
-            <div>Name your file</div>
+            Name File
             <IconButton
               icon={<CloseIcon />}
               onClick={() => setState({ showDialog: false, error: "" })}
             />
           </div>
-          <hr />
-          <div className="file-name-input">
+          <div className="file-save-dialog-input-wrapper">
             <input
               placeholder="File name"
-              className="file-name-input-field"
+              className="file-save-dialog-input-field"
               type="text"
               value={fileName}
               onChange={handleValidation}
             />
             {state.error && (
-              <span className="file-name-error">{state.error}</span>
+              <span className="file-save-dialog-input-error">
+                {state.error}
+              </span>
             )}
           </div>
-          <hr />
-          <div className="file-save-dialog-buttons">
+          <div className="file-save-dialog-button">
             <Button
               disabled={!fileName}
               label="Save"
               onClick={handleFileSave}
-            />
-            <Button
-              label="Cancel"
-              variant="secondary"
-              onClick={() => setState({ showDialog: false, error: "" })}
             />
           </div>
         </div>

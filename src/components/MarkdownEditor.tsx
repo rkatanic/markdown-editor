@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { EffectCallback, useEffect, useState } from "react";
 import MarkdownOutput from "./MarkdownOutput";
 import Editor from "./Editor";
 import Sidenav from "./Sidenav";
@@ -15,7 +15,7 @@ const MarkdownEditor = (): JSX.Element => {
   });
   const [activeTab, setActiveTab] = useState<"editor" | "preview">("editor");
 
-  useEffect(() => {
+  useEffect((): ReturnType<EffectCallback> => {
     const savedFiles = handleReadSavedFilesFromLocalStorage();
 
     if (savedFiles.length) {
@@ -63,7 +63,7 @@ const MarkdownEditor = (): JSX.Element => {
   };
 
   const handleFileDelete = (name: string): void => {
-    const updatedFiles = [...files].filter((f) => f.name != name);
+    const updatedFiles = [...files].filter((f) => f.name !== name);
     setFiles(updatedFiles);
 
     localStorage.removeItem(`md:${name}`);
@@ -71,7 +71,7 @@ const MarkdownEditor = (): JSX.Element => {
 
   const handleFileSave = (): void => {
     const fileAlreadyExists = files.some(
-      (f: MarkdownFile) => f.name == currentFile.name
+      (f: MarkdownFile) => f.name === currentFile.name
     );
 
     if (fileAlreadyExists) {

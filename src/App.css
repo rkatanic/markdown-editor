@@ -6,3 +6,7 @@
     height: 1.25rem;
     width: 1.25rem;
 }
+
+.icon>path {
+    stroke: var(--color-gray-100);
+}

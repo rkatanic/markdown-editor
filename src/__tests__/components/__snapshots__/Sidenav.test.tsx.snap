@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidenav should render 1`] = `
+<body>
+  <div>
+    <div
+      class="sidenav "
+    >
+      <div
+        class="sidenav-toggle"
+      >
+        <svg>
+          menu.svg
+        </svg>
+      </div>
+      <div
+        class="header"
+      >
+        <span
+          class="logo"
+        >
+          rk
+        </span>
+        <div
+          class="tabs"
+        >
+          <h5
+            class="tab tab-active"
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                pencil.svg
+              </svg>
+              <div
+                class="icon-button-tooltip"
+              >
+                Editor
+              </div>
+            </button>
+          </h5>
+          <h5
+            class="tab "
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                eye.svg
+              </svg>
+              <div
+                class="icon-button-tooltip"
+              >
+                Preview
+              </div>
+            </button>
+          </h5>
+        </div>
+        <div
+          class="actions"
+        >
+          <div
+            class="file-save"
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                save.svg
+              </svg>
+              <div
+                class="icon-button-tooltip"
+              >
+                Save file
+              </div>
+            </button>
+          </div>
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              download.svg
+            </svg>
+            <div
+              class="icon-button-tooltip"
+            >
+              Download
+            </div>
+          </button>
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              x-circle.svg
+            </svg>
+            <div
+              class="icon-button-tooltip"
+            >
+              Clear
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="files"
+      >
+        <h5
+          class="files-header"
+        >
+          Files 
+          (2)
+          <div
+            class="files-close"
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                x.svg
+              </svg>
+            </button>
+          </div>
+        </h5>
+        <div
+          class="files-list"
+        >
+          <div
+            class="file file-active"
+          >
+            <div
+              class="file-header"
+            >
+              <span
+                class="file-name"
+              >
+                File 1
+              </span>
+              <button
+                class="icon-button icon-button-small"
+                type="button"
+              >
+                <svg>
+                  trash.svg
+                </svg>
+              </button>
+            </div>
+            <div
+              class="file-content"
+            >
+              content
+            </div>
+          </div>
+          <div
+            class="file "
+          >
+            <div
+              class="file-header"
+            >
+              <span
+                class="file-name"
+              >
+                File 2
+              </span>
+              <button
+                class="icon-button icon-button-small"
+                type="button"
+              >
+                <svg>
+                  trash.svg
+                </svg>
+              </button>
+            </div>
+            <div
+              class="file-content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

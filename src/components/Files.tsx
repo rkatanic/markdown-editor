@@ -7,7 +7,7 @@ import "./Files.css";
 
 interface Props {
   files: MarkdownFile[];
-  currentFile: MarkdownFile;
+  currentFile?: MarkdownFile;
   selectFile: (fileName: string) => void;
   deleteFile: (fileName: string) => void;
   closeSidenav: () => void;
@@ -33,7 +33,7 @@ const Files = ({
           files.map(({ name, markdown }) => (
             <div
               className={`file ${
-                name === currentFile.name ? "file-active" : ""
+                name === currentFile?.name ? "file-active" : ""
               }`}
               key={name}
             >

@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Files should render 1`] = `
+<body>
+  <div>
+    <div
+      class="files"
+    >
+      <h5
+        class="files-header"
+      >
+        Files 
+        (2)
+        <div
+          class="files-close"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              x.svg
+            </svg>
+          </button>
+        </div>
+      </h5>
+      <div
+        class="files-list"
+      >
+        <div
+          class="file file-active"
+        >
+          <div
+            class="file-header"
+          >
+            <span
+              class="file-name"
+            >
+              File 1
+            </span>
+            <button
+              class="icon-button icon-button-small"
+              type="button"
+            >
+              <svg>
+                trash.svg
+              </svg>
+            </button>
+          </div>
+          <div
+            class="file-content"
+          >
+            content
+          </div>
+        </div>
+        <div
+          class="file "
+        >
+          <div
+            class="file-header"
+          >
+            <span
+              class="file-name"
+            >
+              File 2
+            </span>
+            <button
+              class="icon-button icon-button-small"
+              type="button"
+            >
+              <svg>
+                trash.svg
+              </svg>
+            </button>
+          </div>
+          <div
+            class="file-content"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Files should render without files 1`] = `
+<body>
+  <div>
+    <div
+      class="files"
+    >
+      <h5
+        class="files-header"
+      >
+        Files 
+        <div
+          class="files-close"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              x.svg
+            </svg>
+          </button>
+        </div>
+      </h5>
+      <div
+        class="files-list"
+      >
+        <p
+          class="file-text"
+        >
+          No files saved yet
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+`;

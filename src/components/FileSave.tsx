@@ -69,7 +69,7 @@ const FileSave = ({
         tooltip="Save file"
       />
       {state.showDialog && (
-        <div className="file-save-dialog">
+        <div className="file-save-dialog" data-testid="file-save-dialog">
           <div className="file-save-dialog-header">
             Name File
             <IconButton

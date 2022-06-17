@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmarkdown_editor=self.webpackChunkmarkdown_editor||[]).push([[826],{826:function(e,t,a){e.exports=a.p+"static/media/text.d84701d7a40744fa636a.md"}}]);

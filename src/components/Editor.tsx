@@ -23,7 +23,6 @@ const Editor = ({ file, updateCurrentFile }: Props): JSX.Element => {
     <CodeMirror2
       className="code-mirror"
       options={{
-        // @ts-ignore
         placeholder: "Start typing",
         mode: { name: "customHighlights" },
         highlightFormatting: true,

@@ -1,32 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color-hue: 200;
+  --color-hue: 180;
 
-  --color-black: hsl(0, 0%, 0%);
-  --color-black-two: hsl(0, 0%, 2%);
-  --color-black-three: hsl(0, 0%, 4%);
-  --color-white: hsl(0, 0%, 95%);
-  --color-white-two: hsl(0, 0%, 85%);
-  --color-white-three: hsl(0, 0%, 75%);
+  --color-black-one: hsl(0, 0%, 0%);
+  --color-black-two: hsl(0, 0%, 4%);
+  --color-black-three: hsl(0, 0%, 6%);
 
-  --color-gray-900: hsl(0, 0%, 6%);
-  --color-gray-800: hsl(0, 0%, 8%);
-  --color-gray-700: hsl(0, 0%, 10%);
-  --color-gray-600: hsl(0, 0%, 12%);
-  --color-gray-500: hsl(0, 0%, 16%);
-  --color-gray-400: hsl(0, 0%, 18%);
-  --color-gray-300: hsl(0, 0%, 20%);
-  --color-gray-200: hsl(0, 0%, 30%);
-  --color-gray-100: hsl(0, 0%, 50%);
+  --color-white-one: hsl(0, 0%, 99%);
+  --color-white-two: hsl(0, 0%, 86%);
+  --color-white-three: hsl(0, 0%, 76%);
 
-  --color-primary-800: hsl(var(--color-hue), 84%, 64%);
-  --color-primary-700: hsl(var(--color-hue), 84%, 54%);
-  --color-primary-600: hsl(var(--color-hue), 84%, 40%);
-  --color-primary-500: hsl(var(--color-hue), 84%, 36%);
-  --color-primary-200: hsl(var(--color-hue), 42%, 12%);
+  --color-gray-900: hsl(214, 6%, 50%);
+  --color-gray-800: hsl(214, 6%, 40%);
+  --color-gray-700: hsl(214, 6%, 30%);
+  --color-gray-600: hsl(214, 6%, 20%);
+  --color-gray-500: hsl(214, 6%, 16%);
+  --color-gray-400: hsl(214, 6%, 14%);
+  --color-gray-300: hsl(214, 6%, 12%);
+  --color-gray-200: hsl(214, 8%, 11%);
+  --color-gray-100: hsl(214, 8%, 10%);
 
-  --font: "Raleway", sans-serif;
+  --color-primary-900: hsl(var(--color-hue), 36%, 66%);
+  --color-primary-800: hsl(var(--color-hue), 36%, 62%);
+  --color-primary-700: hsl(var(--color-hue), 36%, 58%);
+  --color-primary-600: hsl(var(--color-hue), 36%, 54%);
+  --color-primary-500: hsl(var(--color-hue), 36%, 50%);
+  --color-primary-400: hsl(var(--color-hue), 36%, 46%);
+  --color-primary-300: hsl(var(--color-hue), 36%, 42%);
+  --color-primary-200: hsl(var(--color-hue), 36%, 38%);
+  --color-primary-100: hsl(var(--color-hue), 36%, 34%);
+
+  --font: "Poppins", sans-serif;
 }
 
 * {
@@ -38,21 +43,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font);
-  color: var(--color-white);
-  background-color: var(--color-gray-800);
+  color: var(--color-white-one);
+  background-color: var(--color-gray-100);
+  background-image: radial-gradient(var(--color-gray-300) 1px, transparent 1px);
+  background-size: 0.5rem 0.5rem;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: var(--color-gray-700);
+  background-color: var(--color-gray-200);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gray-500);
+  background: var(--color-gray-400);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gray-400);
+  background: var(--color-gray-500);
 }
 
 p {
@@ -77,5 +84,5 @@ h6 {
 
 strong,
 em {
-  color: var(--color-white);
+  color: var(--color-white-one);
 }

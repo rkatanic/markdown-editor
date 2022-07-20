@@ -1,61 +1,39 @@
 .file-save {
-    position: relative;
-}
-
-.file-save-dialog {
-    border-radius: 2px;
-    left: 3.25rem;
-    top: -0.25rem;
-    position: absolute;
-    gap: 0.5rem;
-    background-color: var(--color-gray-700);
-    padding: 0.25rem 1rem 1rem;
-    box-shadow: 0 4px 8px var(--color-gray-900);
-}
-
-.file-save-dialog::after {
-    top: 17px;
-    left: -8px;
-    position: absolute;
-    content: "";
-    width: 8px;
-    height: 16px;
-    background-color: var(--color-gray-700);
-    clip-path: polygon(0 50%, 100% 100%, 100% 0);
-}
-
-.file-save-dialog-header {
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 600;
-    font-size: 0.875rem;
+    border-bottom: 2px solid var(--color-gray-400);
+    padding: 0 4rem;
+    width: 100%;
 }
 
-.file-save-dialog-button {
-    float: right;
+.file-save-input-wrapper {
+    flex: 1;
+    position: relative;
 }
 
-.file-save-dialog-input-wrapper {
-    margin: 0.5rem 0 1rem;
-}
-
-.file-save-dialog-input-field {
-    color: var(--color-white);
-    padding: 0.625rem 1rem;
-    border-radius: 1px;
-    outline: none;
+.file-save-input {
+    width: 100%;
     border: 0;
-    background-color: var(--color-gray-800);
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white-one);
     font-family: var(--font);
-    caret-color: var(--color-primary-500);
-    font-size: 0.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
-.file-save-dialog-input-error {
-    margin-top: 0.5rem;
-    display: block;
-    white-space: nowrap;
-    font-size: 0.75rem;
-    color: var(--color-primary-800);
+@media screen and (max-width:768px) {
+    .file-save {
+        padding: 0 1.5rem;
+    }
+
+    .file-save-input {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 32rem;
+    }
+
 }

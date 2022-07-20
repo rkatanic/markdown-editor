@@ -5,83 +5,26 @@ exports[`FileSave should render 1`] = `
   <div>
     <div
       class="file-save"
+      data-testid="file-save"
     >
-      <button
-        class="icon-button icon-button-medium"
-        type="button"
-      >
-        <svg>
-          save.svg
-        </svg>
-        <div
-          class="icon-button-tooltip"
-        >
-          Save file
-        </div>
-      </button>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`FileSave should render with popup 1`] = `
-<body>
-  <div>
-    <div
-      class="file-save"
-    >
-      <button
-        class="icon-button icon-button-medium"
-        type="button"
-      >
-        <svg>
-          save.svg
-        </svg>
-        <div
-          class="icon-button-tooltip"
-        >
-          Save file
-        </div>
-      </button>
       <div
-        class="file-save-dialog"
-        data-testid="file-save-dialog"
+        class="file-save-input-wrapper"
       >
-        <div
-          class="file-save-dialog-header"
-        >
-          Name File
-          <button
-            class="icon-button icon-button-medium"
-            type="button"
-          >
-            <svg>
-              x.svg
-            </svg>
-          </button>
-        </div>
-        <div
-          class="file-save-dialog-input-wrapper"
-        >
-          <input
-            class="file-save-dialog-input-field"
-            placeholder="File name"
-            type="text"
-            value="File Name"
-          />
-          
-        </div>
-        <div
-          class="file-save-dialog-button"
-        >
-          <button
-            class="button button-primary"
-            type="button"
-          >
-            Save
-          </button>
-        </div>
+        <input
+          class="file-save-input"
+          placeholder="File name"
+          type="text"
+          value="File Name"
+        />
       </div>
+      <button
+        class="icon-button icon-button-medium"
+        type="button"
+      >
+        <svg>
+          save.svg
+        </svg>
+      </button>
     </div>
   </div>
 </body>

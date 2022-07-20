@@ -15,58 +15,18 @@
 }
 
 .icon-button:hover {
-  background-color: var(--color-gray-700);
+  background-color: var(--color-gray-300);
 }
 
 .icon-button:hover svg>path {
-  stroke: var(--color-white);
+  stroke: var(--color-white-two);
 }
 
 .icon-button:disabled {
   cursor: not-allowed;
 }
 
-.icon-button:hover .icon-button-tooltip {
-  display: initial;
-}
-
 .icon-button-small .icon {
   width: 1rem;
   height: 1rem;
-}
-
-.icon-button-tooltip {
-  font-family: var(--font);
-  font-size: 0.75rem;
-  color: var(--color-white-two);
-  position: absolute;
-  content: "";
-  padding: 0.375rem 0.75rem;
-  left: calc(100% + 0.75rem);
-  top: 0.375rem;
-  background-color: var(--color-gray-500);
-  box-shadow: 0 4px 8px var(--color-black-two);
-  white-space: nowrap;
-  display: none;
-  border-radius: 1px;
-}
-
-.icon-button-tooltip::before {
-  top: 7px;
-  left: -6px;
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 12px;
-  background-color: var(--color-gray-500);
-  clip-path: polygon(0 50%, 100% 100%, 100% 0);
-}
-
-
-
-
-@media screen and (max-width:1024px) {
-  .icon-button:hover .icon-button-tooltip {
-    display: none;
-  }
 }

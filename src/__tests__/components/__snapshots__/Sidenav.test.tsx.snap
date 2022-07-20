@@ -4,183 +4,68 @@ exports[`Sidenav should render 1`] = `
 <body>
   <div>
     <div
-      class="sidenav "
+      class="sidenav"
     >
-      <div
-        class="sidenav-toggle"
+      <span
+        class="logo"
+      >
+        rk
+      </span>
+      <h5
+        class="tab tab-active"
+      >
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            pencil.svg
+          </svg>
+        </button>
+      </h5>
+      <h5
+        class="tab "
+      >
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            eye.svg
+          </svg>
+        </button>
+      </h5>
+      <button
+        class="icon-button icon-button-medium"
+        type="button"
       >
         <svg>
-          menu.svg
+          download.svg
         </svg>
-      </div>
-      <div
-        class="header"
+      </button>
+      <button
+        class="icon-button icon-button-medium"
+        type="button"
       >
-        <span
-          class="logo"
-        >
-          rk
-        </span>
-        <div
-          class="tabs"
-        >
-          <h5
-            class="tab tab-active"
-          >
-            <button
-              class="icon-button icon-button-medium"
-              type="button"
-            >
-              <svg>
-                pencil.svg
-              </svg>
-              <div
-                class="icon-button-tooltip"
-              >
-                Editor
-              </div>
-            </button>
-          </h5>
-          <h5
-            class="tab "
-          >
-            <button
-              class="icon-button icon-button-medium"
-              type="button"
-            >
-              <svg>
-                eye.svg
-              </svg>
-              <div
-                class="icon-button-tooltip"
-              >
-                Preview
-              </div>
-            </button>
-          </h5>
-        </div>
-        <div
-          class="actions"
-        >
-          <div
-            class="file-save"
-          >
-            <button
-              class="icon-button icon-button-medium"
-              type="button"
-            >
-              <svg>
-                save.svg
-              </svg>
-              <div
-                class="icon-button-tooltip"
-              >
-                Save file
-              </div>
-            </button>
-          </div>
-          <button
-            class="icon-button icon-button-medium"
-            type="button"
-          >
-            <svg>
-              download.svg
-            </svg>
-            <div
-              class="icon-button-tooltip"
-            >
-              Download
-            </div>
-          </button>
-          <button
-            class="icon-button icon-button-medium"
-            type="button"
-          >
-            <svg>
-              x-circle.svg
-            </svg>
-            <div
-              class="icon-button-tooltip"
-            >
-              Clear
-            </div>
-          </button>
-        </div>
-      </div>
+        <svg>
+          x-circle.svg
+        </svg>
+      </button>
       <div
-        class="files"
+        class="files-button-container"
       >
-        <h5
-          class="files-header"
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
         >
-          Files 
-          (2)
-          <div
-            class="files-close"
-          >
-            <button
-              class="icon-button icon-button-medium"
-              type="button"
-            >
-              <svg>
-                x.svg
-              </svg>
-            </button>
-          </div>
-        </h5>
+          <svg>
+            folder.svg
+          </svg>
+        </button>
         <div
-          class="files-list"
+          class="files-button-badge"
         >
-          <div
-            class="file file-active"
-          >
-            <div
-              class="file-header"
-            >
-              <span
-                class="file-name"
-              >
-                File 1
-              </span>
-              <button
-                class="icon-button icon-button-small"
-                type="button"
-              >
-                <svg>
-                  trash.svg
-                </svg>
-              </button>
-            </div>
-            <div
-              class="file-content"
-            >
-              content
-            </div>
-          </div>
-          <div
-            class="file "
-          >
-            <div
-              class="file-header"
-            >
-              <span
-                class="file-name"
-              >
-                File 2
-              </span>
-              <button
-                class="icon-button icon-button-small"
-                type="button"
-              >
-                <svg>
-                  trash.svg
-                </svg>
-              </button>
-            </div>
-            <div
-              class="file-content"
-            />
-          </div>
+          4
         </div>
       </div>
     </div>

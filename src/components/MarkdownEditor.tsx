@@ -4,6 +4,8 @@ import Editor from "./Editor";
 import Sidenav from "./Sidenav";
 import { downloadFile } from "../util/markdownEditorUtils";
 import { MarkdownFile } from "../types/markdown";
+import Files from "./Files";
+import FileSave from "./FileSave";
 
 import "./MarkdownEditor.css";
 
@@ -14,6 +16,7 @@ const MarkdownEditor = (): JSX.Element => {
     markdown: "",
   });
   const [activeTab, setActiveTab] = useState<"editor" | "preview">("editor");
+  const [showFiles, setShowFiles] = useState(false);
 
   useEffect((): ReturnType<EffectCallback> => {
     const savedFiles = handleReadSavedFilesFromLocalStorage();
@@ -25,6 +28,10 @@ const MarkdownEditor = (): JSX.Element => {
       handleReadIntroductionFile();
     }
   }, []);
+
+  const handleShowFilesToggle = (): void => {
+    setShowFiles((prevState) => !prevState);
+  };
 
   const handleReadSavedFilesFromLocalStorage = (): MarkdownFile[] => {
     return (
@@ -99,26 +106,38 @@ const MarkdownEditor = (): JSX.Element => {
   return (
     <div className="markdown-editor">
       <Sidenav
-        files={files}
-        currentFile={currentFile}
         activeTab={activeTab}
         changeTab={(tab) => setActiveTab(tab)}
         clearCurrentFile={() =>
           setCurrentFile({ ...currentFile, markdown: "" })
         }
-        changeFileName={handleFileNameChange}
-        saveFile={handleFileSave}
         downloadFile={() => downloadFile(currentFile)}
+        toggleFilesShow={handleShowFilesToggle}
+        numberOfFiles={files.length}
+      />
+      <div className="output-container">
+        <FileSave
+          fileName={currentFile.name}
+          saveFile={handleFileSave}
+          changeFileName={handleFileNameChange}
+        />
+        <div className="output">
+          {activeTab === "editor" ? (
+            <Editor file={currentFile} updateCurrentFile={setCurrentFile} />
+          ) : (
+            <MarkdownOutput markdown={currentFile.markdown} />
+          )}
+        </div>
+      </div>
+
+      <Files
+        files={files}
         selectFile={handleFileSelect}
         deleteFile={handleFileDelete}
+        showFiles={showFiles}
+        toggleFilesShow={handleShowFilesToggle}
+        currentFile={currentFile}
       />
-      <div className="output">
-        {activeTab === "editor" ? (
-          <Editor file={currentFile} updateCurrentFile={setCurrentFile} />
-        ) : (
-          <MarkdownOutput markdown={currentFile.markdown} />
-        )}
-      </div>
     </div>
   );
 };

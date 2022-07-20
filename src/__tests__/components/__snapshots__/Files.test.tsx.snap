@@ -4,7 +4,10 @@ exports[`Files should render 1`] = `
 <body>
   <div>
     <div
-      class="files"
+      class="files-overlay "
+    />
+    <div
+      class="files "
     >
       <h5
         class="files-header"
@@ -87,7 +90,10 @@ exports[`Files should render without files 1`] = `
 <body>
   <div>
     <div
-      class="files"
+      class="files-overlay "
+    />
+    <div
+      class="files "
     >
       <h5
         class="files-header"

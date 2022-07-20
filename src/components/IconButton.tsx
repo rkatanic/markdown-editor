@@ -3,19 +3,24 @@ import "./IconButton.css";
 interface Props {
   icon: JSX.Element;
   onClick?: () => void;
-  tooltip?: string;
   size?: "small" | "medium";
+  disabled?: boolean;
 }
 
-const IconButton = ({ icon, onClick, tooltip, size = "medium" }: Props) => {
+const IconButton = ({
+  icon,
+  onClick,
+  size = "medium",
+  disabled,
+}: Props): JSX.Element => {
   return (
     <button
+      disabled={disabled}
       className={`icon-button icon-button-${size}`}
       type="button"
       onClick={onClick}
     >
       {icon}
-      {tooltip && <div className="icon-button-tooltip">{tooltip}</div>}
     </button>
   );
 };

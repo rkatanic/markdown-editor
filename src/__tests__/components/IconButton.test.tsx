@@ -3,9 +3,7 @@ import IconButton from "../../components/IconButton";
 
 describe("IconButton", (): void => {
   it("should render", (): void => {
-    const { baseElement } = render(
-      <IconButton icon={<>icon</>} tooltip="tooltip text" />
-    );
+    const { baseElement } = render(<IconButton icon={<>icon</>} />);
 
     expect(baseElement).toMatchSnapshot();
   });

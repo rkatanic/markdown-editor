@@ -8,11 +8,6 @@ exports[`IconButton should render 1`] = `
       type="button"
     >
       icon
-      <div
-        class="icon-button-tooltip"
-      >
-        tooltip text
-      </div>
     </button>
   </div>
 </body>

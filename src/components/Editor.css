@@ -1,5 +1,5 @@
 .code-mirror {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   position: relative;
 }
 
@@ -7,7 +7,7 @@
   height: 100%;
   background-color: transparent !important;
   font-family: var(--font);
-  color: var(--color-white-two) !important;
+  color: var(--color-white-three) !important;
 }
 
 .CodeMirror-selected {
@@ -18,12 +18,28 @@
   border-left: 2px solid var(--color-primary-500) !important;
 }
 
+.cm-comment {
+  color: var(--color-primary-500) !important;
+}
+
 .cm-hr {
   color: var(--color-primary-500);
 }
 
+.cm-variable-2 {
+  color: var(--color-white-three) !important;
+}
+
+.cm-variable-3 {
+  color: var(--color-primary-500) !important;
+}
+
+.cm-keyword {
+  color: var(--color-white-two) !important;
+}
+
 .cm-md-strong {
-  color: var(--color-gray-200) !important;
+  color: var(--color-gray-800) !important;
 }
 
 .cm-url {
@@ -31,44 +47,64 @@
 }
 
 .cm-header {
-  color: var(--color-white) !important;
+  color: var(--color-white-one) !important;
 }
 
 .cm-header-1,
 h1 {
-  font-size: 4rem;
+  font-size: 2.25rem;
 }
 
 .cm-header-2,
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .cm-header-3,
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .cm-header-4,
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .cm-header-5,
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 .cm-heading-6,
 h6 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .cm-strong,
 .cm-em {
-  color: var(--color-white);
+  color: var(--color-white-one);
 }
 
 .cm-md-heading-prefix {
-  color: var(--color-gray-300) !important;
+  color: var(--color-gray-600) !important;
+}
+
+a {
+  color: var(--color-primary-500);
+}
+
+a:hover {
+  color: var(--color-primary-900);
+}
+
+ul {
+  color: var(--color-white-three);
+}
+
+img {
+  display: block;
+  max-width: 36.75em;
+  max-height: 36.75em;
+  width: auto;
+  height: auto;
 }

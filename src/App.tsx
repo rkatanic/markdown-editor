@@ -1,12 +1,12 @@
 import MarkdownEditor from "./components/MarkdownEditor";
 import "./App.css";
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <MarkdownEditor />
     </div>
   );
-}
+};
 
 export default App;

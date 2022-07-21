@@ -31,10 +31,10 @@ const Editor = ({ file, updateCurrentFile }: Props): JSX.Element => {
         highlightActiveLine: true,
       }}
       value={file.markdown}
-      onChange={(editor, data, value) =>
+      onChange={(_editor, _data, value) =>
         updateCurrentFile({ ...file, markdown: value })
       }
-      onBeforeChange={(editor, data, value) => {
+      onBeforeChange={(_editor, _data, value) => {
         updateCurrentFile({ ...file, markdown: value });
       }}
     />

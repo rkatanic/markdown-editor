@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkdownEditor should render 1`] = `
+<body>
+  <div>
+    <div
+      class="markdown-editor"
+    >
+      <div
+        class="sidenav"
+      >
+        <span
+          class="logo"
+        >
+          rk
+        </span>
+        <h5
+          class="tab tab-active"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              pencil.svg
+            </svg>
+          </button>
+        </h5>
+        <h5
+          class="tab "
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              eye.svg
+            </svg>
+          </button>
+        </h5>
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            download.svg
+          </svg>
+        </button>
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            x-circle.svg
+          </svg>
+        </button>
+        <div
+          class="files-button-container"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              folder.svg
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="output-container"
+      >
+        <div
+          class="file-save"
+          data-testid="file-save"
+        >
+          <div
+            class="file-save-input-wrapper"
+          >
+            <input
+              class="file-save-input"
+              placeholder="File name"
+              type="text"
+              value="Untitled"
+            />
+          </div>
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              save.svg
+            </svg>
+          </button>
+        </div>
+        <div
+          class="output"
+        >
+          <div
+            class="react-codemirror2 code-mirror"
+          >
+            <div
+              class="CodeMirror cm-s-material CodeMirror-wrap CodeMirror-empty"
+              translate="no"
+            >
+              <div
+                style="overflow: hidden; position: relative; width: 3px; height: 0px;"
+              >
+                <textarea
+                  autocapitalize="off"
+                  autocorrect="off"
+                  spellcheck="false"
+                  style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"
+                  tabindex="0"
+                />
+              </div>
+              <div
+                class="CodeMirror-vscrollbar"
+                cm-not-content="true"
+                tabindex="-1"
+              >
+                <div
+                  style="min-width: 1px;"
+                />
+              </div>
+              <div
+                class="CodeMirror-hscrollbar"
+                cm-not-content="true"
+                tabindex="-1"
+              >
+                <div
+                  style="height: 100%; min-height: 1px;"
+                />
+              </div>
+              <div
+                class="CodeMirror-scrollbar-filler"
+                cm-not-content="true"
+              />
+              <div
+                class="CodeMirror-gutter-filler"
+                cm-not-content="true"
+              />
+              <div
+                class="CodeMirror-scroll"
+                tabindex="-1"
+              >
+                <div
+                  class="CodeMirror-sizer"
+                  style="margin-left: 0px;"
+                >
+                  <div
+                    style="position: relative;"
+                  >
+                    <div
+                      class="CodeMirror-lines"
+                      role="presentation"
+                    >
+                      <div
+                        role="presentation"
+                        style="position: relative; outline: none;"
+                      >
+                        <pre
+                          class="CodeMirror-placeholder CodeMirror-line-like"
+                          style="height: 0px; overflow: visible; direction: ltr;"
+                        >
+                          Start typing
+                        </pre>
+                        <div
+                          class="CodeMirror-measure"
+                        >
+                          <pre
+                            class="CodeMirror-line-like"
+                          >
+                            <span>
+                              xxxxxxxxxx
+                            </span>
+                          </pre>
+                        </div>
+                        <div
+                          class="CodeMirror-measure"
+                        />
+                        <div
+                          style="position: relative; z-index: 1;"
+                        />
+                        <div
+                          class="CodeMirror-cursors"
+                        />
+                        <div
+                          class="CodeMirror-code"
+                          role="presentation"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="position: absolute; height: 50px; width: 1px;"
+                />
+                <div
+                  class="CodeMirror-gutters"
+                  style="display: none;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="files-overlay "
+      />
+      <div
+        class="files "
+      >
+        <h5
+          class="files-header"
+        >
+          Files 
+          <div
+            class="files-close"
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                x.svg
+              </svg>
+            </button>
+          </div>
+        </h5>
+        <div
+          class="files-list"
+        >
+          <p
+            class="file-text"
+          >
+            No files saved yet
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`MarkdownEditor should render with output 1`] = `
+<body>
+  <div>
+    <div
+      class="markdown-editor"
+    >
+      <div
+        class="sidenav"
+      >
+        <span
+          class="logo"
+        >
+          rk
+        </span>
+        <h5
+          class="tab "
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              pencil.svg
+            </svg>
+          </button>
+        </h5>
+        <h5
+          class="tab tab-active"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              eye.svg
+            </svg>
+          </button>
+        </h5>
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            download.svg
+          </svg>
+        </button>
+        <button
+          class="icon-button icon-button-medium"
+          type="button"
+        >
+          <svg>
+            x-circle.svg
+          </svg>
+        </button>
+        <div
+          class="files-button-container"
+        >
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              folder.svg
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="output-container"
+      >
+        <div
+          class="file-save"
+          data-testid="file-save"
+        >
+          <div
+            class="file-save-input-wrapper"
+          >
+            <input
+              class="file-save-input"
+              placeholder="File name"
+              type="text"
+              value="Untitled"
+            />
+          </div>
+          <button
+            class="icon-button icon-button-medium"
+            type="button"
+          >
+            <svg>
+              save.svg
+            </svg>
+          </button>
+        </div>
+        <div
+          class="output"
+        >
+          <div
+            class="markdown-output"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="files-overlay "
+      />
+      <div
+        class="files "
+      >
+        <h5
+          class="files-header"
+        >
+          Files 
+          <div
+            class="files-close"
+          >
+            <button
+              class="icon-button icon-button-medium"
+              type="button"
+            >
+              <svg>
+                x.svg
+              </svg>
+            </button>
+          </div>
+        </h5>
+        <div
+          class="files-list"
+        >
+          <p
+            class="file-text"
+          >
+            No files saved yet
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

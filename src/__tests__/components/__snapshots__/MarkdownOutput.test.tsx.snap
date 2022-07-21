@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkdownOutput should render 1`] = `
+<body>
+  <div>
+    <div
+      class="markdown-output"
+    >
+      <div>
+        markdown content
+      </div>
+    </div>
+  </div>
+</body>
+`;

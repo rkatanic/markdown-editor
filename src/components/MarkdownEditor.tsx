@@ -48,18 +48,15 @@ const MarkdownEditor = (): JSX.Element => {
 
   const handleReadIntroductionFile = (): void => {
     //@ts-ignore
-    import(`../text.md`)
-      .then((res) => {
-        fetch(res.default)
-          .then((res) => {
-            return res.text();
-          })
-          .then((res) => {
-            setCurrentFile({ ...currentFile, markdown: res });
-          })
-          .catch((err) => console.log(err));
-      })
-      .catch((err) => console.log(err));
+    import(`../text.md`).then((res) => {
+      fetch(res.default)
+        .then((res) => {
+          return res.text();
+        })
+        .then((res) => {
+          setCurrentFile({ ...currentFile, markdown: res });
+        });
+    });
   };
 
   const handleFileSelect = (name: string): void => {
@@ -103,14 +100,16 @@ const MarkdownEditor = (): JSX.Element => {
     setCurrentFile({ ...currentFile, name });
   };
 
+  const handleFileContentClear = (): void => {
+    setCurrentFile({ ...currentFile, markdown: "" });
+  };
+
   return (
     <div className="markdown-editor">
       <Sidenav
         activeTab={activeTab}
         changeTab={(tab) => setActiveTab(tab)}
-        clearCurrentFile={() =>
-          setCurrentFile({ ...currentFile, markdown: "" })
-        }
+        clearCurrentFile={handleFileContentClear}
         downloadFile={() => downloadFile(currentFile)}
         toggleFilesShow={handleShowFilesToggle}
         numberOfFiles={files.length}

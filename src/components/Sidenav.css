@@ -6,7 +6,7 @@
     align-items: center;
     gap: 1.5rem;
     padding: 0 1rem;
-    border-right: 2px solid var(--color-gray-400);
+    border-right: 1px solid var(--color-gray-500);
 }
 
 .logo {
@@ -15,7 +15,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 1.25rem;
-    border-bottom: 2px solid var(--color-gray-500);
+    border-bottom: 1px solid var(--color-gray-500);
 }
 
 .tabs {
@@ -80,7 +80,7 @@
         width: 100vw;
         height: 4rem;
         background-color: var(--color-gray-100);
-        border-top: 2px solid var(--color-gray-400);
+        border-top: 1px solid var(--color-gray-500);
         position: fixed;
         justify-content: center;
         flex-direction: row;

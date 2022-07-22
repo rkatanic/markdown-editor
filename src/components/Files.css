@@ -6,8 +6,8 @@
     transition: left 0.5s;
     transition: margin-left 0.35s;
     overflow-y: auto;
-    border-left: 2px solid var(--color-gray-400);
-    padding: 0 1.5rem;
+    border-left: 1px solid var(--color-gray-500);
+    padding: 0 1.5rem 1.5rem;
 }
 
 .files-open {
@@ -21,7 +21,7 @@
     justify-content: space-between;
     font-weight: 500;
     font-size: 1.25rem;
-    border-bottom: 2px solid var(--color-gray-400);
+    border-bottom: 1px solid var(--color-gray-500);
 }
 
 .files-button {
@@ -98,6 +98,7 @@
         position: fixed;
         background-color: var(--color-gray-100);
         transition: right 0.5s;
+        height: calc(100% - 4rem);
     }
 
     .files-open {

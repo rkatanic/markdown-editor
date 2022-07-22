@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/markdown-editor/static/css/main.465d7c21.css",
+    "main.css": "/markdown-editor/static/css/main.0f65f17e.css",
     "main.js": "/markdown-editor/static/js/main.ed32c5c1.js",
     "static/js/826.71b1b55e.chunk.js": "/markdown-editor/static/js/826.71b1b55e.chunk.js",
     "static/media/trash.svg": "/markdown-editor/static/media/trash.eeaeb5bc6f8c619555ff315c3e9b6c9c.svg",
@@ -13,11 +13,11 @@
     "static/media/eye.svg": "/markdown-editor/static/media/eye.d8d0727c670fe6d2368a2024b7e7d1e3.svg",
     "static/media/x.svg": "/markdown-editor/static/media/x.514a136e859e32747368225f85bc5fe8.svg",
     "static/media/text.md": "/markdown-editor/static/media/text.d84701d7a40744fa636a.md",
-    "main.465d7c21.css.map": "/markdown-editor/static/css/main.465d7c21.css.map",
+    "main.0f65f17e.css.map": "/markdown-editor/static/css/main.0f65f17e.css.map",
     "main.ed32c5c1.js.map": "/markdown-editor/static/js/main.ed32c5c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.465d7c21.css",
+    "static/css/main.0f65f17e.css",
     "static/js/main.ed32c5c1.js"
   ]
 }

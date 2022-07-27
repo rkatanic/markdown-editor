@@ -14,17 +14,6 @@
   padding: 0 4rem;
 }
 
-.save-button {
-  bottom: 2rem;
-  right: 2rem;
-  position: fixed;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  box-shadow: 0 1px 0 var(--color-black-two) inset, 0 -1px 0 var(--color-black-two) inset;
-}
-
 .save-button svg>path {
   stroke: var(--color-black);
 }

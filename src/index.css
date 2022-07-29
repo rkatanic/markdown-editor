@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --color-hue: 180;
@@ -7,7 +7,7 @@
   --color-black-two: hsl(0, 0%, 4%);
   --color-black-three: hsl(0, 0%, 6%);
 
-  --color-white-one: hsl(0, 0%, 99%);
+  --color-white-one: hsl(0, 0%, 92%);
   --color-white-two: hsl(0, 0%, 86%);
   --color-white-three: hsl(0, 0%, 76%);
 
@@ -31,7 +31,7 @@
   --color-primary-200: hsl(var(--color-hue), 36%, 38%);
   --color-primary-100: hsl(var(--color-hue), 36%, 34%);
 
-  --font: "Poppins", sans-serif;
+  --font: "Inter", sans-serif;
 }
 
 * {
@@ -80,6 +80,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: var(--color-white-one)
 }
 
 strong,

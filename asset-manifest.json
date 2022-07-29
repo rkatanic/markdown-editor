@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/markdown-editor/static/css/main.f9d2c738.css",
-    "main.js": "/markdown-editor/static/js/main.ed32c5c1.js",
-    "static/js/826.71b1b55e.chunk.js": "/markdown-editor/static/js/826.71b1b55e.chunk.js",
+    "main.css": "/markdown-editor/static/css/main.c2a7aa71.css",
+    "main.js": "/markdown-editor/static/js/main.e5e4dcdc.js",
+    "static/js/826.216b6fbc.chunk.js": "/markdown-editor/static/js/826.216b6fbc.chunk.js",
     "static/media/trash.svg": "/markdown-editor/static/media/trash.eeaeb5bc6f8c619555ff315c3e9b6c9c.svg",
     "static/media/save.svg": "/markdown-editor/static/media/save.bdd9136234f802a980da429659485840.svg",
     "index.html": "/markdown-editor/index.html",
@@ -12,12 +12,12 @@
     "static/media/x-circle.svg": "/markdown-editor/static/media/x-circle.5868a49ce25e0f78fb7ba1cd75bd3b8c.svg",
     "static/media/eye.svg": "/markdown-editor/static/media/eye.d8d0727c670fe6d2368a2024b7e7d1e3.svg",
     "static/media/x.svg": "/markdown-editor/static/media/x.514a136e859e32747368225f85bc5fe8.svg",
-    "static/media/text.md": "/markdown-editor/static/media/text.d84701d7a40744fa636a.md",
-    "main.f9d2c738.css.map": "/markdown-editor/static/css/main.f9d2c738.css.map",
-    "main.ed32c5c1.js.map": "/markdown-editor/static/js/main.ed32c5c1.js.map"
+    "static/media/text.md": "/markdown-editor/static/media/text.2e4c3e6c2b90c6e62d2e.md",
+    "main.c2a7aa71.css.map": "/markdown-editor/static/css/main.c2a7aa71.css.map",
+    "main.e5e4dcdc.js.map": "/markdown-editor/static/js/main.e5e4dcdc.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9d2c738.css",
-    "static/js/main.ed32c5c1.js"
+    "static/css/main.c2a7aa71.css",
+    "static/js/main.e5e4dcdc.js"
   ]
 }

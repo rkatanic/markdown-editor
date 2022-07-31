@@ -20,8 +20,14 @@
 
 
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:1024px) {
   .output {
-    padding: 0 1rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .output {
+    padding: 0 1rem 4rem;
   }
 }

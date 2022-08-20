@@ -1,8 +1,5 @@
 import { ChangeEvent } from "react";
-import IconButton from "./IconButton";
-import { ReactComponent as SaveIcon } from "../assets/icons/save.svg";
-
-import "./FileSave.css";
+import { FiSave } from "react-icons/fi";
 
 interface Props {
   fileName: string;
@@ -20,17 +17,18 @@ const FileSave = ({
   };
 
   return (
-    <div className="file-save" data-testid="file-save">
-      <div className="file-save-input-wrapper">
+    <div className="bg-white w-full border-b h-16 flex items-center justify-center text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700 dark:bg-zinc-800">
+      <div className="flex items-center justify-between gap-8 w-full max-w-5xl px-8 ">
         <input
-          placeholder="File name"
-          className="file-save-input"
-          type="text"
-          value={fileName}
+          className="focus:outline-none bg-transparent w-full"
           onChange={handleFileNameChange}
+          value={fileName}
+        />
+        <FiSave
+          onClick={saveFile}
+          className="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
         />
       </div>
-      <IconButton icon={<SaveIcon />} disabled={!fileName} onClick={saveFile} />
     </div>
   );
 };

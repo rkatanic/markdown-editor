@@ -1,89 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
-:root {
-  --color-hue: 180;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --color-black-one: hsl(0, 0%, 0%);
-  --color-black-two: hsl(0, 0%, 4%);
-  --color-black-three: hsl(0, 0%, 6%);
-
-  --color-white-one: hsl(0, 0%, 92%);
-  --color-white-two: hsl(0, 0%, 86%);
-  --color-white-three: hsl(0, 0%, 76%);
-
-  --color-gray-900: hsl(214, 6%, 50%);
-  --color-gray-800: hsl(214, 6%, 42%);
-  --color-gray-700: hsl(214, 6%, 30%);
-  --color-gray-600: hsl(214, 6%, 20%);
-  --color-gray-500: hsl(214, 6%, 18%);
-  --color-gray-400: hsl(214, 6%, 16%);
-  --color-gray-300: hsl(214, 6%, 15%);
-  --color-gray-200: hsl(214, 8%, 14%);
-  --color-gray-100: hsl(214, 8%, 12%);
-
-  --color-primary-900: hsl(var(--color-hue), 36%, 66%);
-  --color-primary-800: hsl(var(--color-hue), 36%, 62%);
-  --color-primary-700: hsl(var(--color-hue), 36%, 58%);
-  --color-primary-600: hsl(var(--color-hue), 36%, 54%);
-  --color-primary-500: hsl(var(--color-hue), 36%, 50%);
-  --color-primary-400: hsl(var(--color-hue), 36%, 46%);
-  --color-primary-300: hsl(var(--color-hue), 36%, 42%);
-  --color-primary-200: hsl(var(--color-hue), 36%, 38%);
-  --color-primary-100: hsl(var(--color-hue), 36%, 34%);
-
-  --font: "Inter", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font);
-  color: var(--color-white-one);
-  background-color: var(--color-gray-100);
-  background-image: radial-gradient(var(--color-gray-300) 1px, transparent 1px);
-  background-size: 0.5rem 0.5rem;
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  background-color: var(--color-gray-200);
+  width: 12px;
+  height: 12px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: hsl(180, 4%, 10%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gray-400);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gray-500);
-}
-
-p {
-  color: var(--color-white-two);
-}
-
-hr {
-  width: 100%;
-  border-color: var(--color-gray-500);
-  border-top: 1px solid var(--color-gray-500);
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  color: var(--color-white-one)
-}
-
-strong,
-em {
-  color: var(--color-white-one);
+  border-radius: 1rem;
+  background: hsl(180, 4%, 50%);
 }

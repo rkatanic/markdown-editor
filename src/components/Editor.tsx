@@ -20,24 +20,26 @@ interface Props {
 
 const Editor = ({ file, updateCurrentFile }: Props): JSX.Element => {
   return (
-    <CodeMirror2
-      className="code-mirror"
-      options={{
-        placeholder: "Start typing",
-        mode: { name: "customHighlights" },
-        highlightFormatting: true,
-        theme: "material",
-        lineWrapping: true,
-        highlightActiveLine: true,
-      }}
-      value={file.markdown}
-      onChange={(_editor, _data, value) =>
-        updateCurrentFile({ ...file, markdown: value })
-      }
-      onBeforeChange={(_editor, _data, value) => {
-        updateCurrentFile({ ...file, markdown: value });
-      }}
-    />
+    <div className="w-full max-w-5xl m-auto mt-8 px-8 h-[calc(100vh-10rem)] sm:h-[calc(100vh-6rem)]">
+      <CodeMirror2
+        className="code-mirror overflow-y-auto shadow-lg bg-white h-full rounded-md dark:bg-zinc-800 dark:border-zinc-700"
+        options={{
+          placeholder: "Start typing",
+          mode: { name: "customHighlights" },
+          highlightFormatting: true,
+          theme: "material",
+          lineWrapping: true,
+          highlightActiveLine: true,
+        }}
+        value={file.markdown}
+        onChange={(_editor, _data, value) =>
+          updateCurrentFile({ ...file, markdown: value })
+        }
+        onBeforeChange={(_editor, _data, value) => {
+          updateCurrentFile({ ...file, markdown: value });
+        }}
+      />
+    </div>
   );
 };
 

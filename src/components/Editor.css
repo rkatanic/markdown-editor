@@ -1,21 +1,22 @@
-.code-mirror {
-  margin-top: 1.5rem;
-  position: relative;
+.CodeMirror-wrap {
+  padding: 2rem 2rem 0;
 }
 
 .code-mirror>div {
   height: 100%;
-  background-color: transparent !important;
+  background-color: white !important;
   font-family: var(--font);
   color: var(--color-white-three) !important;
 }
 
-.CodeMirror-selected {
-  background-color: var(--color-gray-400) !important;
+.dark .code-mirror>div {
+  background-color: #27272A !important;
 }
 
+.CodeMirror-selected {}
+
 .CodeMirror-cursor {
-  border-left: 2px solid var(--color-primary-500) !important;
+  border-left: 2px solid black !important;
 }
 
 .cm-comment {

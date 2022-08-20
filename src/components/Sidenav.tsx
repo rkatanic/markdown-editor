@@ -1,19 +1,21 @@
-import IconButton from "./IconButton";
-import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg";
-import { ReactComponent as DeleteIcon } from "../assets/icons/x-circle.svg";
-import { ReactComponent as PencilIcon } from "../assets/icons/pencil.svg";
-import { ReactComponent as EyeIcon } from "../assets/icons/eye.svg";
-import { ReactComponent as FolderIcon } from "../assets/icons/folder.svg";
-
-import "./Sidenav.css";
+import { useState } from "react";
+import {
+  FiEdit2,
+  FiEye,
+  FiDownload,
+  FiXCircle,
+  FiFolder,
+  FiX,
+  FiMenu,
+} from "react-icons/fi";
+import { VscColorMode } from "react-icons/vsc";
 
 interface Props {
   activeTab: "editor" | "preview";
   changeTab: (tab: "editor" | "preview") => void;
   clearCurrentFile: () => void;
   downloadFile: () => void;
-  toggleFilesShow: () => void;
-  numberOfFiles: number;
+  toggleShowFiles: () => void;
 }
 
 const Sidenav = ({
@@ -21,31 +23,81 @@ const Sidenav = ({
   changeTab,
   clearCurrentFile,
   downloadFile,
-  toggleFilesShow,
-  numberOfFiles,
+  toggleShowFiles,
 }: Props): JSX.Element => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleShowMenuoggle = (): void => {
+    setShowMenu((prevState) => !prevState);
+  };
+
   return (
-    <div className="sidenav">
-      <span className="logo">rk</span>
-      <h5
-        className={`tab ${activeTab === "editor" ? "tab-active" : ""}`}
-        onClick={() => changeTab("editor")}
-      >
-        <IconButton icon={<PencilIcon />} />
-      </h5>
-      <h5
-        className={`tab ${activeTab === "preview" ? "tab-active" : ""}`}
-        onClick={() => changeTab("preview")}
-      >
-        <IconButton icon={<EyeIcon />} />
-      </h5>
-      <IconButton icon={<DownloadIcon />} onClick={downloadFile} />
-      <IconButton icon={<DeleteIcon />} onClick={clearCurrentFile} />
-      <div className="files-button-container" onClick={toggleFilesShow}>
-        <IconButton icon={<FolderIcon />} />
-        {!!numberOfFiles && (
-          <div className="files-button-badge">{numberOfFiles}</div>
+    <div className="w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6 sm:z-10">
+      <div className="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-16 bg-emerald-700 w-full z-10">
+        <div className="w-8 h-8 border-emerald-50 border-8 rounded-full"></div>
+        {showMenu ? (
+          <FiX
+            onClick={handleShowMenuoggle}
+            size="1.375rem"
+            className="stroke-white sm:hidden"
+          />
+        ) : (
+          <FiMenu
+            onClick={handleShowMenuoggle}
+            size="1.375rem"
+            className="stroke-white sm:hidden"
+          />
         )}
+      </div>
+      <div
+        className={`${
+          showMenu ? "top-0" : "-top-full"
+        } z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 sm:py-0 sm:top-0 mt-16 py-4 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-4 w-full px-4`}
+      >
+        <div
+          onClick={(): void => changeTab("editor")}
+          className={`${
+            activeTab === "editor" ? "bg-emerald-700" : ""
+          } hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full`}
+        >
+          <FiEdit2 size="1.375rem" className="stroke-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Editor</span>
+        </div>
+        <div
+          onClick={(): void => changeTab("preview")}
+          className={`${
+            activeTab === "preview" ? "bg-emerald-700" : ""
+          } hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full`}
+        >
+          <FiEye size="1.375rem" className="stroke-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Preview</span>
+        </div>
+        <div
+          onClick={downloadFile}
+          className="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <FiDownload size="1.375rem" className="stroke-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Download</span>
+        </div>
+        <div
+          onClick={clearCurrentFile}
+          className="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <FiXCircle size="1.375rem" className="stroke-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Clear</span>
+        </div>
+        <div
+          onClick={toggleShowFiles}
+          className="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <FiFolder size="1.375rem" className="stroke-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Files</span>
+        </div>
+        <div className="bg-emerald-500 h-px w-8"></div>
+        <div className="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full">
+          <VscColorMode size="1.375rem" className="fill-emerald-100" />
+          <span className="text-white text-lg sm:hidden">Theme</span>
+        </div>
       </div>
     </div>
   );

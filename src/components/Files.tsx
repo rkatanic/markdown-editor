@@ -27,6 +27,7 @@ const Files = ({
     <>
       {showFiles && (
         <div
+          data-testid="files-overlay"
           onClick={toggleFilesShow}
           className="z-10 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"
         ></div>
@@ -44,6 +45,7 @@ const Files = ({
             </span>
           </div>
           <FiX
+            data-testid="x-icon"
             onClick={toggleFilesShow}
             size="1.375rem"
             className="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
@@ -64,6 +66,7 @@ const Files = ({
                   {name}
                 </span>
                 <FiTrash2
+                  data-testid="trash-icon"
                   onClick={() => deleteFile(name)}
                   size="1.125rem"
                   className="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"

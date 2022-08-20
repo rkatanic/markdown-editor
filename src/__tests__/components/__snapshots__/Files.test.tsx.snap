@@ -4,80 +4,294 @@ exports[`Files should render 1`] = `
 <body>
   <div>
     <div
-      class="files-overlay "
-    />
-    <div
-      class="files "
+      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm"
     >
-      <h5
-        class="files-header"
-      >
-        Files 
-        (2)
-        <div
-          class="files-close"
-        >
-          <button
-            class="icon-button icon-button-medium"
-            type="button"
-          >
-            <svg>
-              x.svg
-            </svg>
-          </button>
-        </div>
-      </h5>
       <div
-        class="files-list"
+        class="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
+      >
+        <div>
+          Notes
+           
+          <span
+            class="text-sm text-zinc-400 font-normal ml-2"
+          >
+            2 Files
+          </span>
+        </div>
+        <svg
+          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          data-testid="x-icon"
+          fill="none"
+          height="1.375rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1.375rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </div>
+      <div
+        class="w-full max-w-sm"
       >
         <div
-          class="file file-active"
+          class="bg-zinc-50 dark:bg-zinc-700/25 border-b px-6 py-4 dark:border-zinc-700"
         >
-          <div
-            class="file-header"
+          <p
+            class="cursor-pointer mb-2 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
           >
-            <span
-              class="file-name"
-            >
+            <span>
               File 1
             </span>
-            <button
-              class="icon-button icon-button-small"
-              type="button"
+            <svg
+              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              data-testid="trash-icon"
+              fill="none"
+              height="1.125rem"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1.125rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg>
-                trash.svg
-              </svg>
-            </button>
-          </div>
-          <div
-            class="file-content"
+              <polyline
+                points="3 6 5 6 21 6"
+              />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+              <line
+                x1="10"
+                x2="10"
+                y1="11"
+                y2="17"
+              />
+              <line
+                x1="14"
+                x2="14"
+                y1="11"
+                y2="17"
+              />
+            </svg>
+          </p>
+          <p
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-500 dark:text-zinc-400"
           >
             content
-          </div>
+          </p>
         </div>
         <div
-          class="file "
+          class=" border-b px-6 py-4 dark:border-zinc-700"
         >
-          <div
-            class="file-header"
+          <p
+            class="cursor-pointer mb-2 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
           >
-            <span
-              class="file-name"
-            >
+            <span>
               File 2
             </span>
-            <button
-              class="icon-button icon-button-small"
-              type="button"
+            <svg
+              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              data-testid="trash-icon"
+              fill="none"
+              height="1.125rem"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1.125rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg>
-                trash.svg
-              </svg>
-            </button>
-          </div>
-          <div
-            class="file-content"
+              <polyline
+                points="3 6 5 6 21 6"
+              />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+              <line
+                x1="10"
+                x2="10"
+                y1="11"
+                y2="17"
+              />
+              <line
+                x1="14"
+                x2="14"
+                y1="11"
+                y2="17"
+              />
+            </svg>
+          </p>
+          <p
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-500 dark:text-zinc-400"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Files should render with overlay 1`] = `
+<body>
+  <div>
+    <div
+      class="z-10 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"
+      data-testid="files-overlay"
+    />
+    <div
+      class="left-0 sm:ml-20 overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm"
+    >
+      <div
+        class="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
+      >
+        <div>
+          Notes
+           
+          <span
+            class="text-sm text-zinc-400 font-normal ml-2"
+          >
+            2 Files
+          </span>
+        </div>
+        <svg
+          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          data-testid="x-icon"
+          fill="none"
+          height="1.375rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1.375rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </div>
+      <div
+        class="w-full max-w-sm"
+      >
+        <div
+          class="bg-zinc-50 dark:bg-zinc-700/25 border-b px-6 py-4 dark:border-zinc-700"
+        >
+          <p
+            class="cursor-pointer mb-2 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+          >
+            <span>
+              File 1
+            </span>
+            <svg
+              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              data-testid="trash-icon"
+              fill="none"
+              height="1.125rem"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1.125rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="3 6 5 6 21 6"
+              />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+              <line
+                x1="10"
+                x2="10"
+                y1="11"
+                y2="17"
+              />
+              <line
+                x1="14"
+                x2="14"
+                y1="11"
+                y2="17"
+              />
+            </svg>
+          </p>
+          <p
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-500 dark:text-zinc-400"
+          >
+            content
+          </p>
+        </div>
+        <div
+          class=" border-b px-6 py-4 dark:border-zinc-700"
+        >
+          <p
+            class="cursor-pointer mb-2 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+          >
+            <span>
+              File 2
+            </span>
+            <svg
+              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              data-testid="trash-icon"
+              fill="none"
+              height="1.125rem"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1.125rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="3 6 5 6 21 6"
+              />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+              <line
+                x1="10"
+                x2="10"
+                y1="11"
+                y2="17"
+              />
+              <line
+                x1="14"
+                x2="14"
+                y1="11"
+                y2="17"
+              />
+            </svg>
+          </p>
+          <p
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-500 dark:text-zinc-400"
           />
         </div>
       </div>
@@ -90,37 +304,50 @@ exports[`Files should render without files 1`] = `
 <body>
   <div>
     <div
-      class="files-overlay "
-    />
-    <div
-      class="files "
+      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm"
     >
-      <h5
-        class="files-header"
-      >
-        Files 
-        <div
-          class="files-close"
-        >
-          <button
-            class="icon-button icon-button-medium"
-            type="button"
-          >
-            <svg>
-              x.svg
-            </svg>
-          </button>
-        </div>
-      </h5>
       <div
-        class="files-list"
+        class="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
       >
-        <p
-          class="file-text"
+        <div>
+          Notes
+           
+          <span
+            class="text-sm text-zinc-400 font-normal ml-2"
+          >
+            0 Files
+          </span>
+        </div>
+        <svg
+          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          data-testid="x-icon"
+          fill="none"
+          height="1.375rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1.375rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          No files saved yet
-        </p>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
       </div>
+      <div
+        class="w-full max-w-sm"
+      />
     </div>
   </div>
 </body>

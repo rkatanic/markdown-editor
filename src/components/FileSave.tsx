@@ -23,8 +23,10 @@ const FileSave = ({
           className="focus:outline-none bg-transparent w-full"
           onChange={handleFileNameChange}
           value={fileName}
+          placeholder="File name"
         />
         <FiSave
+          data-testid="save-icon"
           onClick={saveFile}
           className="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
         />

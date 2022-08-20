@@ -1,54 +1,52 @@
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, RenderResult } from "@testing-library/react";
 import Files from "../../components/Files";
+import { MarkdownFile } from "../../types/markdown";
 
 describe("Files", (): void => {
-  const files = [
+  const mockFiles = [
     { name: "File 1", markdown: "content" },
     { name: "File 2", markdown: "" },
-  ];
+  ] as MarkdownFile[];
 
-  it("should render", (): void => {
-    const { baseElement } = render(
+  const mockSelectFile = jest.fn();
+  const mockDeleteFile = jest.fn();
+  const mockToggleFilesShow = jest.fn();
+
+  const renderTestComponent = (
+    files = mockFiles,
+    showFiles = false
+  ): RenderResult =>
+    render(
       <Files
         files={files}
-        currentFile={files[0]}
-        selectFile={jest.fn()}
-        deleteFile={jest.fn()}
-        toggleFilesShow={jest.fn()}
-        showFiles={false}
+        currentFile={mockFiles[0]}
+        selectFile={mockSelectFile}
+        deleteFile={mockDeleteFile}
+        toggleFilesShow={mockToggleFilesShow}
+        showFiles={showFiles}
       />
     );
+
+  it("should render", (): void => {
+    const { baseElement } = renderTestComponent();
+
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it("should render with overlay", (): void => {
+    const { baseElement } = renderTestComponent(mockFiles, true);
 
     expect(baseElement).toMatchSnapshot();
   });
 
   it("should render without files", (): void => {
-    const { baseElement } = render(
-      <Files
-        files={[]}
-        currentFile={undefined as any}
-        selectFile={jest.fn()}
-        deleteFile={jest.fn()}
-        toggleFilesShow={jest.fn()}
-        showFiles={false}
-      />
-    );
+    const { baseElement } = renderTestComponent([]);
 
     expect(baseElement).toMatchSnapshot();
   });
 
   it("should call selectFile on file name", (): void => {
-    const mockSelectFile = jest.fn();
-    const { getByText } = render(
-      <Files
-        files={files}
-        currentFile={files[0]}
-        selectFile={mockSelectFile}
-        deleteFile={jest.fn()}
-        toggleFilesShow={jest.fn()}
-        showFiles={false}
-      />
-    );
+    const { getByText } = renderTestComponent();
 
     fireEvent.click(getByText("File 1"));
 
@@ -56,17 +54,7 @@ describe("Files", (): void => {
   });
 
   it("should call selectFile on file content", (): void => {
-    const mockSelectFile = jest.fn();
-    const { getByText } = render(
-      <Files
-        files={files}
-        currentFile={files[0]}
-        selectFile={mockSelectFile}
-        deleteFile={jest.fn()}
-        toggleFilesShow={jest.fn()}
-        showFiles={false}
-      />
-    );
+    const { getByText } = renderTestComponent();
 
     fireEvent.click(getByText("content"));
 
@@ -74,37 +62,17 @@ describe("Files", (): void => {
   });
 
   it("should call deleteFile", (): void => {
-    const mockDeleteFile = jest.fn();
-    const { getAllByText } = render(
-      <Files
-        files={files}
-        currentFile={files[0]}
-        selectFile={jest.fn()}
-        deleteFile={mockDeleteFile}
-        toggleFilesShow={jest.fn()}
-        showFiles={true}
-      />
-    );
+    const { getAllByTestId } = renderTestComponent();
 
-    fireEvent.click(getAllByText("trash.svg")[0]);
+    fireEvent.click(getAllByTestId("trash-icon")[0]);
 
     expect(mockDeleteFile).toHaveBeenCalledTimes(1);
   });
 
   it("should call toggleFilesShow", (): void => {
-    const mockToggleFilesShow = jest.fn();
-    const { getByText, baseElement } = render(
-      <Files
-        files={files}
-        currentFile={files[0]}
-        selectFile={jest.fn()}
-        deleteFile={jest.fn()}
-        toggleFilesShow={mockToggleFilesShow}
-        showFiles={false}
-      />
-    );
+    const { getByTestId } = renderTestComponent();
 
-    fireEvent.click(getByText("x.svg"));
+    fireEvent.click(getByTestId("x-icon"));
 
     expect(mockToggleFilesShow).toHaveBeenCalledTimes(1);
   });

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import MarkdownOutput from "../../components/MarkdownOutput";
 
-jest.mock("react-markdown", () => (props: any) => {
+jest.mock("react-markdown", () => (props: any): JSX.Element => {
   return <div>{props.children}</div>;
 });
 jest.mock("remark-gfm", () => () => {});

@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react";
 import MarkdownEditor from "../../components/MarkdownEditor";
 import { downloadFile } from "../../util/markdownEditorUtils";
 
-jest.mock("react-markdown", () => (props: any) => {
+jest.mock("react-markdown", () => (props: any): JSX.Element => {
   return <div>{props.children}</div>;
 });
 jest.mock("remark-gfm", () => () => {});
@@ -12,7 +12,7 @@ jest.mock("../../util/markdownEditorUtils", () => ({
 }));
 
 describe("MarkdownEditor", (): void => {
-  afterEach(() => {
+  afterEach((): void => {
     jest.clearAllMocks();
   });
 
@@ -23,62 +23,51 @@ describe("MarkdownEditor", (): void => {
   });
 
   it("should render with output", (): void => {
-    const { baseElement, getByText } = render(<MarkdownEditor />);
+    const { baseElement, getByTestId } = render(<MarkdownEditor />);
 
-    fireEvent.click(getByText("eye.svg"));
+    fireEvent.click(getByTestId("eye-icon"));
 
     expect(baseElement).toMatchSnapshot();
   });
 
   it("should save file", (): void => {
     Storage.prototype.setItem = jest.fn();
-    const { baseElement, getByText, getByDisplayValue } = render(
-      <MarkdownEditor />
-    );
+    const { getByTestId, getByDisplayValue } = render(<MarkdownEditor />);
 
     fireEvent.change(getByDisplayValue("Untitled"), {
       target: { value: "New file" },
     });
-    fireEvent.click(getByText("save.svg"));
+    fireEvent.click(getByTestId("save-icon"));
 
-    expect(baseElement.querySelector(".file-name")).toHaveTextContent(
-      "New file"
-    );
     expect(localStorage.setItem).toHaveBeenNthCalledWith(1, "md:New file", "");
   });
 
   it("should delete file", (): void => {
     Storage.prototype.setItem = jest.fn();
     Storage.prototype.removeItem = jest.fn();
-    const { baseElement, getByText, queryByText, getByDisplayValue } = render(
-      <MarkdownEditor />
-    );
+    const { getByTestId, getByDisplayValue } = render(<MarkdownEditor />);
 
     fireEvent.change(getByDisplayValue("Untitled"), {
       target: { value: "New file" },
     });
-    fireEvent.click(getByText("save.svg"));
-    expect(baseElement.querySelector(".file-name")).toHaveTextContent(
-      "New file"
-    );
+    fireEvent.click(getByTestId("save-icon"));
     expect(localStorage.setItem).toHaveBeenNthCalledWith(1, "md:New file", "");
 
-    fireEvent.click(getByText("trash.svg"));
+    fireEvent.click(getByTestId("trash-icon"));
     expect(localStorage.removeItem).toHaveBeenNthCalledWith(1, "md:New file");
-    expect(queryByText("New file")).not.toBeInTheDocument();
   });
 
   it("should toggle files menu", (): void => {
-    const { baseElement, getByText } = render(<MarkdownEditor />);
+    const { getByTestId, queryByTestId } = render(<MarkdownEditor />);
 
-    fireEvent.click(getByText("folder.svg"));
-    expect(baseElement.querySelector(".files")).toHaveClass("files-open");
+    fireEvent.click(getByTestId("folder-icon"));
+    expect(getByTestId("files-overlay")).toBeInTheDocument();
 
-    fireEvent.click(getByText("x.svg"));
-    expect(baseElement.querySelector(".files")).not.toHaveClass("files-open");
+    fireEvent.click(getByTestId("x-icon"));
+    expect(queryByTestId("files-overlay")).not.toBeInTheDocument();
   });
 
-  it("should downlaod file", (): void => {
+  it("should download file", (): void => {
     Object.defineProperty(window, "localStorage", {
       value: {
         key: "md:something",
@@ -86,9 +75,9 @@ describe("MarkdownEditor", (): void => {
       },
     });
     (downloadFile as jest.Mock).mockReturnValue("file");
-    const { getByText } = render(<MarkdownEditor />);
+    const { getByTestId } = render(<MarkdownEditor />);
 
-    fireEvent.click(getByText("download.svg"));
+    fireEvent.click(getByTestId("download-icon"));
 
     expect(downloadFile).toHaveBeenNthCalledWith(1, {
       name: "Untitled",

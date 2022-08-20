@@ -3,7 +3,7 @@ import MarkdownOutput from "./MarkdownOutput";
 import Editor from "./Editor";
 import Sidenav from "./Sidenav";
 import { downloadFile } from "../util/markdownEditorUtils";
-import { MarkdownFile } from "../types/markdown";
+import { MarkdownFile, Tab } from "../types/markdown";
 import Files from "./Files";
 import FileSave from "./FileSave";
 
@@ -13,7 +13,7 @@ const MarkdownEditor = (): JSX.Element => {
     name: "Untitled",
     markdown: "",
   });
-  const [activeTab, setActiveTab] = useState<"editor" | "preview">("editor");
+  const [activeTab, setActiveTab] = useState<Tab>("editor");
   const [showFiles, setShowFiles] = useState(false);
 
   const handleShowFilesToggle = (): void => {

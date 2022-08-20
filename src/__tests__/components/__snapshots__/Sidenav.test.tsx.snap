@@ -4,68 +4,235 @@ exports[`Sidenav should render 1`] = `
 <body>
   <div>
     <div
-      class="sidenav"
+      class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6 sm:z-10"
     >
-      <span
-        class="logo"
-      >
-        rk
-      </span>
-      <h5
-        class="tab tab-active"
-      >
-        <button
-          class="icon-button icon-button-medium"
-          type="button"
-        >
-          <svg>
-            pencil.svg
-          </svg>
-        </button>
-      </h5>
-      <h5
-        class="tab "
-      >
-        <button
-          class="icon-button icon-button-medium"
-          type="button"
-        >
-          <svg>
-            eye.svg
-          </svg>
-        </button>
-      </h5>
-      <button
-        class="icon-button icon-button-medium"
-        type="button"
-      >
-        <svg>
-          download.svg
-        </svg>
-      </button>
-      <button
-        class="icon-button icon-button-medium"
-        type="button"
-      >
-        <svg>
-          x-circle.svg
-        </svg>
-      </button>
       <div
-        class="files-button-container"
+        class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-16 bg-emerald-700 w-full z-10"
       >
-        <button
-          class="icon-button icon-button-medium"
-          type="button"
-        >
-          <svg>
-            folder.svg
-          </svg>
-        </button>
         <div
-          class="files-button-badge"
+          class="w-8 h-8 border-emerald-50 border-8 rounded-full"
+        />
+        <svg
+          class="stroke-white sm:hidden"
+          data-testid="menu-icon"
+          fill="none"
+          height="1.375rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1.375rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          4
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </div>
+      <div
+        class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 sm:py-0 sm:top-0 mt-16 py-4 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-4 w-full px-4"
+        data-testid="sidenav-menu"
+      >
+        <div
+          class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="stroke-emerald-100"
+            data-testid="edit-icon"
+            fill="none"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Editor
+          </span>
+        </div>
+        <div
+          class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="stroke-emerald-100"
+            data-testid="eye-icon"
+            fill="none"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="3"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Preview
+          </span>
+        </div>
+        <div
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="stroke-emerald-100"
+            data-testid="download-icon"
+            fill="none"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+            />
+            <polyline
+              points="7 10 12 15 17 10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="15"
+              y2="3"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Download
+          </span>
+        </div>
+        <div
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="stroke-emerald-100"
+            data-testid="x-circle-icon"
+            fill="none"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="15"
+              x2="9"
+              y1="9"
+              y2="15"
+            />
+            <line
+              x1="9"
+              x2="15"
+              y1="9"
+              y2="15"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Clear
+          </span>
+        </div>
+        <div
+          class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="stroke-emerald-100"
+            data-testid="folder-icon"
+            fill="none"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Files
+          </span>
+        </div>
+        <div
+          class="bg-emerald-500 h-px w-8"
+        />
+        <div
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+        >
+          <svg
+            class="fill-emerald-100"
+            data-testid="theme-switch-icon"
+            fill="currentColor"
+            height="1.375rem"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="1.375rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13V2a6 6 0 1 1 0 12z"
+            />
+          </svg>
+          <span
+            class="text-white text-lg sm:hidden"
+          >
+            Theme
+          </span>
         </div>
       </div>
     </div>

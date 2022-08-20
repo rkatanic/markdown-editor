@@ -14,12 +14,7 @@ const MarkdownEditor = (): JSX.Element => {
     markdown: "",
   });
   const [activeTab, setActiveTab] = useState<"editor" | "preview">("editor");
-  const [showMenu, setShowMenu] = useState(false);
   const [showFiles, setShowFiles] = useState(false);
-
-  const handleShowMenuoggle = (): void => {
-    setShowMenu((prevState) => !prevState);
-  };
 
   const handleShowFilesToggle = (): void => {
     setShowFiles((prevState) => !prevState);
@@ -109,16 +104,12 @@ const MarkdownEditor = (): JSX.Element => {
 
   return (
     <div className="flex-col flex bg-zinc-50 dark:bg-zinc-900/50 dark:bg-opacity-40 sm:flex-row h-full">
-      {(showMenu || showFiles) && (
-        <div className="z-10 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"></div>
-      )}
       <Sidenav
         activeTab={activeTab}
         changeTab={(tab) => setActiveTab(tab)}
         clearCurrentFile={handleFileContentClear}
         downloadFile={() => downloadFile(currentFile)}
         toggleShowFiles={handleShowFilesToggle}
-        // numberOfFiles={files.length}
       />
       <Files
         files={files}

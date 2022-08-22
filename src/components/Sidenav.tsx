@@ -65,7 +65,7 @@ const Sidenav = ({
           className="z-10 sm:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"
         ></div>
       )}
-      <div className="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6 sm:z-10">
+      <div className="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6">
         <div className="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-16 bg-emerald-700 w-full z-10">
           <div className="w-8 h-8 border-emerald-50 border-8 rounded-full"></div>
           {showMenu ? (

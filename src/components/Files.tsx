@@ -1,5 +1,6 @@
 import { MarkdownFile } from "../types/markdown";
-import { FiFilePlus, FiTrash2, FiX } from "react-icons/fi";
+import { FiFilePlus, FiX } from "react-icons/fi";
+import File from "./File";
 
 interface Props {
   files: MarkdownFile[];
@@ -29,7 +30,7 @@ const Files = ({
         <div
           data-testid="files-overlay"
           onClick={toggleFilesShow}
-          className="z-10 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"
+          className="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70"
         ></div>
       )}
       <div
@@ -53,34 +54,17 @@ const Files = ({
         </div>
         {files.length ? (
           <div className="w-full max-w-sm">
-            {files.map(({ name, markdown }, i) => (
-              <div
-                key={i}
-                className={`${
-                  currentFile?.name === name
-                    ? "bg-zinc-50 dark:bg-zinc-700/25"
-                    : ""
-                } border-b px-6 py-4 dark:border-zinc-700`}
-              >
-                <p className="cursor-pointer mb-2 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200">
-                  <span onClick={(): void => handleFilesSelect(name)}>
-                    {name}
-                  </span>
-                  <FiTrash2
-                    data-testid="trash-icon"
-                    onClick={() => deleteFile(name)}
-                    size="1.125rem"
-                    className="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
-                  />
-                </p>
-                <p
-                  onClick={(): void => handleFilesSelect(name)}
-                  className="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-500 dark:text-zinc-400"
-                >
-                  {markdown}
-                </p>
-              </div>
-            ))}
+            {files.map(
+              (file, i): JSX.Element => (
+                <File
+                  key={i}
+                  currentFileName={currentFile?.name}
+                  file={file}
+                  deleteFile={deleteFile}
+                  selectFile={handleFilesSelect}
+                />
+              )
+            )}
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center gap-1 mt-8">

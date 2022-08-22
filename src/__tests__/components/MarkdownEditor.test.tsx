@@ -45,7 +45,9 @@ describe("MarkdownEditor", (): void => {
   it("should delete file", (): void => {
     Storage.prototype.setItem = jest.fn();
     Storage.prototype.removeItem = jest.fn();
-    const { getByTestId, getByDisplayValue } = render(<MarkdownEditor />);
+    const { getByTestId, getByDisplayValue, getByText } = render(
+      <MarkdownEditor />
+    );
 
     fireEvent.change(getByDisplayValue("Untitled"), {
       target: { value: "New file" },
@@ -54,6 +56,7 @@ describe("MarkdownEditor", (): void => {
     expect(localStorage.setItem).toHaveBeenNthCalledWith(1, "md:New file", "");
 
     fireEvent.click(getByTestId("trash-icon"));
+    fireEvent.click(getByText("Delete"));
     expect(localStorage.removeItem).toHaveBeenNthCalledWith(1, "md:New file");
   });
 

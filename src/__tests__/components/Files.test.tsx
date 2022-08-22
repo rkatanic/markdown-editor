@@ -62,9 +62,10 @@ describe("Files", (): void => {
   });
 
   it("should call deleteFile", (): void => {
-    const { getAllByTestId } = renderTestComponent();
+    const { getAllByTestId, getByText } = renderTestComponent();
 
     fireEvent.click(getAllByTestId("trash-icon")[0]);
+    fireEvent.click(getByText("Delete"));
 
     expect(mockDeleteFile).toHaveBeenCalledTimes(1);
   });

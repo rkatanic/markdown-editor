@@ -152,7 +152,7 @@ exports[`Files should render with overlay 1`] = `
 <body>
   <div>
     <div
-      class="z-10 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70 z-100"
+      class="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70"
       data-testid="files-overlay"
     />
     <div

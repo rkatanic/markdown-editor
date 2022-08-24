@@ -87,7 +87,7 @@ h6 {
 }
 
 .cm-md-heading-prefix {
-  color: var(--color-gray-600) !important;
+  color: lightgray !important;
 }
 
 a {

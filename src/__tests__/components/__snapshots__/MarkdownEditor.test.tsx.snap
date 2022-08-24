@@ -10,7 +10,7 @@ exports[`MarkdownEditor should render 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
       >
         <div
-          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-16 bg-emerald-700 w-full z-10"
+          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-[4.5rem] bg-emerald-700 w-full z-10"
         >
           <div
             class="w-8 h-8 border-emerald-50 border-8 rounded-full"
@@ -243,13 +243,13 @@ exports[`MarkdownEditor should render 1`] = `
         class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm"
       >
         <div
-          class="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
+          class="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
         >
           <div>
             Notes
              
             <span
-              class="text-sm text-zinc-400 font-normal ml-2"
+              class="text-sm text-zinc-400 font-normal ml-1"
             >
               0 Files
             </span>
@@ -367,7 +367,7 @@ exports[`MarkdownEditor should render 1`] = `
           </div>
         </div>
         <div
-          class="w-full max-w-5xl m-auto mt-8 px-8 h-[calc(100vh-10rem)] sm:h-[calc(100vh-6rem)]"
+          class="w-full max-w-5xl m-auto sm:mt-8 sm:px-8 h-[calc(100vh-8rem)] sm:h-[calc(100vh-6rem)]"
         >
           <div
             class="react-codemirror2 code-mirror overflow-y-auto shadow-lg bg-white h-full rounded-md dark:bg-zinc-800 dark:border-zinc-700"
@@ -493,7 +493,7 @@ exports[`MarkdownEditor should render with output 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
       >
         <div
-          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-16 bg-emerald-700 w-full z-10"
+          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-[4.5rem] bg-emerald-700 w-full z-10"
         >
           <div
             class="w-8 h-8 border-emerald-50 border-8 rounded-full"
@@ -726,13 +726,13 @@ exports[`MarkdownEditor should render with output 1`] = `
         class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm"
       >
         <div
-          class="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
+          class="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700"
         >
           <div>
             Notes
              
             <span
-              class="text-sm text-zinc-400 font-normal ml-2"
+              class="text-sm text-zinc-400 font-normal ml-1"
             >
               0 Files
             </span>
@@ -850,7 +850,7 @@ exports[`MarkdownEditor should render with output 1`] = `
           </div>
         </div>
         <div
-          class="w-full max-w-5xl m-auto mt-8 px-8 h-[calc(100vh-10rem)] sm:h-[calc(100vh-6rem)]"
+          class="w-full max-w-5xl m-auto sm:mt-8 sm:px-8 h-[calc(100vh-8rem)] sm:h-[calc(100vh-6rem)]"
         >
           <div
             class="overflow-y-auto shadow-lg bg-white h-full p-8 rounded-md dark:bg-zinc-800 dark:border-zinc-700"

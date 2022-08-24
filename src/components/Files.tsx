@@ -38,10 +38,10 @@ const Files = ({
           showFiles ? "left-0 sm:ml-20" : "-left-full "
         } overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm`}
       >
-        <div className="border-b h-16 flex items-center justify-between px-6 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700">
+        <div className="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700">
           <div>
             Notes{" "}
-            <span className="text-sm text-zinc-400 font-normal ml-2">
+            <span className="text-sm text-zinc-400 font-normal ml-1">
               {`${files.length} ${files.length === 1 ? "File" : "Files"}`}
             </span>
           </div>

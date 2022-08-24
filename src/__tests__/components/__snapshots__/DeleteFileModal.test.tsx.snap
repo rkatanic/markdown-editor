@@ -14,11 +14,11 @@ exports[`DeleteFileModal should render 1`] = `
       data-testid="delete-file-modal-overlay"
     />
     <div
-      class="top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 fixed bg-white shadow-lg p-6 rounded-md w-full max-w-lg dark:bg-zinc-800"
+      class="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed bg-white shadow-lg p-4 rounded-md w-full max-w-lg dark:bg-zinc-800"
       data-testid="delete-file-modal"
     >
       <div
-        class="flex flex-col justify-center items-center  gap-4 mb-8 sm:flex-row sm:items-start"
+        class="flex flex-col justify-center items-center gap-4 mb-8 sm:flex-row sm:items-start"
       >
         <div
           class="p-3 bg-rose-100 rounded-full dark:bg-rose-900 dark:bg-opacity-30"
@@ -55,8 +55,8 @@ exports[`DeleteFileModal should render 1`] = `
         <div
           class="flex-1 text-center sm:text-left"
         >
-          <h2
-            class="flex items-start justify-center font-semibold text-lg mb-2 sm:justify-between dark:text-zinc-100"
+          <h5
+            class="flex items-start justify-center font-semibold sm:justify-between dark:text-zinc-100"
           >
             Delete note
             <svg
@@ -85,7 +85,7 @@ exports[`DeleteFileModal should render 1`] = `
                 y2="18"
               />
             </svg>
-          </h2>
+          </h5>
           <p
             class="text-zinc-500 text-md dark:text-zinc-400"
           >
@@ -99,7 +99,7 @@ exports[`DeleteFileModal should render 1`] = `
         class="flex flex-col gap-4 justify-end sm:flex-row"
       >
         <button
-          class="order-2 shadow-sm font-semibold text-sm border border-zinc-300 px-4 py-2 rounded-md text-zinc-900 hover:bg-zinc-50 sm:order-1 dark:shadow-md dark:text-zinc-100 dark:hover:bg-zinc-700 dark:border-zinc-500"
+          class="order-2 shadow-sm font-semibold text-sm border bg-zinc-50 border-zinc-300 px-4 py-2 rounded-md text-zinc-900 hover:bg-zinc-100 sm:order-1 dark:shadow-md dark:text-zinc-100 dark:hover:bg-zinc-700 dark:border-zinc-500"
           type="button"
         >
           Cancel

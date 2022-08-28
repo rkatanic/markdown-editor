@@ -91,7 +91,7 @@ exports[`Files should render 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
           >
             content
           </p>
@@ -139,8 +139,10 @@ exports[`Files should render 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
-          />
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+          >
+            Empty note
+          </p>
         </div>
       </div>
     </div>
@@ -243,7 +245,7 @@ exports[`Files should render with overlay 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
           >
             content
           </p>
@@ -291,8 +293,10 @@ exports[`Files should render with overlay 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
-          />
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+          >
+            Empty note
+          </p>
         </div>
       </div>
     </div>

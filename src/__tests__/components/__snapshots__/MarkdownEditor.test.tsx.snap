@@ -10,7 +10,7 @@ exports[`MarkdownEditor should render 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
       >
         <div
-          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-[4.5rem] bg-emerald-700 w-full z-10"
+          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-700 w-full z-10"
         >
           <div
             class="w-8 h-8 border-emerald-50 border-8 rounded-full"
@@ -19,13 +19,13 @@ exports[`MarkdownEditor should render 1`] = `
             class="stroke-white sm:hidden"
             data-testid="menu-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <line
@@ -49,23 +49,23 @@ exports[`MarkdownEditor should render 1`] = `
           </svg>
         </div>
         <div
-          class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 sm:py-0 sm:top-0 mt-16 py-4 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-4 w-full px-4"
+          class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 py-2 sm:py-0 sm:top-0 mt-16 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-1 sm:gap-4 w-full px-2 sm:px-4"
           data-testid="sidenav-menu"
         >
           <div
-            class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="edit-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -73,25 +73,25 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Editor
             </span>
           </div>
           <div
-            class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="eye-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -104,25 +104,25 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Preview
             </span>
           </div>
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="download-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -139,25 +139,25 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Download
             </span>
           </div>
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="x-circle-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle
@@ -179,25 +179,25 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Clear
             </span>
           </div>
           <div
-            class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="folder-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -205,26 +205,26 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Files
             </span>
           </div>
           <div
-            class="bg-emerald-500 h-px w-8"
+            class="hidden sm:block bg-emerald-500 h-px w-8"
           />
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="fill-emerald-100"
               data-testid="theme-switch-icon"
               fill="currentColor"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-width="0"
               viewBox="0 0 16 16"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -232,7 +232,7 @@ exports[`MarkdownEditor should render 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Theme
             </span>
@@ -333,38 +333,44 @@ exports[`MarkdownEditor should render 1`] = `
         <div
           class="bg-white w-full border-b h-16 flex items-center justify-center text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700 dark:bg-zinc-800"
         >
-          <div
-            class="flex items-center justify-between gap-8 w-full max-w-5xl px-8 "
+          <form
+            class="flex items-center justify-between gap-8 w-full max-w-5xl px-4 sm:px-8"
           >
             <input
               class="focus:outline-none bg-transparent w-full"
               placeholder="File name"
-              value="Untitled"
+              required=""
+              type="text"
+              value="Introduction"
             />
-            <svg
-              class="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
-              data-testid="save-icon"
-              fill="none"
-              height="1em"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              type="submit"
             >
-              <path
-                d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
-              />
-              <polyline
-                points="17 21 17 13 7 13 7 21"
-              />
-              <polyline
-                points="7 3 7 8 15 8"
-              />
-            </svg>
-          </div>
+              <svg
+                class="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
+                data-testid="save-icon"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                />
+                <polyline
+                  points="17 21 17 13 7 13 7 21"
+                />
+                <polyline
+                  points="7 3 7 8 15 8"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
         <div
           class="w-full max-w-5xl m-auto sm:mt-8 sm:px-8 h-[calc(100vh-8rem)] sm:h-[calc(100vh-6rem)]"
@@ -493,7 +499,7 @@ exports[`MarkdownEditor should render with output 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
       >
         <div
-          class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-[4.5rem] bg-emerald-700 w-full z-10"
+          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-700 w-full z-10"
         >
           <div
             class="w-8 h-8 border-emerald-50 border-8 rounded-full"
@@ -502,13 +508,13 @@ exports[`MarkdownEditor should render with output 1`] = `
             class="stroke-white sm:hidden"
             data-testid="menu-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <line
@@ -532,23 +538,23 @@ exports[`MarkdownEditor should render with output 1`] = `
           </svg>
         </div>
         <div
-          class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 sm:py-0 sm:top-0 mt-16 py-4 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-4 w-full px-4"
+          class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 py-2 sm:py-0 sm:top-0 mt-16 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-1 sm:gap-4 w-full px-2 sm:px-4"
           data-testid="sidenav-menu"
         >
           <div
-            class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="edit-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -556,25 +562,25 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Editor
             </span>
           </div>
           <div
-            class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="eye-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -587,25 +593,25 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Preview
             </span>
           </div>
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="download-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -622,25 +628,25 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Download
             </span>
           </div>
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="x-circle-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle
@@ -662,25 +668,25 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Clear
             </span>
           </div>
           <div
-            class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="stroke-emerald-100"
               data-testid="folder-icon"
               fill="none"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -688,26 +694,26 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Files
             </span>
           </div>
           <div
-            class="bg-emerald-500 h-px w-8"
+            class="hidden sm:block bg-emerald-500 h-px w-8"
           />
           <div
-            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+            class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
           >
             <svg
               class="fill-emerald-100"
               data-testid="theme-switch-icon"
               fill="currentColor"
-              height="1.375rem"
+              height="1.25rem"
               stroke="currentColor"
               stroke-width="0"
               viewBox="0 0 16 16"
-              width="1.375rem"
+              width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -715,7 +721,7 @@ exports[`MarkdownEditor should render with output 1`] = `
               />
             </svg>
             <span
-              class="text-white text-lg sm:hidden"
+              class="text-emerald-50 sm:hidden"
             >
               Theme
             </span>
@@ -816,44 +822,50 @@ exports[`MarkdownEditor should render with output 1`] = `
         <div
           class="bg-white w-full border-b h-16 flex items-center justify-center text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700 dark:bg-zinc-800"
         >
-          <div
-            class="flex items-center justify-between gap-8 w-full max-w-5xl px-8 "
+          <form
+            class="flex items-center justify-between gap-8 w-full max-w-5xl px-4 sm:px-8"
           >
             <input
               class="focus:outline-none bg-transparent w-full"
               placeholder="File name"
-              value="Untitled"
+              required=""
+              type="text"
+              value="Introduction"
             />
-            <svg
-              class="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
-              data-testid="save-icon"
-              fill="none"
-              height="1em"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              type="submit"
             >
-              <path
-                d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
-              />
-              <polyline
-                points="17 21 17 13 7 13 7 21"
-              />
-              <polyline
-                points="7 3 7 8 15 8"
-              />
-            </svg>
-          </div>
+              <svg
+                class="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
+                data-testid="save-icon"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                />
+                <polyline
+                  points="17 21 17 13 7 13 7 21"
+                />
+                <polyline
+                  points="7 3 7 8 15 8"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
         <div
           class="w-full max-w-5xl m-auto sm:mt-8 sm:px-8 h-[calc(100vh-8rem)] sm:h-[calc(100vh-6rem)]"
         >
           <div
-            class="overflow-y-auto shadow-lg bg-white h-full p-8 rounded-md dark:bg-zinc-800 dark:border-zinc-700"
+            class="overflow-y-auto shadow-lg bg-white h-full p-4 sm:p-8 rounded-md dark:bg-zinc-800 dark:border-zinc-700"
           >
             <div />
           </div>

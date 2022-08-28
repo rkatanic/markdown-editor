@@ -6,7 +6,7 @@
   height: 100%;
   background-color: white !important;
   font-family: var(--font);
-  color: var(--color-white-three) !important;
+  color: black !important;
 }
 
 .dark .code-mirror>div {
@@ -40,7 +40,7 @@
 }
 
 .cm-md-strong {
-  color: var(--color-gray-700) !important;
+  color: gray !important;
 }
 
 .cm-url {
@@ -108,4 +108,11 @@ img {
   max-height: 36.75em;
   width: auto;
   height: auto;
+}
+
+@media screen and (max-width:640px) {
+  .CodeMirror-wrap {
+    padding: 1rem 1rem 0;
+  }
+
 }

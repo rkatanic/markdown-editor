@@ -34,7 +34,9 @@ const File = ({
       } border-b p-4 dark:border-zinc-700`}
     >
       <p className="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200">
-        <span onClick={(): void => selectFile(name)}>{name}</span>
+        <span onClick={(): void => selectFile(name)}>
+          {name ? name : "Untitled"}
+        </span>
         <FiTrash2
           data-testid="trash-icon"
           onClick={handleDeleteFileModalToggle}
@@ -44,9 +46,9 @@ const File = ({
       </p>
       <p
         onClick={(): void => selectFile(name)}
-        className="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
+        className="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
       >
-        {markdown}
+        {markdown ? markdown : "Empty note"}
       </p>
       <DeleteFileModal
         isOpen={showDeleteFileModal}

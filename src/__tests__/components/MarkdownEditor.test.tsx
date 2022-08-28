@@ -34,7 +34,7 @@ describe("MarkdownEditor", (): void => {
     Storage.prototype.setItem = jest.fn();
     const { getByTestId, getByDisplayValue } = render(<MarkdownEditor />);
 
-    fireEvent.change(getByDisplayValue("Untitled"), {
+    fireEvent.change(getByDisplayValue("Introduction"), {
       target: { value: "New file" },
     });
     fireEvent.click(getByTestId("save-icon"));
@@ -49,7 +49,7 @@ describe("MarkdownEditor", (): void => {
       <MarkdownEditor />
     );
 
-    fireEvent.change(getByDisplayValue("Untitled"), {
+    fireEvent.change(getByDisplayValue("Introduction"), {
       target: { value: "New file" },
     });
     fireEvent.click(getByTestId("save-icon"));
@@ -83,7 +83,7 @@ describe("MarkdownEditor", (): void => {
     fireEvent.click(getByTestId("download-icon"));
 
     expect(downloadFile).toHaveBeenNthCalledWith(1, {
-      name: "Untitled",
+      name: "Introduction",
       markdown: "",
     });
   });

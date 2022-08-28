@@ -10,7 +10,7 @@ import FileSave from "./FileSave";
 const MarkdownEditor = (): JSX.Element => {
   const [files, setFiles] = useState<MarkdownFile[]>([]);
   const [currentFile, setCurrentFile] = useState<MarkdownFile>({
-    name: "Untitled",
+    name: "Introduction",
     markdown: "",
   });
   const [activeTab, setActiveTab] = useState<Tab>("editor");

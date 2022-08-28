@@ -46,7 +46,7 @@ exports[`File should render 1`] = `
         </svg>
       </p>
       <p
-        class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
+        class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
       >
         markdown text
       </p>
@@ -101,7 +101,7 @@ exports[`File should render current select file 1`] = `
         </svg>
       </p>
       <p
-        class="cursor-pointer overflow-hidden text-ellipsis max-h-16 text-sm text-zinc-400 dark:text-zinc-400"
+        class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
       >
         markdown text
       </p>

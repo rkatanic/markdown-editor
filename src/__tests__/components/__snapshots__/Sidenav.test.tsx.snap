@@ -7,7 +7,7 @@ exports[`Sidenav should render 1`] = `
       class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
     >
       <div
-        class="px-8 justify-between flex items-center sm:justify-center sm:px-0 h-[4.5rem] bg-emerald-700 w-full z-10"
+        class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-700 w-full z-10"
       >
         <div
           class="w-8 h-8 border-emerald-50 border-8 rounded-full"
@@ -16,13 +16,13 @@ exports[`Sidenav should render 1`] = `
           class="stroke-white sm:hidden"
           data-testid="menu-icon"
           fill="none"
-          height="1.375rem"
+          height="1.25rem"
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
           viewBox="0 0 24 24"
-          width="1.375rem"
+          width="1.25rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <line
@@ -46,23 +46,23 @@ exports[`Sidenav should render 1`] = `
         </svg>
       </div>
       <div
-        class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 sm:py-0 sm:top-0 mt-16 py-4 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-4 w-full px-4"
+        class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 py-2 sm:py-0 sm:top-0 mt-16 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-1 sm:gap-4 w-full px-2 sm:px-4"
         data-testid="sidenav-menu"
       >
         <div
-          class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="stroke-emerald-100"
             data-testid="edit-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -70,25 +70,25 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Editor
           </span>
         </div>
         <div
-          class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="stroke-emerald-100"
             data-testid="eye-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -101,25 +101,25 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Preview
           </span>
         </div>
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="stroke-emerald-100"
             data-testid="download-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -136,25 +136,25 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Download
           </span>
         </div>
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="stroke-emerald-100"
             data-testid="x-circle-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
@@ -176,25 +176,25 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Clear
           </span>
         </div>
         <div
-          class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="stroke-emerald-100"
             data-testid="folder-icon"
             fill="none"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -202,26 +202,26 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Files
           </span>
         </div>
         <div
-          class="bg-emerald-500 h-px w-8"
+          class="hidden sm:block bg-emerald-500 h-px w-8"
         />
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-center py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
             class="fill-emerald-100"
             data-testid="theme-switch-icon"
             fill="currentColor"
-            height="1.375rem"
+            height="1.25rem"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 16 16"
-            width="1.375rem"
+            width="1.25rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -229,7 +229,7 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-white text-lg sm:hidden"
+            class="text-emerald-50 sm:hidden"
           >
             Theme
           </span>

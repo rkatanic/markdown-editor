@@ -6,49 +6,84 @@
   height: 100%;
   background-color: white !important;
   font-family: var(--font);
-  color: black !important;
+  color: var(--color-gray-800) !important;
 }
 
 .dark .code-mirror>div {
   background-color: #27272A !important;
+  color: var(--color-gray-300) !important;
 }
-
-.CodeMirror-selected {}
 
 .CodeMirror-cursor {
   border-left: 2px solid black !important;
 }
 
 .cm-comment {
-  color: var(--color-primary-500) !important;
+  color: var(--color-gray-500) !important;
 }
 
 .cm-hr {
-  color: var(--color-primary-500);
+  color: var(--color-gray-500);
 }
 
 .cm-variable-2 {
-  color: var(--color-white-three) !important;
+  color: var(--color-gray-900) !important;
 }
 
 .cm-variable-3 {
-  color: var(--color-primary-500) !important;
+  color: var(--color-gray-900) !important;
+}
+
+.dark .cm-variable-2,
+.dark .cm-variable-3,
+.dark .cm-keyword {
+  color: var(--color-gray-300) !important;
 }
 
 .cm-keyword {
-  color: var(--color-white-two) !important;
-}
-
-.cm-md-strong {
-  color: gray !important;
+  color: var(--color-gray-900) !important;
 }
 
 .cm-url {
-  color: var(--color-primary-500) !important;
+  color: var(--color-sky-600) !important;
+}
+
+.dark .cm-url {
+  color: var(--color-sky-400) !important;
+}
+
+.cm-strong,
+.cm-em {
+  color: var(--color-gray-900) !important;
+}
+
+.dark .cm-strong,
+.dark .cm-em {
+  color: var(--color-gray-200) !important;
+}
+
+.cm-md-strong {
+  color: var(--color-gray-400) !important;
+}
+
+.dark .cm-md-strong {
+  color: var(--color-gray-500) !important;
+}
+
+.dark .cm-header {
+  color: var(--color-gray-200) !important;
+}
+
+.dark .cm-md-heading-prefix {
+  color: var(--color-gray-600) !important;
 }
 
 .cm-header {
-  color: var(--color-white-one) !important;
+  color: var(--color-gray-900) !important;
+}
+
+.cm-md-heading-prefix {
+  color: var(--color-gray-300) !important;
 }
 
 .cm-header-1,
@@ -81,34 +116,6 @@ h6 {
   font-size: 1rem;
 }
 
-.cm-strong,
-.cm-em {
-  color: var(--color-white-one);
-}
-
-.cm-md-heading-prefix {
-  color: lightgray !important;
-}
-
-a {
-  color: var(--color-primary-500);
-}
-
-a:hover {
-  color: var(--color-primary-900);
-}
-
-ul {
-  color: var(--color-white-three);
-}
-
-img {
-  display: block;
-  max-width: 36.75em;
-  max-height: 36.75em;
-  width: auto;
-  height: auto;
-}
 
 @media screen and (max-width:640px) {
   .CodeMirror-wrap {

@@ -1,0 +1,78 @@
+.dark .markdown-output {
+    color: var(--color-gray-300);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-gray-900);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: var(--color-gray-200);
+}
+
+blockquote {
+    border-left: 2px solid var(--color-sky-400);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: hsla(199, 89%, 48%, 0.125);
+}
+
+.dark blockquote {
+    border-color: var(--color-sky-500);
+}
+
+a {
+    color: var(--color-sky-600);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dark a {
+    color: var(--color-sky-400);
+}
+
+.dark table,
+.dark td {
+    border-color: var(--color-gray-600);
+}
+
+table {
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid var(--color-gray-200);
+}
+
+th {
+    padding: 1rem;
+    background-color: var(--color-gray-50);
+}
+
+.dark th {
+    background-color: transparent
+}
+
+td {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.dark hr {
+    border-color: var(--color-gray-700);
+}
+
+ul {
+    margin-left: 1rem;
+    list-style: disc;
+}

@@ -56,6 +56,14 @@ const Sidenav = ({
     handleMenuClose();
   };
 
+  const handleDarkThemeSwitch = (): void => {
+    if (document.body.classList.contains("dark")) {
+      document.body.classList.remove("dark");
+    } else {
+      document.body.classList.add("dark");
+    }
+  };
+
   return (
     <>
       {showMenu && (
@@ -150,7 +158,10 @@ const Sidenav = ({
             <span className="text-emerald-50 sm:hidden">Files</span>
           </div>
           <div className="hidden sm:block bg-emerald-500 h-px w-8"></div>
-          <div className="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full">
+          <div
+            onClick={handleDarkThemeSwitch}
+            className="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          >
             <VscColorMode
               data-testid="theme-switch-icon"
               size="1.25rem"

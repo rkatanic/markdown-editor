@@ -58,7 +58,7 @@ exports[`Files should render 1`] = `
               File 1
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -106,7 +106,7 @@ exports[`Files should render 1`] = `
               File 2
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -212,7 +212,7 @@ exports[`Files should render with overlay 1`] = `
               File 1
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -260,7 +260,7 @@ exports[`Files should render with overlay 1`] = `
               File 2
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"

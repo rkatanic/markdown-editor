@@ -41,7 +41,7 @@ const File = ({
           data-testid="trash-icon"
           onClick={handleDeleteFileModalToggle}
           size="1.125rem"
-          className="stroke-zinc-300 hover:stroke-rose-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-rose-800"
+          className="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
         />
       </p>
       <p

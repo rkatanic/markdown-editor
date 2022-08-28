@@ -21,10 +21,10 @@ exports[`DeleteFileModal should render 1`] = `
         class="flex flex-col justify-center items-center gap-4 mb-8 sm:flex-row sm:items-start"
       >
         <div
-          class="p-3 bg-rose-100 rounded-full dark:bg-rose-900 dark:bg-opacity-30"
+          class="p-3 bg-red-100 rounded-full dark:bg-red-900 dark:bg-opacity-30"
         >
           <svg
-            class="stroke-rose-500"
+            class="stroke-red-500"
             fill="none"
             height="1.5rem"
             stroke="currentColor"
@@ -99,13 +99,13 @@ exports[`DeleteFileModal should render 1`] = `
         class="flex flex-col gap-4 justify-end sm:flex-row"
       >
         <button
-          class="order-2 shadow-sm font-semibold text-sm border bg-zinc-50 border-zinc-300 px-4 py-2 rounded-md text-zinc-900 hover:bg-zinc-100 sm:order-1 dark:shadow-md dark:text-zinc-100 dark:hover:bg-zinc-700 dark:border-zinc-500"
+          class="order-2 sm:order-1 py-1.5 shadow-sm font-semibold text-sm border px-4 rounded-md dark:shadow-md border-zinc-300 bg-zinc-50 hover:bg-zinc-100 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300 dark:border-zinc-600 dark:hover:bg-zinc-600 dark:hover:border-zinc-500"
           type="button"
         >
           Cancel
         </button>
         <button
-          class="order-1 shadow-sm font-semibold text-sm border border-rose-700 bg-rose-600 px-4 py-2 rounded-md text-white hover:bg-rose-700 hover:border-rose-800 dark:shadow-md dark:bg-rose-800 dark:hover:bg-rose-900"
+          class="order-1 py-1.5 shadow-sm font-semibold text-sm border px-4 rounded-md dark:shadow-md border-red-600 bg-red-500 text-white hover:bg-red-600 hover:border-red-700 dark:bg-red-700 dark:hover:bg-red-600 dark:hover:border-red-500"
           type="button"
         >
           Delete

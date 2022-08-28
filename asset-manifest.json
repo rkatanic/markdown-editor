@@ -1,23 +1,15 @@
 {
   "files": {
-    "main.css": "/markdown-editor/static/css/main.eb9fd89d.css",
-    "main.js": "/markdown-editor/static/js/main.e5e4dcdc.js",
-    "static/js/826.216b6fbc.chunk.js": "/markdown-editor/static/js/826.216b6fbc.chunk.js",
-    "static/media/trash.svg": "/markdown-editor/static/media/trash.eeaeb5bc6f8c619555ff315c3e9b6c9c.svg",
-    "static/media/save.svg": "/markdown-editor/static/media/save.bdd9136234f802a980da429659485840.svg",
+    "main.css": "/markdown-editor/static/css/main.1b4c7fab.css",
+    "main.js": "/markdown-editor/static/js/main.96a5d8ef.js",
+    "static/js/826.a6cbbad7.chunk.js": "/markdown-editor/static/js/826.a6cbbad7.chunk.js",
     "index.html": "/markdown-editor/index.html",
-    "static/media/download.svg": "/markdown-editor/static/media/download.50af510f4cb489d8e5b30f739f08fb70.svg",
-    "static/media/folder.svg": "/markdown-editor/static/media/folder.7637e8068d53587f667f89fe0b30fdfc.svg",
-    "static/media/pencil.svg": "/markdown-editor/static/media/pencil.062a95aecee9f2cafa38ed2462b7d0e5.svg",
-    "static/media/x-circle.svg": "/markdown-editor/static/media/x-circle.5868a49ce25e0f78fb7ba1cd75bd3b8c.svg",
-    "static/media/eye.svg": "/markdown-editor/static/media/eye.d8d0727c670fe6d2368a2024b7e7d1e3.svg",
-    "static/media/x.svg": "/markdown-editor/static/media/x.514a136e859e32747368225f85bc5fe8.svg",
-    "static/media/text.md": "/markdown-editor/static/media/text.2e4c3e6c2b90c6e62d2e.md",
-    "main.eb9fd89d.css.map": "/markdown-editor/static/css/main.eb9fd89d.css.map",
-    "main.e5e4dcdc.js.map": "/markdown-editor/static/js/main.e5e4dcdc.js.map"
+    "static/media/text.md": "/markdown-editor/static/media/text.2585084dc0238f7bea23.md",
+    "main.1b4c7fab.css.map": "/markdown-editor/static/css/main.1b4c7fab.css.map",
+    "main.96a5d8ef.js.map": "/markdown-editor/static/js/main.96a5d8ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9fd89d.css",
-    "static/js/main.e5e4dcdc.js"
+    "static/css/main.1b4c7fab.css",
+    "static/js/main.96a5d8ef.js"
   ]
 }

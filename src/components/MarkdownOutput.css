@@ -17,7 +17,7 @@ h6 {
 .dark h4,
 .dark h5,
 .dark h6 {
-    color: var(--color-gray-200);
+    color: var(--color-gray-100);
 }
 
 blockquote {
@@ -45,7 +45,7 @@ a:hover {
 
 .dark table,
 .dark td {
-    border-color: var(--color-gray-600);
+    border-color: var(--color-gray-500);
 }
 
 table {
@@ -60,7 +60,7 @@ th {
 }
 
 .dark th {
-    background-color: transparent
+    background-color: var(--color-gray-600);
 }
 
 td {

@@ -4,13 +4,13 @@ exports[`Sidenav should render 1`] = `
 <body>
   <div>
     <div
-      class="overflow-y-auto w-full sm:max-w-[5rem] bg-gradient-to-b from-emerald-600 to-teal-600 flex flex-col items-center gap-6"
+      class="overflow-y-auto w-full sm:max-w-[5rem] bg-zinc-800 dark:bg-zinc-900 flex flex-col items-center gap-6"
     >
       <div
-        class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-700 w-full z-10"
+        class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-cyan-600 dark:bg-cyan-600 w-full z-10"
       >
         <div
-          class="w-8 h-8 border-emerald-50 border-8 rounded-full"
+          class="w-8 h-8 border-white border-8 rounded-full"
         />
         <svg
           class="stroke-white sm:hidden"
@@ -46,14 +46,14 @@ exports[`Sidenav should render 1`] = `
         </svg>
       </div>
       <div
-        class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 py-2 sm:py-0 sm:top-0 mt-16 bg-gradient-to-b from-emerald-600 to-teal-600  flex flex-col items-center gap-1 sm:gap-4 w-full px-2 sm:px-4"
+        class="-top-full sm:h-full sm:bg-none z-10 transition-[top] duration-300 absolute sm:relative sm:mt-0 py-2 sm:py-0 sm:top-0 mt-16 bg-zinc-800 flex flex-col items-center gap-1 sm:gap-4 w-full px-2 sm:px-4"
         data-testid="sidenav-menu"
       >
         <div
-          class="bg-emerald-700 hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class="bg-zinc-600 hover:cursor-pointer hover:bg-zinc-600/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="stroke-emerald-100"
+            class="stroke-zinc-100"
             data-testid="edit-icon"
             fill="none"
             height="1.25rem"
@@ -70,16 +70,16 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Editor
           </span>
         </div>
         <div
-          class=" hover:cursor-pointer hover:bg-emerald-700/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class=" hover:cursor-pointer hover:bg-zinc-600/50 bg-opacity-50 flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="stroke-emerald-100"
+            class="stroke-zinc-100"
             data-testid="eye-icon"
             fill="none"
             height="1.25rem"
@@ -101,16 +101,16 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Preview
           </span>
         </div>
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-zinc-600 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="stroke-emerald-100"
+            class="stroke-zinc-100"
             data-testid="download-icon"
             fill="none"
             height="1.25rem"
@@ -136,16 +136,16 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Download
           </span>
         </div>
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-zinc-600 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="stroke-emerald-100"
+            class="stroke-zinc-100"
             data-testid="x-circle-icon"
             fill="none"
             height="1.25rem"
@@ -176,16 +176,16 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Clear
           </span>
         </div>
         <div
-          class="lg:hidden hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class="lg:hidden hover:bg-opacity-50 hover:bg-zinc-600 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="stroke-emerald-100"
+            class="stroke-zinc-100"
             data-testid="folder-icon"
             fill="none"
             height="1.25rem"
@@ -202,19 +202,19 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Files
           </span>
         </div>
         <div
-          class="hidden sm:block bg-emerald-500 h-px w-8"
+          class="hidden sm:block bg-zinc-500 h-px w-8"
         />
         <div
-          class="hover:bg-opacity-50 hover:bg-emerald-700 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
+          class="hover:bg-opacity-50 hover:bg-zinc-600 hover:cursor-pointer flex gap-4 items-center justify-start sm:justify-center px-4 py-2 sm:px-0 sm:py-3 rounded-md w-full"
         >
           <svg
-            class="fill-emerald-100"
+            class="fill-zinc-100"
             data-testid="theme-switch-icon"
             fill="currentColor"
             height="1.25rem"
@@ -229,7 +229,7 @@ exports[`Sidenav should render 1`] = `
             />
           </svg>
           <span
-            class="text-emerald-50 sm:hidden"
+            class="text-zinc-50 sm:hidden"
           >
             Theme
           </span>

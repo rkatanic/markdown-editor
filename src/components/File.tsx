@@ -30,8 +30,8 @@ const File = ({
   return (
     <div
       className={`${
-        currentFileName === name ? "bg-zinc-50 dark:bg-zinc-700/25" : ""
-      } border-b p-4 dark:border-zinc-700`}
+        currentFileName === name ? "bg-zinc-50 dark:bg-zinc-600" : ""
+      } border-b p-4 dark:border-zinc-500`}
     >
       <p className="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200">
         <span onClick={(): void => selectFile(name)}>
@@ -41,7 +41,7 @@ const File = ({
           data-testid="trash-icon"
           onClick={handleDeleteFileModalToggle}
           size="1.125rem"
-          className="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
+          className="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
         />
       </p>
       <p

@@ -4,7 +4,7 @@ exports[`File should render 1`] = `
 <body>
   <div>
     <div
-      class=" border-b p-4 dark:border-zinc-700"
+      class=" border-b p-4 dark:border-zinc-500"
     >
       <p
         class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
@@ -13,7 +13,7 @@ exports[`File should render 1`] = `
           File name
         </span>
         <svg
-          class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
+          class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
           data-testid="trash-icon"
           fill="none"
           height="1.125rem"
@@ -59,7 +59,7 @@ exports[`File should render current select file 1`] = `
 <body>
   <div>
     <div
-      class="bg-zinc-50 dark:bg-zinc-700/25 border-b p-4 dark:border-zinc-700"
+      class="bg-zinc-50 dark:bg-zinc-600 border-b p-4 dark:border-zinc-500"
     >
       <p
         class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
@@ -68,7 +68,7 @@ exports[`File should render current select file 1`] = `
           File name
         </span>
         <svg
-          class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-500 dark:hover:stroke-red-800"
+          class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
           data-testid="trash-icon"
           fill="none"
           height="1.125rem"

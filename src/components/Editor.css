@@ -10,12 +10,12 @@
 }
 
 .dark .code-mirror>div {
-  background-color: #27272A !important;
+  background-color: var(--color-gray-700) !important;
   color: var(--color-gray-300) !important;
 }
 
 .CodeMirror-cursor {
-  border-left: 2px solid black !important;
+  border-left: 2px solid var(--color-sky-500) !important;
 }
 
 .cm-comment {
@@ -71,11 +71,11 @@
 }
 
 .dark .cm-header {
-  color: var(--color-gray-200) !important;
+  color: var(--color-gray-100) !important;
 }
 
 .dark .cm-md-heading-prefix {
-  color: var(--color-gray-600) !important;
+  color: var(--color-gray-500) !important;
 }
 
 .cm-header {

@@ -22,7 +22,7 @@ const FileSave = ({
   };
 
   return (
-    <div className="bg-white w-full border-b h-16 flex items-center justify-center text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700 dark:bg-zinc-800">
+    <div className="bg-white w-full border-b h-16 flex items-center justify-center text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500 dark:bg-zinc-700">
       <form
         className="flex items-center justify-between gap-8 w-full max-w-5xl px-4 sm:px-8"
         onSubmit={handleFileSave}
@@ -38,7 +38,7 @@ const FileSave = ({
         <button type="submit">
           <FiSave
             data-testid="save-icon"
-            className="dark:stroke-zinc-400 cursor-pointer hover:stroke-emerald-500 dark:hover:stroke-emerald-500"
+            className="dark:stroke-zinc-400 cursor-pointer hover:stroke-cyan-600 dark:hover:stroke-cyan-500"
           />
         </button>
       </form>

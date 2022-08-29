@@ -36,9 +36,9 @@ const Files = ({
       <div
         className={`${
           showFiles ? "left-0 sm:ml-20" : "-left-full "
-        } overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-800 dark:border-zinc-700 w-full max-w-sm`}
+        } overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-700 dark:border-zinc-500 w-full max-w-sm`}
       >
-        <div className="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-700">
+        <div className="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500">
           <div>
             Notes{" "}
             <span className="text-sm text-zinc-400 font-normal ml-1">
@@ -70,9 +70,11 @@ const Files = ({
           <div className="flex flex-col items-center justify-center gap-1 mt-8">
             <FiFilePlus
               size="2.5rem"
-              className="stroke-1 stroke-zinc-300 mb-1"
+              className="stroke-1 stroke-zinc-300 mb-1 dark:stroke-zinc-400"
             />
-            <div className="text-zinc-700 font-semibold">No notes saved</div>
+            <div className="text-zinc-700 font-semibold dark:text-zinc-100">
+              No notes saved
+            </div>
             <div className="text-sm text-zinc-400">
               Get started by saving your first note.
             </div>

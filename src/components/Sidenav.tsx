@@ -74,7 +74,7 @@ const Sidenav = ({
         ></div>
       )}
       <div className="overflow-y-auto w-full sm:max-w-[5rem] bg-zinc-800 dark:bg-zinc-900 flex flex-col items-center gap-6">
-        <div className="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-cyan-600 dark:bg-cyan-600 w-full z-10">
+        <div className="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-600 dark:bg-emerald-600 w-full z-10">
           <div className="w-8 h-8 border-white border-8 rounded-full"></div>
           {showMenu ? (
             <FiX

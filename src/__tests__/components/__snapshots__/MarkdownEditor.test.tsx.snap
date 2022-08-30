@@ -10,7 +10,7 @@ exports[`MarkdownEditor should render 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-zinc-800 dark:bg-zinc-900 flex flex-col items-center gap-6"
       >
         <div
-          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-cyan-600 dark:bg-cyan-600 w-full z-10"
+          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-600 dark:bg-emerald-600 w-full z-10"
         >
           <div
             class="w-8 h-8 border-white border-8 rounded-full"
@@ -499,7 +499,7 @@ exports[`MarkdownEditor should render with output 1`] = `
         class="overflow-y-auto w-full sm:max-w-[5rem] bg-zinc-800 dark:bg-zinc-900 flex flex-col items-center gap-6"
       >
         <div
-          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-cyan-600 dark:bg-cyan-600 w-full z-10"
+          class="p-4 justify-between flex items-center sm:justify-center sm:px-0 bg-emerald-600 dark:bg-emerald-600 w-full z-10"
         >
           <div
             class="w-8 h-8 border-white border-8 rounded-full"

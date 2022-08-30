@@ -11,7 +11,7 @@
 
 .dark .code-mirror>div {
   background-color: var(--color-gray-700) !important;
-  color: var(--color-gray-300) !important;
+  color: var(--color-gray-200) !important;
 }
 
 .CodeMirror-cursor {
@@ -20,6 +20,10 @@
 
 .cm-comment {
   color: var(--color-gray-500) !important;
+}
+
+.dark .cm-comment {
+  color: var(--color-gray-400) !important;
 }
 
 .cm-hr {
@@ -37,7 +41,7 @@
 .dark .cm-variable-2,
 .dark .cm-variable-3,
 .dark .cm-keyword {
-  color: var(--color-gray-300) !important;
+  color: var(--color-gray-200) !important;
 }
 
 .cm-keyword {
@@ -59,7 +63,7 @@
 
 .dark .cm-strong,
 .dark .cm-em {
-  color: var(--color-gray-200) !important;
+  color: var(--color-gray-100) !important;
 }
 
 .cm-md-strong {
@@ -67,7 +71,7 @@
 }
 
 .dark .cm-md-strong {
-  color: var(--color-gray-500) !important;
+  color: var(--color-gray-400) !important;
 }
 
 .dark .cm-header {
@@ -75,7 +79,7 @@
 }
 
 .dark .cm-md-heading-prefix {
-  color: var(--color-gray-500) !important;
+  color: var(--color-gray-400) !important;
 }
 
 .cm-header {

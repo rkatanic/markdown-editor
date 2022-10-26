@@ -20,9 +20,9 @@ const Button = ({
       case "danger":
         return "border-red-600 bg-red-500 text-white hover:bg-red-600 hover:border-red-700 dark:bg-red-700 dark:hover:bg-red-600 dark:hover:border-red-500";
       case "secondary":
-        return "border-zinc-300 bg-zinc-50 hover:bg-zinc-100 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300 dark:border-zinc-600 dark:hover:bg-zinc-600 dark:hover:border-zinc-500";
+        return "border-neutral-300 bg-neutral-50 hover:bg-neutral-100 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-300 dark:border-neutral-600 dark:hover:bg-neutral-600 dark:hover:border-neutral-500";
       default:
-        return "border-zinc-300 bg-zinc-50 hover:bg-zinc-100 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300 dark:border-zinc-600 dark:hover:bg-zinc-600 dark:hover:border-zinc-500";
+        return "border-neutral-300 bg-neutral-50 hover:bg-neutral-100 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-300 dark:border-neutral-600 dark:hover:bg-neutral-600 dark:hover:border-neutral-500";
     }
   };
 

@@ -1,16 +1,16 @@
 .CodeMirror-wrap {
-  padding: 2rem 2rem 0;
+  /* padding: 2rem 2rem 0; */
 }
 
-.code-mirror>div {
+.code-mirror > div {
   height: 100%;
   background-color: white !important;
   font-family: var(--font);
   color: var(--color-gray-800) !important;
 }
 
-.dark .code-mirror>div {
-  background-color: var(--color-gray-700) !important;
+.dark .code-mirror > div {
+  background-color: var(--color-gray-900) !important;
   color: var(--color-gray-200) !important;
 }
 
@@ -120,10 +120,8 @@ h6 {
   font-size: 1rem;
 }
 
-
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .CodeMirror-wrap {
     padding: 1rem 1rem 0;
   }
-
 }

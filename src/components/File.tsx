@@ -30,10 +30,10 @@ const File = ({
   return (
     <div
       className={`${
-        currentFileName === name ? "bg-zinc-50 dark:bg-zinc-600" : ""
-      } border-b p-4 dark:border-zinc-500`}
+        currentFileName === name ? "bg-yellow-50/70 dark:bg-yellow-800/10" : ""
+      } border-b p-4 py-2 dark:border-neutral-700/50`}
     >
-      <p className="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200">
+      <p className="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-neutral-200">
         <span onClick={(): void => selectFile(name)}>
           {name ? name : "Untitled"}
         </span>
@@ -41,12 +41,12 @@ const File = ({
           data-testid="trash-icon"
           onClick={handleDeleteFileModalToggle}
           size="1.125rem"
-          className="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
+          className="stroke-neutral-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-neutral-400 dark:hover:stroke-red-600"
         />
       </p>
       <p
         onClick={(): void => selectFile(name)}
-        className="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+        className="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-neutral-400 dark:text-neutral-400"
       >
         {markdown ? markdown : "Empty note"}
       </p>

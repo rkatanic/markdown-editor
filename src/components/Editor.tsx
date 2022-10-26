@@ -22,7 +22,7 @@ const Editor = ({ file, updateCurrentFile }: Props): JSX.Element => {
   return (
     <div className="w-full max-w-5xl m-auto sm:mt-8 sm:px-8 h-[calc(100vh-8rem)] sm:h-[calc(100vh-6rem)]">
       <CodeMirror2
-        className="code-mirror overflow-y-auto shadow-lg h-full rounded-md rounded-b-none"
+        className="code-mirror overflow-y-auto h-full"
         options={{
           placeholder: "Start typing",
           mode: { name: "customHighlights" },

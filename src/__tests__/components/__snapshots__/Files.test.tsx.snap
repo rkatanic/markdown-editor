@@ -4,22 +4,22 @@ exports[`Files should render 1`] = `
 <body>
   <div>
     <div
-      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-700 dark:border-zinc-500 w-full max-w-sm"
+      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-neutral-50 dark:bg-neutral-800 dark:border-neutral-700 w-full max-w-sm"
     >
       <div
-        class="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500"
+        class="border-b dark:border-b-neutral-700/50 h-16 flex items-center justify-between px-4 text-xl font-semibold dark:text-neutral-200"
       >
         <div>
           Notes
            
           <span
-            class="text-sm text-zinc-400 font-normal ml-1"
+            class="text-sm text-neutral-400 font-normal ml-1"
           >
             2 Files
           </span>
         </div>
         <svg
-          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          class="lg:hidden dark:stroke-neutral-400 stroke-neutral-500"
           data-testid="x-icon"
           fill="none"
           height="1.375rem"
@@ -49,16 +49,16 @@ exports[`Files should render 1`] = `
         class="w-full max-w-sm"
       >
         <div
-          class="bg-zinc-50 dark:bg-zinc-600 border-b p-4 dark:border-zinc-500"
+          class="bg-yellow-50/70 dark:bg-yellow-800/10 border-b p-4 py-2 dark:border-neutral-700/50"
         >
           <p
-            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-neutral-200"
           >
             <span>
               File 1
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
+              class="stroke-neutral-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-neutral-400 dark:hover:stroke-red-600"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -91,22 +91,22 @@ exports[`Files should render 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-neutral-400 dark:text-neutral-400"
           >
             content
           </p>
         </div>
         <div
-          class=" border-b p-4 dark:border-zinc-500"
+          class=" border-b p-4 py-2 dark:border-neutral-700/50"
         >
           <p
-            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-neutral-200"
           >
             <span>
               File 2
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
+              class="stroke-neutral-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-neutral-400 dark:hover:stroke-red-600"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -139,7 +139,7 @@ exports[`Files should render 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-neutral-400 dark:text-neutral-400"
           >
             Empty note
           </p>
@@ -154,26 +154,26 @@ exports[`Files should render with overlay 1`] = `
 <body>
   <div>
     <div
-      class="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70"
+      class="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-neutral-900/70"
       data-testid="files-overlay"
     />
     <div
-      class="left-0 sm:ml-20 overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-700 dark:border-zinc-500 w-full max-w-sm"
+      class="left-0 sm:ml-20 overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-neutral-50 dark:bg-neutral-800 dark:border-neutral-700 w-full max-w-sm"
     >
       <div
-        class="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500"
+        class="border-b dark:border-b-neutral-700/50 h-16 flex items-center justify-between px-4 text-xl font-semibold dark:text-neutral-200"
       >
         <div>
           Notes
            
           <span
-            class="text-sm text-zinc-400 font-normal ml-1"
+            class="text-sm text-neutral-400 font-normal ml-1"
           >
             2 Files
           </span>
         </div>
         <svg
-          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          class="lg:hidden dark:stroke-neutral-400 stroke-neutral-500"
           data-testid="x-icon"
           fill="none"
           height="1.375rem"
@@ -203,16 +203,16 @@ exports[`Files should render with overlay 1`] = `
         class="w-full max-w-sm"
       >
         <div
-          class="bg-zinc-50 dark:bg-zinc-600 border-b p-4 dark:border-zinc-500"
+          class="bg-yellow-50/70 dark:bg-yellow-800/10 border-b p-4 py-2 dark:border-neutral-700/50"
         >
           <p
-            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-neutral-200"
           >
             <span>
               File 1
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
+              class="stroke-neutral-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-neutral-400 dark:hover:stroke-red-600"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -245,22 +245,22 @@ exports[`Files should render with overlay 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-neutral-400 dark:text-neutral-400"
           >
             content
           </p>
         </div>
         <div
-          class=" border-b p-4 dark:border-zinc-500"
+          class=" border-b p-4 py-2 dark:border-neutral-700/50"
         >
           <p
-            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-zinc-200"
+            class="cursor-pointer mb-1 font-semibold flex items-center gap-2 justify-between dark:text-neutral-200"
           >
             <span>
               File 2
             </span>
             <svg
-              class="stroke-zinc-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-zinc-400 dark:hover:stroke-red-600"
+              class="stroke-neutral-300 hover:stroke-red-500 hover:cursor-pointer dark:stroke-neutral-400 dark:hover:stroke-red-600"
               data-testid="trash-icon"
               fill="none"
               height="1.125rem"
@@ -293,7 +293,7 @@ exports[`Files should render with overlay 1`] = `
             </svg>
           </p>
           <p
-            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-zinc-400 dark:text-zinc-400"
+            class="cursor-pointer overflow-hidden text-ellipsis max-h-16 h-[4rem] text-sm text-neutral-400 dark:text-neutral-400"
           >
             Empty note
           </p>
@@ -308,22 +308,22 @@ exports[`Files should render without files 1`] = `
 <body>
   <div>
     <div
-      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-700 dark:border-zinc-500 w-full max-w-sm"
+      class="-left-full  overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-neutral-50 dark:bg-neutral-800 dark:border-neutral-700 w-full max-w-sm"
     >
       <div
-        class="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500"
+        class="border-b dark:border-b-neutral-700/50 h-16 flex items-center justify-between px-4 text-xl font-semibold dark:text-neutral-200"
       >
         <div>
           Notes
            
           <span
-            class="text-sm text-zinc-400 font-normal ml-1"
+            class="text-sm text-neutral-400 font-normal ml-1"
           >
             0 Files
           </span>
         </div>
         <svg
-          class="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+          class="lg:hidden dark:stroke-neutral-400 stroke-neutral-500"
           data-testid="x-icon"
           fill="none"
           height="1.375rem"
@@ -353,7 +353,7 @@ exports[`Files should render without files 1`] = `
         class="flex flex-col items-center justify-center gap-1 mt-8"
       >
         <svg
-          class="stroke-1 stroke-zinc-300 mb-1 dark:stroke-zinc-400"
+          class="stroke-1 stroke-neutral-300 mb-1 dark:stroke-neutral-400"
           fill="none"
           height="2.5rem"
           stroke="currentColor"
@@ -384,12 +384,12 @@ exports[`Files should render without files 1`] = `
           />
         </svg>
         <div
-          class="text-zinc-700 font-semibold dark:text-zinc-100"
+          class="text-neutral-700 font-semibold dark:text-neutral-100"
         >
           No notes saved
         </div>
         <div
-          class="text-sm text-zinc-400"
+          class="text-sm text-neutral-400"
         >
           Get started by saving your first note.
         </div>

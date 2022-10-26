@@ -30,18 +30,18 @@ const Files = ({
         <div
           data-testid="files-overlay"
           onClick={toggleFilesShow}
-          className="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-zinc-900/70"
+          className="z-10 ml-20 lg:ml-0 lg:hidden fixed inset-0 w-full h-full bg-neutral-900/70"
         ></div>
       )}
       <div
         className={`${
           showFiles ? "left-0 sm:ml-20" : "-left-full "
-        } overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-white dark:bg-zinc-700 dark:border-zinc-500 w-full max-w-sm`}
+        } overflow-y-auto z-10 h-full transition-[left] duration-300 absolute lg:relative lg:left-0 lg:ml-0 shadow-sm border-r bg-neutral-50 dark:bg-neutral-800 dark:border-neutral-700 w-full max-w-sm`}
       >
-        <div className="border-b h-16 flex items-center justify-between px-4 text-lg font-semibold dark:text-zinc-200 dark:border-zinc-500">
+        <div className="border-b dark:border-b-neutral-700/50 h-16 flex items-center justify-between px-4 text-xl font-semibold dark:text-neutral-200">
           <div>
             Notes{" "}
-            <span className="text-sm text-zinc-400 font-normal ml-1">
+            <span className="text-sm text-neutral-400 font-normal ml-1">
               {`${files.length} ${files.length === 1 ? "File" : "Files"}`}
             </span>
           </div>
@@ -49,7 +49,7 @@ const Files = ({
             data-testid="x-icon"
             onClick={toggleFilesShow}
             size="1.375rem"
-            className="lg:hidden dark:stroke-zinc-400 stroke-zinc-500"
+            className="lg:hidden dark:stroke-neutral-400 stroke-neutral-500"
           />
         </div>
         {files.length ? (
@@ -70,12 +70,12 @@ const Files = ({
           <div className="flex flex-col items-center justify-center gap-1 mt-8">
             <FiFilePlus
               size="2.5rem"
-              className="stroke-1 stroke-zinc-300 mb-1 dark:stroke-zinc-400"
+              className="stroke-1 stroke-neutral-300 mb-1 dark:stroke-neutral-400"
             />
-            <div className="text-zinc-700 font-semibold dark:text-zinc-100">
+            <div className="text-neutral-700 font-semibold dark:text-neutral-100">
               No notes saved
             </div>
-            <div className="text-sm text-zinc-400">
+            <div className="text-sm text-neutral-400">
               Get started by saving your first note.
             </div>
           </div>

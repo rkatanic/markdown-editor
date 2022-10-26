@@ -103,7 +103,7 @@ const MarkdownEditor = (): JSX.Element => {
   };
 
   return (
-    <div className="flex-col flex bg-zinc-50 dark:bg-zinc-800 dark:bg-opacity-40 sm:flex-row h-full">
+    <div className="flex-col flex dark:bg-neutral-900 dark:bg-opacity-40 sm:flex-row h-full">
       <Sidenav
         activeTab={activeTab}
         changeTab={(tab) => setActiveTab(tab)}
